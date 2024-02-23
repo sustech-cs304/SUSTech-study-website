@@ -6,26 +6,27 @@ import jakarta.persistence.*;
 @Table
 public class Student {
     @Id
-    private int question_id;
+
     private int user_id;
-    private int view_count;
+    private int question_id;
+    private int password;
     private int answer_count;
     private String tags;
-    private String title;
+    private String username;
     private String url;
     @Column(length = 50000)
     private String content;
 
 
-    public Student(int question_id, int user_id, int view_count, int answer_count,
-                   String tags,String content,String title, String url) {
+    public Student(int question_id, int user_id, int password, int answer_count,
+                   String tags,String content,String username, String url) {
         this.question_id = question_id;
         this.user_id = user_id;
-        this.view_count = view_count;
+        this.password = password;
         this.answer_count = answer_count;
         this.tags = tags;
         this.content=content;
-        this.title=title;
+        this.username=username;
         this.url = url;
     }
 
@@ -40,12 +41,12 @@ public class Student {
     public Student() {
     }
 
-    public String getTitle() {
-        return title;
+    public String getUsername() {
+        return username;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getContent() {
@@ -72,12 +73,12 @@ public class Student {
         this.user_id = user_id;
     }
 
-    public int getView_count() {
-        return view_count;
+    public int getPassword() {
+        return password;
     }
 
-    public void setView_count(int view_count) {
-        this.view_count = view_count;
+    public void setPassword(int password) {
+        this.password = password;
     }
 
     public int getAnswer_count() {
