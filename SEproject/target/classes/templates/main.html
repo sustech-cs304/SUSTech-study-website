@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS209A 2023 Fall Final Project</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      margin: 0; /* 添加这一行以消除默认的 body margin */
+    }
+
+    h1, p {
+      text-align: center;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    h1 {
+      font-family: 'Your Preferred Font', sans-serif;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .button-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .white-button {
+      background-color: white;
+      color: #4CAF50; /* Button text color */
+      width: 170px; /* 指定按钮宽度 */
+      height: 40px; /* 指定按钮高度 */
+      margin-bottom: 10px; /* 添加适当的 margin 防止重叠 */
+    }
+  </style>
+</head>
+<body>
+
+
+<h1>CS209A 2023 Fall Final Project</h1>
+<p>There are 500 threads from Stack Overflow stored in our database.</p>
+
+<div class="button-container">
+  <button class="white-button" onclick="collectData()">Collect Data</button>
+  <button class="white-button" onclick="collectContent()">Collect Content</button>
+  <button class="white-button" onclick="Loader()">Import</button>
+
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+
+  <button onclick="showData()">Show Data</button>
+  <button onclick="topicPopularity()">Topic Popularity</button>
+  <button onclick="bugPopularity()">Bug Popularity</button>
+  <button onclick="relatedTopics()">Related Topics</button>
+</div>
+
+<script>
+  function collectData(){
+    fetch('/collectData', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+        // You can add more headers if needed
+      },
+    })
+
+    alert('Successfully collect data');
+  }
+  function collectContent(){
+    fetch('/collectContent', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+        // You can add more headers if needed
+      },
+    })
+    alert('Successfully collect content');
+  }
+  Load
+  function Loader(){
+    fetch('/Load', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+        // You can add more headers if needed
+      },
+    })
+    alert('Successfully import data');
+  }
+
+  function showData() {
+    // TODO: Add logic for Show Data button
+    window.location.href = 'list';
+  }
+
+  function topicPopularity() {
+    // TODO: Add logic for Topic Popularity button
+    window.location.href = 'word';
+  }
+
+  function bugPopularity() {
+    // TODO: Add logic for Bug Popularity button
+    window.location.href = 'bugCategory';
+  }
+
+  function relatedTopics() {
+    // TODO: Add logic for Related Topics button
+    window.location.href = 'topic';
+  }
+</script>
+
+</body>
+</html>
