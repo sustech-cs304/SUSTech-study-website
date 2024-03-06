@@ -6,9 +6,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.context.annotation.ComponentScan;
 @Controller
+@ComponentScan(basePackages = {"com.example.mvcdemo2.service"}) // Add your service's package here
 public class StudentController {
 
     private final StudentService studentService;
@@ -30,4 +32,8 @@ public class StudentController {
         return "main";
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "main"; // Assuming 'main' is the name of your home page template
+    }
 }
