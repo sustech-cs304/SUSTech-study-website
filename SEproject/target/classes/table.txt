@@ -1,0 +1,22 @@
+CREATE TABLE Post (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    creationDate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    userId INT, -- 假设你有一个User表与之关联
+    -- 更多的属性根据需求添加
+    -- 如果有用户系统，还需要外键约束
+);
+
+CREATE TABLE Tag (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) UNIQUE NOT NULL
+);
+
+CREATE TABLE PostTag (
+    postId INT,
+    tagId INT,
+    PRIMARY KEY (postId, tagId),
+    FOREIGN KEY (postId) REFERENCES Post(id) ON DELETE CASCADE,
+    FOREIGN KEY (tagId) REFERENCES Tag(id) ON DELETE CASCADE
+);

@@ -29,15 +29,9 @@ public class StudentController {
     public String showMain(Model model){
         //model.addAttribute("students", studentService.getStudents());
         LOGGER.info("Enter main page");
-        return "gpa";
+        return "main";
     }
 
-    @RequestMapping("/gpa")
-    public String showGPA(Model model){
-        //model.addAttribute("students", studentService.getStudents());
-        LOGGER.info("Enter gpa page");
-        return "gpa";
-    }
     @GetMapping("/")
     public String home() {
         return "main"; // Assuming 'main' is the name of your home page template

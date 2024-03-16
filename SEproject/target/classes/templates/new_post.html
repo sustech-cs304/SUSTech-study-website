@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>发布新帖子 - 校园助手</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault(); // 阻止表单默认提交行为
+      // 这里你可以添加发送数据到服务器的代码
+      // ...
+
+      // 提交后跳转到学习建议页面
+      window.location.href = '/advice';
+    }
+  </script>
+</head>
+<body>
+<header>
+  <!-- 这里可以放置导航栏 -->
+</header>
+
+<main class="new-post-container">
+  <h2>发布新帖子</h2>
+  <form id="new-post-form" class="form-layout" onsubmit="handleSubmit(event)">
+    <div class="form-section">
+      <label for="new-post-category">选择类别:</label>
+      <select id="new-post-category">
+        <option value="course_materials">课程资料分享</option>
+        <option value="study_advice">学习建议</option>
+        <option value="question_help">问题求助</option>
+        <!-- 这里可以添加更多的类别 -->
+      </select>
+    </div>
+    <div class="form-section">
+      <label for="new-post-title">标题:</label>
+      <input type="text" id="new-post-title" placeholder="请输入帖子标题" required>
+    </div>
+    <div class="form-section">
+      <label for="new-post-content">正文:</label>
+      <textarea id="new-post-content" placeholder="请输入帖子内容" rows="15" required></textarea>
+    </div>
+    <div class="form-section submit-section">
+      <button type="submit">发布帖子</button>
+    </div>
+  </form>
+</main>
+
+<footer>
+  <!-- 这里可以放置页脚信息 -->
+</footer>
+</body>
+</html>
