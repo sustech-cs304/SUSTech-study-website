@@ -1,0 +1,16 @@
+com\example\mvcdemo2\controller\StudentController.class
+com\example\mvcdemo2\task\RelatedTopics.class
+com\example\mvcdemo2\task\RelatedTopics$1.class
+com\example\mvcdemo2\controller\AdviceController.class
+com\example\mvcdemo2\controller\StudentRestController.class
+com\example\mvcdemo2\task\TopicPopularity.class
+com\example\mvcdemo2\Mvcdemo2Application.class
+com\example\mvcdemo2\controller\ImageTestController.class
+com\example\mvcdemo2\model\Student.class
+com\example\mvcdemo2\controller\AIController.class
+com\example\mvcdemo2\Data\Loader.class
+com\example\mvcdemo2\task\BugPopularity.class
+com\example\mvcdemo2\model\Tag.class
+com\example\mvcdemo2\model\Post.class
+com\example\mvcdemo2\service\StudentService.class
+com\example\mvcdemo2\repository\StudentRepository.class
