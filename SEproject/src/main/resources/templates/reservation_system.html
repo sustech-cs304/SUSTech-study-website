@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间预约系统</title>
+    <link rel="stylesheet" href="/reservation_system.css">
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-brand">空间预约系统</div>
+    <div class="nav-item active">首页</div>
+    <div class="nav-user">
+        <span>tim</span>
+        <button class="dropdown-toggle" id="dropdownMenuButton">▼</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">个人中心</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="sidebar">
+        <div class="category">
+            <button class="tab-link" onclick="toggleSubcategories('discussionSubcats')">讨论室</button>
+            <div id="discussionSubcats" class="subcategories" style="display: none;">
+                <a href="#" onclick="showContent('1-2人')">1-2人</a>
+                <a href="#" onclick="showContent('3-7人')">3-7人</a>
+                <a href="#" onclick="showContent('7-人')">7人以上</a>
+            </div>
+        </div>
+        <div class="category">
+            <button class="tab-link" onclick="toggleSubcategories('meetingSubcats')">会议室</button>
+            <div id="meetingSubcats" class="subcategories" style="display: none;">
+                <a href="#" onclick="showContent('small')">小型</a>
+                <a href="#" onclick="showContent('middle')">中型</a>
+                <a href="#" onclick="showContent('large')">大型</a>
+            </div>
+        </div>
+        <!-- 其他类别 -->
+    </div>
+
+    <div class="content">
+        <div id="content-display">选择一个类别以显示内容</div>
+        <div id="reservation-details" style="display: none;">
+            <form id="reservation-form">
+                <label for="date">预约日期:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time_slot">预约时间段:</label>
+                <select id="time_slot" name="time_slot" required>
+                    <option value="09:00-11:00">早上 9点 - 11点</option>
+                    <option value="11:00-13:00">上午 11点 - 1点</option>
+                    <option value="13:00-15:00">下午 1点 - 3点</option>
+                    <option value="15:00-17:00">下午 3点 - 5点</option>
+                    <option value="17:00-19:00">下午 5点 - 7点</option>
+                    <option value="19:00-21:00">晚上 7点 - 9点</option>
+                </select>
+
+                <label for="location">预约地点:</label>
+                <select id="location" name="location" required>
+                    <option value="三教">三教</option>
+                    <option value="一教">一教</option>
+                    <option value="琳恩">琳恩</option>
+                    <option value="一丹">一丹</option>
+                    <option value="涵泳">涵泳</option>
+                </select>
+
+                <label for="participants">预约人数:</label>
+                <input type="number" id="participants" name="participants" min="1" required
+                       onchange="addParticipantDetails(this.value)">
+
+                <div id="participant-details"></div>
+
+                <input type="submit" value="提交预约">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 右侧内容容器 -->
+<div class="container2">
+
+</div>
+
+
+<script src="/reservation_system.js"></script>
+</body>
+</html>

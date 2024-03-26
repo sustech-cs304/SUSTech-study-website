@@ -1,0 +1,203 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0 ;
+}
+
+/* Styles for navbar */
+.navbar {
+    /*padding-top: 20px; !* 增加顶部内边距 *!*/
+    /*padding-bottom: 20px; !* 增加底部内边距 *!*/
+    background-color: #333; /* Grey-black background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.nav-brand {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    position: relative; /* For absolute positioning of dropdown menu */
+}
+
+.nav-user span {
+    margin-right: 5px; /* Spacing between user name and dropdown arrow */
+}
+
+/* Dropdown toggle button */
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none; /* 默认隐藏下拉菜单 */
+    position: absolute; /* 绝对定位 */
+    right: 0;
+    top: 100%; /* 下拉菜单在触发元素正下方 */
+    background-color: white; /* 背景色 */
+    /* 使用flex布局使内容水平排列 */
+
+    flex-direction: row; /* 项目横向排列 */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* 可选的阴影效果 */
+}
+
+/* Show/hide the dropdown */
+.show {
+    display: block;
+}
+
+ /*Dropdown item */
+.dropdown-item {
+    color: black;
+    padding: 10px 20px; /* 适当调整内边距 */
+    text-decoration: none; /* 移除下划线 */
+    display: block; /* 设置为块级元素以填充宽度 */
+    white-space: nowrap; /* 防止内容换行 */
+}
+
+
+.dropdown-item:hover {
+    background-color: #f2f2f2; /* Light grey background on hover */
+}
+
+.nav-user:hover .dropdown-menu {
+    display: flex; /* 显示下拉菜单 */
+}
+
+/* 鼠标悬停在“首页”上时的样式 */
+.nav-item:hover {
+    color: #5091cd; /* 改变文字颜色 */
+}
+
+/* 上面导航，下面侧边栏*/
+.container {
+    display: flex;
+    max-width: 1200px; /* 或者你想要的任何最大宽度 */
+    margin: 50px auto; /* 上下保持 50px, 左右自动居中 */
+}
+
+.sidebar {
+    flex-basis: 20%;
+    background: #f3f3f3;
+    padding: 20px;
+    margin: 50px 0 50px 50px; /* 外边距：上边距，右边距，下边距，左边距 */
+}
+
+.tab-link {
+    display: block;
+    padding: 20px;
+    margin-bottom: 5px;
+    background: #e7e7e7;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px; /* 可选：如果你希望增加字体大小 */
+}
+
+.tab-link:hover,
+.tab-link.active {
+    background: #d7d7d7;
+}
+
+
+.category .subcategories {
+    display: none;
+    padding-left: 20px;
+}
+
+.category .subcategories a {
+    display: block;
+    padding: 5px 0;
+    color: #000;
+    text-decoration: none;
+}
+
+.category .subcategories a {
+    display: block;
+    margin: 5px 0; /* 为子类型添加上下间距 */
+    padding: 5px 10px; /* 在这里稍微减少内边距以缩小子类型的大小 */
+    background: #f9f9f9; /* 轻微的背景色区分 */
+    border: 1px solid #ddd; /* 添加边框 */
+    border-radius: 4px; /* 轻微的圆角效果 */
+}
+
+
+.category .subcategories a:hover {
+    background-color: #e7e7e7; /* 鼠标悬停的背景颜色 */
+}
+
+/* 下面内容栏*/
+/*.content {*/
+/*    flex-grow: 1; !* 让内容容器占据剩余的空间 *!*/
+/*    padding: 20px; !* 添加一些内边距 *!*/
+/*    !* 更多样式... *!*/
+/*}*/
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 50px; /* 左边距推开内容区域离侧边栏 */
+    background-color: #fff; /* 背景颜色设置为白色，与侧边栏区分开 */
+    border: 1px solid #ddd; /* 添加边框 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 可选：添加阴影效果 */
+}
+
+#content-display {
+    /* 添加一些样式以美化内容显示 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    /* 更多样式... */
+}
+
+/**/
+#reservation-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#reservation-form input, #reservation-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+#reservation-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#reservation-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.container2 {
+    display: flex;
+    max-width: 1200px; /* 或者你想要的任何最大宽度 */
+    margin: 50px auto; /* 上下保持 50px, 左右自动居中 */
+}
+
