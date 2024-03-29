@@ -30,7 +30,7 @@ function bindFormSubmit() {
         event.preventDefault();
         const formData = new FormData(form);
         let reservationData = Object.fromEntries(formData.entries());
-        reservationData.time_slot = form['time-slot'].value
+        // reservationData.time_slot = form['time-slot'].value
         // 打印出表单数据，用于调试
         console.log('提交的预约数据:', reservationData);
 
@@ -65,7 +65,12 @@ function submitReservation(reservationData) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(reservationData),
+        body: JSON.stringify({
+            date: reservationData.date,
+            time_slot: reservationData.time_slot,
+            location: reservationData.location,
+            participants: Number(reservationData.participants) // 确保是整数
+        }),
     })
         .then(response => response.json())
         .then(data => {
@@ -75,9 +80,6 @@ function submitReservation(reservationData) {
             console.error('Error:', error);
         });
 }
-
-
-
 
 
 function toggleSubcategories(subcatId) {
@@ -145,90 +147,4 @@ function showContent(subtype) {
 
 }
 
-// // 当文档加载完成后绑定事件
-// document.addEventListener('DOMContentLoaded', function () {
-//     // 给下拉箭头绑定点击事件
-//     document.querySelector('.dropdown-toggle').addEventListener('click', function() {
-//         // 此处的'.dropdown-menu'应该与你的下拉菜单容器的类名一致
-//         var dropdownMenu = document.querySelector('.dropdown-menu');
-//         // 切换下拉菜单的显示和隐藏
-//         dropdownMenu.classList.toggle('show');
-//     });
-// });
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     document.getElementById('reservation-form').addEventListener('submit', function (event) {
-//         event.preventDefault(); // 阻止表单默认提交
-//         const form = event.target;
-//         const date = form.date.value;
-//         const timeSlot = form['time-slot'].value;
-//         const location = form.location.value;
-//         const participants = form.participants.value;
-//
-//         let participantDetails = '';
-//         for (let i = 1; i <= participants; i++) {
-//             participantDetails += `姓名 ${i}: ${form['name' + i].value}, 学号 ${i}: ${form['studentId' + i].value}\n`;
-//         }
-//
-//         // 弹出或处理预约信息
-//         const confirmationMessage = `预约母类型: ${document.getElementById('content-display').textContent}\n预约日期: ${date}\n预约时间段: ${timeSlot}\n预约地点: ${location}\n预约人数: ${participants}\n${participantDetails}`;
-//         alert(confirmationMessage);
-//         // 重置表单和隐藏预约细节部分
-//         // 重置表单
-//         this.reset();
-//         // 重置侧边栏的展开内容
-//         resetSubcategories();
-//         // 隐藏预约细节
-//         document.getElementById('reservation-details').style.display = 'none';
-//         // 重置内容显示区
-//         document.getElementById('content-display').textContent = '选择一个类别以显示内容';
-//         // 清除动态生成的姓名和学号输入字段
-//         document.getElementById('participant-details').innerHTML = '';
-//     });
-// });
-
-
-// document.getElementById('reservation-form').addEventListener('submit', function(event) {
-//     event.preventDefault();
-//     const formData = new FormData(event.target);
-//     const reservationData = Object.fromEntries(formData.entries());
-//     // 打印FormData对象和转换后的对象
-//     console.log('FormData:', [...formData]);
-//     console.log('Reservation Data:', reservationData);
-//     // 在发送之前打印出reservationData对象
-//     console.log("提交的预约数据：", reservationData);
-//
-//     fetch('/reservations', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(reservationData),
-//     })
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log('Success:', data);
-//             // 处理成功响应
-//         })
-//         .catch((error) => {
-//             console.error('Error:', error);
-//             // 处理错误响应
-//         });
-// });
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     // 获取下拉菜单元素
-//     var dropdownMenu = document.querySelector('.dropdown-menu');
-//
-//     // 监听鼠标在.nav-user上的悬停事件
-//     document.querySelector('.nav-user').addEventListener('mouseenter', function() {
-//         // 显示下拉菜单
-//         dropdownMenu.style.display = 'flex';
-//     });
-//
-//     // 监听鼠标离开.nav-user区域的事件
-//     document.querySelector('.nav-user').addEventListener('mouseleave', function() {
-//         // 隐藏下拉菜单
-//         dropdownMenu.style.display = 'none';
-//     });
-// });
