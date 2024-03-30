@@ -1,0 +1,30 @@
+/* CSS样式 */
+.user-avatar {
+    width: 100px; /* 调整头像大小 */
+    height: 100px;
+    border-radius: 50%; /* 圆形头像 */
+    margin-bottom: 10px;
+}
+
+.username {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.post-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sidebar {
+    flex: 0 0 150px; /* 侧边栏宽度 */
+    padding: 20px;
+}
+
+.post-content {
+    flex: 1; /* 主内容区域占据剩余空间 */
+    padding: 20px;
+    border-left: 1px solid #ccc; /* 添加分隔线 */
+}
+
+/* 在此添加其他样式 */
