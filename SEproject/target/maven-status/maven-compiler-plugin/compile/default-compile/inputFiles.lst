@@ -10,6 +10,10 @@ C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdem
 C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\task\RelatedTopics.java
 C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\repository\StudentRepository.java
 C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\Mvcdemo2Application.java
+C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\controller\PostController.java
 C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\controller\StudentController.java
+C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\model\Comment.java
 C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\model\Post.java
+C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\repository\PostRepository.java
 C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\controller\ImageTestController.java
+C:\Users\creegon\Desktop\软件工程\SEproject\src\main\java\com\example\mvcdemo2\repository\CommentRepository.java

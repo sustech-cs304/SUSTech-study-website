@@ -36,9 +36,63 @@ function loadPosts() {
 }
 
 
-// 页面加载完成时，调用loadPosts函数
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM fully loaded and parsed'); // Debug: 确认DOM加载完成
     loadPosts();
+
+    document.body.addEventListener('click', function(event) {
+        console.log("点击了！！！！！！！！")
+        if (event.target.id === 'search-btn') {
+            console.log("点击了搜索按钮");
+            const searchValue = document.getElementById('search-post').value;
+            const filterCategory = document.getElementById('filter-tags').value;
+            const filterTime = document.getElementById('filter-time').value;
+
+            loadFilteredPosts(searchValue, filterCategory, filterTime);
+        }
+    });
 });
-// 为每个帖子创建HTML元素，并添加到页面中
+
+
+
+function loadFilteredPosts(title, category, sortBy) {
+    // 构建查询参数
+    const params = new URLSearchParams();
+    if (title) params.append('title', title);
+    if (category !== 'all') params.append('category', category);
+    params.append('sortBy', sortBy);
+
+    // 发起请求到后端搜索API
+    fetch(`/posts/search?${params.toString()}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(posts => {
+            const postsContainer = document.getElementById('post-container');
+            postsContainer.innerHTML = ''; // 清空当前帖子列表
+
+            // 添加帖子到页面
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+                postElement.innerHTML = `
+                  <div class="title">${post.title}</div>
+                  <div class="category">${post.category}</div>
+                  <div class="author">${post.author}</div>
+                  <div class="date">${new Date(post.publishTime).toLocaleString()}</div>
+                `;
+                // 绑定点击事件
+                postElement.onclick = function() {
+                    window.location.href = `/posts/${post.id}?id=${post.id}`;
+                };
+                postsContainer.appendChild(postElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading filtered posts:', error);
+            document.getElementById('post-container').textContent = '加载帖子失败: ' + error;
+        });
+}

@@ -1,7 +1,7 @@
 package com.example.mvcdemo2.controller;
 
-import com.example.mvcdemo2.model.Post;
-import com.example.mvcdemo2.repository.PostRepository;
+import com.example.mvcdemo2.model.*;
+import com.example.mvcdemo2.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -15,6 +15,9 @@ import java.util.Optional;
 public class PostController {
     @Autowired
     private PostRepository postRepository;
+
+    @Autowired
+    private CommentRepository commentRepository;
 
     @PostMapping("/new_post")
     public Post createPost(@RequestBody Post post) {
@@ -41,16 +44,46 @@ public class PostController {
 
 
 
+    @GetMapping("/posts/id={id}")
+    public ResponseEntity<Post> getPostById(@PathVariable Long id) {
+        Optional<Post> post = postRepository.findById(id);
+        if (post.isPresent()) {
+            return ResponseEntity.ok(post.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
-//    @GetMapping("/posts/{id}")
-//    public ResponseEntity<Post> getPostById(@PathVariable Long id) {
-//        Optional<Post> post = postRepository.findById(id);
-//        if (post.isPresent()) {
-//            return ResponseEntity.ok(post.get());
-//        } else {
-//            return ResponseEntity.notFound().build();
-//        }
-//    }
+    // 在您的 PostController 中
+    @GetMapping("/posts/search")
+    public ResponseEntity<List<Post>> searchPosts(
+            @RequestParam(required = false) String title,
+            @RequestParam(defaultValue = "all") String category,
+            @RequestParam(defaultValue = "newest") String sortBy) {
 
+        List<Post> posts = postRepository.findByTitleContainingAndCategoryOrderByPublishTime(
+                title, category, sortBy);
+
+        return ResponseEntity.ok(posts);
+    }
+
+    @PostMapping("/posts/{postId}/comments")
+    public ResponseEntity<Comment> createComment(@PathVariable Long postId, @RequestBody Comment comment) {
+        Optional<Post> post = postRepository.findById(postId);
+        if (post.isPresent()) {
+            comment.setPost(post.get());
+            Comment savedComment = commentRepository.save(comment);
+            return ResponseEntity.ok(savedComment);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
+    @GetMapping("/posts/{postId}/comments")
+    public ResponseEntity<List<Comment>> getCommentsByPostId(@PathVariable Long postId) {
+        List<Comment> comments = commentRepository.findByPostId(postId);
+        return ResponseEntity.ok(comments);
+    }
 
 }

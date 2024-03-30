@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习建议 - 校园助手</title>
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <header>
@@ -15,13 +16,13 @@
   <section id="search-and-filter">
     <input type="text" id="search-post" placeholder="搜索帖子">
     <button id="search-btn">搜索</button>
-    <select id="filter-tags">
+    <select id="filter-tags" title="Filter posts by tags" aria-label="Filter posts by tags">
       <option value="all">所有标签</option>
       <option value="course_materials">课程资料分享</option>
       <option value="study_advice">学习建议</option>
       <option value="question_help">问题求助</option>
     </select>
-    <select id="filter-time">
+    <select id="filter-time" title="Filter posts by time" aria-label="Filter posts by time">
       <option value="newest">最新</option>
       <option value="oldest">最旧</option>
     </select>
@@ -34,13 +35,15 @@
 
   <!-- 帖子预览列表 -->
   <div id="posts-preview">
-    <!-- 假设每个帖子都是一个 'post' 类的对象 -->
-    <!-- 以下是模拟数据，实际开发中应从服务器获取 -->
     <div class="post">
       <div class="title">帖子标题</div>
       <div class="category">类别</div>
       <div class="author">作者</div>
       <div class="date">发布时间</div>
+    </div>
+    <div id="post-container"> <!-- 新的容器用于动态内容 -->
+      <!-- 假设每个帖子都是一个 'post' 类的对象 -->
+      <!-- 以下是模拟数据，实际开发中应从服务器获取 -->
     </div>
     <!-- ... 更多帖子 ... -->
   </div>
@@ -50,6 +53,6 @@
   <!-- 这里可以放置页脚信息 -->
 </footer>
 
-<script src="/static/js/study_advice.js"></script>
+<script src="/js/study_advice.js"></script>
 </body>
 </html>

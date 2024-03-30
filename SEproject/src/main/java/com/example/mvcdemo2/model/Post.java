@@ -3,7 +3,9 @@ package com.example.mvcdemo2.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "posts")
@@ -16,6 +18,9 @@ public class Post {
     private String content;
     private String author; // 添加发帖人字段
     private LocalDateTime publishTime; // 添加 publishTime 字段
+
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments = new ArrayList<>();
 
     public Post() {
     }
@@ -67,11 +72,31 @@ public class Post {
     public void setAuthor(String author) {
         this.author = author;
     }
+
     public LocalDateTime getPublishTime() {
         return publishTime;
     }
+
     public void setPublishTime(LocalDateTime publishTime) {
         this.publishTime = publishTime;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public void addComment(Comment comment) {
+        comments.add(comment);
+        comment.setPost(this);
+    }
+
+    public void removeComment(Comment comment) {
+        comments.remove(comment);
+        comment.setPost(null);
     }
 
     @Override
