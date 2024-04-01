@@ -42,10 +42,14 @@ function loadComments() {
                 const commentElement = document.createElement('div');
                 commentElement.className = 'comment';
                 commentElement.innerHTML = `
-                    <p class="comment-author">${comment.author}</p>
-                    <p class="comment-content">${comment.content}</p>
-                    <p class="comment-date">${new Date(comment.publishTime).toLocaleString()}</p>
-                `;
+                <p class="comment-author">${comment.author}</p>
+                <p class="comment-content">${comment.content}</p>
+                <p class="comment-date">${new Date(comment.publishTime).toLocaleString()}</p>
+                <div class="comment-actions">
+                    <button class="like-button" data-comment-id="${comment.id}">赞 (${comment.likes})</button>
+                    <button class="dislike-button" data-comment-id="${comment.id}">踩 (${comment.dislikes})</button>
+                </div>
+            `;
                 commentsList.appendChild(commentElement);
             });
         })
@@ -89,6 +93,39 @@ document.addEventListener('DOMContentLoaded', function() {
                         console.error('Error submitting comment:', error);
                     });
             }
+        }
+        else if (event.target.classList.contains('like-button')) {
+            // 处理点赞按钮
+            const commentId = event.target.dataset.commentId;
+            fetch(`/comments/${commentId}/like`, {
+                method: 'POST'
+            })
+                .then(response => {
+                    if (response.ok) {
+                        loadComments(); // 重新加载评论
+                    } else {
+                        throw new Error('Failed to like comment');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error liking comment:', error);
+                });
+        } else if (event.target.classList.contains('dislike-button')) {
+            // 处理点踩按钮
+            const commentId = event.target.dataset.commentId;
+            fetch(`/comments/${commentId}/dislike`, {
+                method: 'POST'
+            })
+                .then(response => {
+                    if (response.ok) {
+                        loadComments(); // 重新加载评论
+                    } else {
+                        throw new Error('Failed to dislike comment');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error disliking comment:', error);
+                });
         }
     });
 });

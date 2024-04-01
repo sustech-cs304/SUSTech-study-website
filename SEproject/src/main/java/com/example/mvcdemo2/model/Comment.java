@@ -19,6 +19,9 @@ public class Comment {
     @JsonIgnore // 添加这个注解
     private Post post;
 
+    private int likes; // 新增属性
+    private int dislikes; // 新增属性
+
     public Comment() {}
 
     public Comment(String content, String author, LocalDateTime publishTime, Post post) {
@@ -26,6 +29,8 @@ public class Comment {
         this.author = author;
         this.publishTime = publishTime;
         this.post = post;
+        this.likes = 0;
+        this.dislikes = 0;
     }
 
     // Getters and setters
@@ -67,5 +72,22 @@ public class Comment {
 
     public void setPost(Post post) {
         this.post = post;
+    }
+
+    // 新增的 getter 和 setter 方法
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public int getDislikes() {
+        return dislikes;
+    }
+
+    public void setDislikes(int dislikes) {
+        this.dislikes = dislikes;
     }
 }

@@ -1,14 +1,14 @@
 /* CSS样式 */
 .user-avatar {
-    width: 100px; /* 调整头像大小 */
-    height: 100px;
+    width: 50px; /* 头像大小调整为50px */
+    height: 50px;
     border-radius: 50%; /* 圆形头像 */
-    margin-bottom: 10px;
 }
 
 .username {
-    text-align: center;
-    margin-bottom: 20px;
+    position: absolute; /* 用绝对定位将用户名放到左上角 */
+    top: 10px;
+    left: 70px; /* 与头像的宽度一致 */
 }
 
 .post-container {
@@ -19,6 +19,7 @@
 .sidebar {
     flex: 0 0 150px; /* 侧边栏宽度 */
     padding: 20px;
+    position: relative; /* 设置相对定位作为绝对定位的参照 */
 }
 
 .post-content {
@@ -27,4 +28,86 @@
     border-left: 1px solid #ccc; /* 添加分隔线 */
 }
 
-/* 在此添加其他样式 */
+#comments-section {
+    padding: 20px;
+    background: #f9f9f9; /* 背景色 */
+}
+
+#comments-list .comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-areas:
+        "username date"
+        "avatar content";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    background: #fff;
+}
+
+.comment-avatar {
+    grid-area: avatar;
+    width: 50px; /* 调整头像大小 */
+    height: 50px;
+    border-radius: 50%;
+    align-self: end; /* 头像对齐到底部 */
+}
+
+.comment-username {
+    grid-area: username;
+    align-self: start; /* 用户名对齐到顶部 */
+}
+
+.comment-publish-time {
+    grid-area: date;
+    justify-self: end; /* 发布时间对齐到右边 */
+    align-self: start; /* 发布时间对齐到顶部 */
+}
+
+.comment-text {
+    grid-area: content;
+    justify-self: end; /* 内容对齐到右边 */
+    align-self: end; /* 内容对齐到底部 */
+}
+
+/* 创建分隔线 */
+.comment::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ccc;
+}
+
+.comment::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.comment-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.like-button, .dislike-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dislike-button {
+    background-color: #f44336;
+}

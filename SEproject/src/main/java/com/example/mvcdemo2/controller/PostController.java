@@ -82,8 +82,33 @@ public class PostController {
 
     @GetMapping("/posts/{postId}/comments")
     public ResponseEntity<List<Comment>> getCommentsByPostId(@PathVariable Long postId) {
-        List<Comment> comments = commentRepository.findByPostId(postId);
+        List<Comment> comments = commentRepository.findByPostIdOrderByPublishTimeDesc(postId);
         return ResponseEntity.ok(comments);
     }
 
+    @PostMapping("/comments/{commentId}/like")
+    public ResponseEntity<Void> likeComment(@PathVariable Long commentId) {
+        Optional<Comment> comment = commentRepository.findById(commentId);
+        if (comment.isPresent()) {
+            Comment updatedComment = comment.get();
+            updatedComment.setLikes(updatedComment.getLikes() + 1);
+            commentRepository.save(updatedComment);
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PostMapping("/comments/{commentId}/dislike")
+    public ResponseEntity<Void> dislikeComment(@PathVariable Long commentId) {
+        Optional<Comment> comment = commentRepository.findById(commentId);
+        if (comment.isPresent()) {
+            Comment updatedComment = comment.get();
+            updatedComment.setDislikes(updatedComment.getDislikes() + 1);
+            commentRepository.save(updatedComment);
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
