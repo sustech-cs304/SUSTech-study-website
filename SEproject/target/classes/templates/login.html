@@ -3,73 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Assistant System - 登录</title>
+  <title>Login Page</title>
   <style>
-    /* 样式可以根据需要进行修改 */
-    .container {
-      margin: auto;
-      width: 50%;
-      padding: 20px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
     }
 
-    input[type=text], input[type=password] {
+    form {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
       width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
       box-sizing: border-box;
     }
 
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
       border: none;
       cursor: pointer;
-      width: 100%;
     }
 
-    button:hover {
-      opacity: 0.8;
-    }
-
-    .container {
-      padding: 16px;
-    }
-
-    span.psw {
-      float: right;
-      padding-top: 16px;
+    input[type="submit"]:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
+<form id="loginForm">
+  <h2>Login</h2>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <input type="submit" value="Login">
+</form>
 
-<div class="container">
-  <h2>Academic Assistant System - 登录</h2>
-  <form action="/action_page.php">
-    <div class="imgcontainer">
-      <img src="avatar.jpg" alt="Avatar" class="avatar">
-    </div>
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // 阻止表单提交
 
-    <div class="container">
-      <label for="uname"><b>用户名</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
 
-      <label for="psw"><b>密码</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">登录</button>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">注册</button>
-      <span class="psw">忘记 <a href="#">密码？</a></span>
-    </div>
-  </form>
-</div>
-
+    // 发送登录请求到后端
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/login', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          alert('登录成功！');
+          // 如果登录成功，可以跳转到其他页面
+          window.location.href = '/dashboard';
+        } else {
+          alert('登录失败，请检查用户名和密码！');
+        }
+      }
+    };
+    xhr.send(JSON.stringify({username: username, password: password}));
+  });
+</script>
 </body>
 </html>
