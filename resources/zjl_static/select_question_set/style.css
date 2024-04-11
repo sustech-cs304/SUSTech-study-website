@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    background-image: url('bg_select_q_set.jpg'); 
+    background-attachment: fixed; /* 设置背景图片固定，不随滚动条移动 */
+}
+
+header {
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.quiz-container {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px; /* 调整间距以更好地适应两个题库 */
+    width: calc(50% - 40px); /* 减少宽度，同时考虑边距 */
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box; /* 包括边距和填充在内的宽度计算 */
+    max-width: 400px; /* 或者设置一个最大宽度限制 */
+    display: inline-block; /* 使元素以行内块的形式展示 */
+    opacity: 0.55;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4b6fa2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0f189b;
+}
+
+@media (max-width: 800px) { /* 如果屏幕尺寸较小，每行显示一个题库 */
+    .quiz-container {
+        width: calc(100% - 20px); /* 在小屏幕上宽度减小，以适应屏幕宽度 */
+    }
+}
+
