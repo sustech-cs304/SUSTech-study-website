@@ -499,6 +499,10 @@ a {
 .form_btn {
     margin-left: 200px;
 }
+.form_tit3 {
+    padding-left: 12px; /* 向右移动 20 像素 */
+}
+
 
 #btn1, #btn2 {
     background: #099;
@@ -552,6 +556,7 @@ a {
     font-size: 26px;
     color: #099;
 }
+
 
 #close {
     position: absolute;

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA Calculator</title>
+</head>
+<body>
+<h1>GPA Calculator</h1>
+<div style="display: flex;">
+  <div style="flex: 1;">
+    <table id="gradeTable">
+      <tr>
+        <th>课程</th>
+        <th>学分</th>
+        <th>分数</th>
+      </tr>
+    </table>
+    <button onclick="addRow()">添加一行</button>
+    <button onclick="calculateGPA()">计算GPA</button>
+  </div>
+  <div style="flex: 1;">
+    <label for="gpaRuleSelect">选择规则：</label>
+    <select id="gpaRuleSelect" onchange="changeGPARule()">
+      <option value="default">默认规则</option>
+      <option value="schoolB">学校B规则</option>
+      <option value="schoolC">学校C规则</option>
+    </select>
+    <h3>换算规则：</h3>
+    <ul id="gpaRulesList">
+      <li>默认规则：90及以上为4.0，80-89为3.0，70-79为2.0，60-69为1.0，60以下为0.0</li>
+      <li>学校B规则：95及以上为4.0，85-94为3.5，75-84为2.5，60-74为1.0，60以下为0.0</li>
+      <li>学校C规则：...</li>
+      <!-- 添加更多规则的说明 -->
+    </ul>
+  </div>
+</div>
+<p id="result"></p>
+
+<script>
+  function addRow() {
+    var newRow = document.createElement('tr');
+    newRow.innerHTML = `
+                <td><input type="text" class="course"></td>
+                <td><input type="number" class="credit" step="0.01" min="0"></td>
+                <td><input type="number" class="score"></td>
+            `;
+    document.getElementById('gradeTable').appendChild(newRow);
+  }
+
+  function changeGPARule() {
+    var ruleSelect = document.getElementById('gpaRuleSelect');
+    var selectedRule = ruleSelect.options[ruleSelect.selectedIndex].value;
+    // 根据选择的规则更新页面中的说明文本
+    var rulesList = document.getElementById('gpaRulesList');
+    var rules = {
+      'default': '默认规则：90及以上为4.0，80-89为3.0，70-79为2.0，60-69为1.0，60以下为0.0',
+      'schoolB': '学校B规则：95及以上为4.0，85-94为3.5，75-84为2.5，60-74为1.0，60以下为0.0',
+      'schoolC': '学校C规则：...'
+      // 添加更多规则的说明文本
+    };
+    rulesList.innerHTML = "<h3>换算规则：</h3><ul>";
+    for (var rule in rules) {
+      rulesList.innerHTML += "<li>" + rules[rule] + "</li>";
+    }
+    rulesList.innerHTML += "</ul>";
+  }
+
+  function calculateGPA() {
+    var totalCredits = 0;
+    var totalGradePoints = 0;
+
+    var rows = document.querySelectorAll('#gradeTable tr');
+    for (var i = 1; i < rows.length; i++) {
+      var course = rows[i].querySelector('.course').value;
+      var credit = parseFloat(rows[i].querySelector('.credit').value);
+      var score = parseFloat(rows[i].querySelector('.score').value);
+
+      var gradePoint;
+      // 根据选择的规则进行换算
+      var selectedRule = document.getElementById('gpaRuleSelect').value;
+      if (selectedRule === 'default') {
+        // 默认规则
+        if (score >= 90) {
+          gradePoint = 4.0;
+        } else if (score >= 80) {
+          gradePoint = 3.0;
+        } else if (score >= 70) {
+          gradePoint = 2.0;
+        } else if (score >= 60) {
+          gradePoint = 1.0;
+        } else {
+          gradePoint = 0.0;
+        }
+      } else if (selectedRule === 'schoolB') {
+        // 学校B规则
+        if (score >= 95) {
+          gradePoint = 4.0;
+        } else if (score >= 85) {
+          gradePoint = 3.5;
+        } else if (score >= 75) {
+          gradePoint = 2.5;
+        } else if (score >= 60) {
+          gradePoint = 1.0;
+        } else {
+          gradePoint = 0.0;
+        }
+      } else if (selectedRule === 'schoolC') {
+        // 学校C规则
+        // 添加学校C规则的逻辑
+      }
+
+      totalCredits += credit;
+      totalGradePoints += gradePoint * credit;
+    }
+
+    var gpa = totalGradePoints / totalCredits;
+    document.getElementById('result').innerText = "GPA: " + gpa.toFixed(2);
+  }
+
+  // 添加初始三行空白的输入行
+  for (var i = 0; i < 3; i++) {
+    addRow();
+  }
+</script>
+</body>
+</html>
