@@ -54,16 +54,33 @@
             text-align: center;
         }
         .recommendation img {
-            max-width: 100%;
+            max-width: 50%;
             height: auto;
             margin-bottom: 10px;
         }
+
+        .tag {
+            font-size: 12px;
+            color: #666;
+        }
+        .price {
+            font-size: 16px;
+            color: red;
+            font-weight: bold;
+        }
+        /*.seller {*/
+        /*    position: absolute;*/
+        /*    left: 5px;*/
+        /*    bottom: 5px;*/
+        /*    font-size: 12px;*/
+        /*    color: #333;*/
+        /*}*/
     </style>
 </head>
 <body>
 <div class="navbar">
-    <a href="#">首页</a>
-    <a href="#">二手商品</a>
+    <a href="/">首页</a>
+<!--    <a href="#">二手商品</a>-->
     <a href="#">发布商品</a>
     <a href="#">我的账户</a>
     <a href="#">退出</a>
@@ -76,9 +93,15 @@
 
 <div class="recommendations">
     <div class="recommendation" th:each="product : ${recommendedProducts}">
-        <img th:src="${product.imageUrl}" alt="Product">
-        <h3 th:text="${product.name}">商品名称</h3>
-        <p th:text="${product.description}">商品描述或简介</p>
+<!--        <img th:src="@{'/getImage/' + ${product.good_id}}" alt="Product Image"/>-->
+<!--        <h3 th:text="${product.name}">商品名称</h3>-->
+        <a th:href="@{'/productInfo?id=' + ${product.good_id}}"> <!-- 设置跳转链接及传递商品ID -->
+            <img th:src="@{'/getImage/' + ${product.good_id}}" alt="Product Image"/>
+            <h3 th:text="${product.name}">商品名称</h3>
+        </a>
+        <p class="tag" th:text="${product.tags}">标签</p>
+        <p class="price" th:text="${'¥' + product.price}">价格</p>
+        <p class="seller" th:text="${'卖家：' + product.seller}">卖家信息</p>
     </div>
 </div>
 </body>
