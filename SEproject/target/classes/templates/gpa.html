@@ -58,65 +58,9 @@
                             <div class="form_btn">
                                 <div class="btn" id="btn1"><a href="#">开始计算</a></div>
                                 <div class="btn" id="btn2"><a href="#">清空结果</a></div>
+                                <div class="btn" id="btn3"><a href="#">保存结果</a></div>
                             </div>
-                            <!--div style="margin-top:30px;">
-                                <a href="http://topmba.mobi/?pt=1" target="_blank"><img src="Images/ads/980x100.jpg" style="width:900px; height:92px" /></a>
-                            </div-->
                         </form>
-                        <script>
-                            // 将你提供的 JavaScript 代码放在这里
-                            function calculateGPA() {
-                                var totalCredits = 0;
-                                var totalGradePoints = 0;
-
-                                var rows = document.querySelectorAll('.input_kc');
-                                for (var i = 0; i < rows.length; i++) {
-                                    var courseName = rows[i].querySelector('.name').value;
-                                    var score = parseFloat(rows[i].querySelector('.score').value);
-                                    var credit = parseFloat(rows[i].querySelector('.credit').value);
-
-                                    var gradePoint;
-
-                                    // 根据选择的规则进行换算
-                                    var selectedRule = document.querySelector('.scoreType').value;
-                                    if (selectedRule === 'hundred') {
-                                        if (score >= 90) {
-                                            gradePoint = 4.0;
-                                        } else if (score >= 80) {
-                                            gradePoint = 3.0;
-                                        } else if (score >= 70) {
-                                            gradePoint = 2.0;
-                                        } else if (score >= 60) {
-                                            gradePoint = 1.0;
-                                        } else {
-                                            gradePoint = 0.0;
-                                        }
-                                    } else if (selectedRule === 'five') {
-                                        // 根据五分制的换算规则计算 gradePoint
-                                    } else if (selectedRule === 'rank') {
-                                        // 根据等级制的换算规则计算 gradePoint
-                                    }
-
-                                    // 计算总学分和总绩点乘以学分的分数
-                                    totalCredits += credit;
-                                    totalGradePoints += gradePoint * credit;
-
-
-                                }
-
-                                // 计算 GPA
-                                var gpa = totalGradePoints / totalCredits;
-
-                                // 显示 GPA
-                                var resultDisplay = document.createElement('div');
-                                resultDisplay.innerText = "GPA: " + gpa.toFixed(2);
-                                document.querySelector('.form_btn').appendChild(resultDisplay);
-                            }
-
-                            document.getElementById("btn1").addEventListener("click", calculateGPA);
-
-                            // 如果需要清空结果的功能，可以在这里添加相应的逻辑
-                        </script>
                     </div>
                 </div>
             </div>
@@ -510,14 +454,6 @@
 
 
         <div class="main_bot wrap">
-
-            <div>
-                <!--开始 toefl广告-->
-                <!--a class="cdg-content b2">
-                <iframe src="https://mat.chasedream.com/ets/gre/2019/07/" frameborder="0" scrolling="no" style="width: 560px; height: 72px; border: none;"></iframe>
-                </a-->
-                <!--结束 toefl广告 -->
-            </div>
         </div>
     </div>
 </div>
