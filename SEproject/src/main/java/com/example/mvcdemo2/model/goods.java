@@ -1,9 +1,6 @@
 package com.example.mvcdemo2.model;
 
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -11,6 +8,7 @@ import java.util.List;
 @Table
 public class goods {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int good_id;
     private String name;
     private int price;
