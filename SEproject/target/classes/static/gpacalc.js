@@ -571,7 +571,7 @@ $(document).ready(function () {
         var mask = $('<div id="mask">');
         var ad = $('<div id="ad">').css({width: '100%'});
         var close = $('<spam id="close">').html('×');
-        ad.html('<a href="http://g.chasedream.com/ChaseDream/Service/program" target="_blank">算出GPA之后该做什么？欢迎了解ChaseDream的各种留学申请利器！</a>')
+        ad.html('<a href="" target="_blank">广告位招租！</a>')
         mask.css('height', $(document).height());
 
         $('body').append(mask, showBox);
