@@ -9,7 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.util.ResourceUtils;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -78,6 +80,26 @@ public class trade_controller {
         return "productInfo";
     }
 
+    @GetMapping("/postGoods")
+    public String postProduct(){
+        return "postPage";
+    }
+
+    @PostMapping("/submit-product")
+    public String updateGoods(goods g, @RequestParam("imageFromNet") MultipartFile imageFile)  {
+        g.setSeller("tim");
+        try {
+            byte[] imageData = imageFile.getBytes();
+            System.out.println("Image data length: " + imageData.length);
+            g.setImage(imageData); // 将上传的图片文件转换为字节数组并保存
+        } catch (IOException e) {
+            // 处理文件上传异常
+            e.printStackTrace();
+        }
+        tr.save(g);
+        return "redirect:/tradeFrontPage";
+//        return "redirect:/tradeFrontPage";
+    }
 //    public static String imageToBase64(String imagePath) {
 //        try {
 //            Path path = Paths.get(imagePath);
