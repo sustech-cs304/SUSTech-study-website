@@ -15,6 +15,9 @@ public class Reservation {
     private String time_slot;
     private String location;
     private Integer participants;
+    private String firstName; // 第一位预约者的姓名
+    private String firstStudentId; // 第一位预约者的学号
+    private String roomType; // 房间类型
     // Getters and setters
 
     public Long getId() {
@@ -57,6 +60,29 @@ public class Reservation {
         this.participants = participants;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getFirstStudentId() {
+        return firstStudentId;
+    }
+
+    public void setFirstStudentId(String firstStudentId) {
+        this.firstStudentId = firstStudentId;
+    }
+
+    public String getRoomType() {
+        return roomType;
+    }
+
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
+    }
     @Override
     public String toString() {
         return "Reservation{" +
@@ -65,6 +91,9 @@ public class Reservation {
                 ", time_slot='" + time_slot + '\'' +
                 ", location='" + location + '\'' +
                 ", participants=" + participants +
+                ", firstName='" + firstName + '\'' +
+                ", firstStudentId='" + firstStudentId + '\'' +
+                ", roomType='" + roomType + '\'' +
                 '}';
     }
 }
