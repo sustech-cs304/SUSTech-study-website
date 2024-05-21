@@ -7,10 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/reservations")
@@ -27,6 +26,16 @@ public class ReservationController {
         logger.info("接收到的预约数据: " + reservation);
         Reservation savedReservation = reservationService.saveReservation(reservation);
         return new ResponseEntity<>(savedReservation, HttpStatus.CREATED);
+    }
+
+    // 新添加的方法
+    @GetMapping("/all")
+    public ResponseEntity<List<Reservation>> getAllReservations() {
+        List<Reservation> reservations = reservationService.findAllReservations();
+        if (reservations.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(reservations, HttpStatus.OK);
     }
 
 }
