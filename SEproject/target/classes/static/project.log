@@ -9222,3 +9222,61 @@ org.attoparser.ParseException: (Line = 137, Column = 67) Malformed markup: Attri
 19:39:50.067 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 19:39:50.087 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 19:39:50.096 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+10:26:55.853 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.mvcdemo2.Mvcdemo2ApplicationTests]: Mvcdemo2ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:26:56.009 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.mvcdemo2.Mvcdemo2Application for test class com.example.mvcdemo2.Mvcdemo2ApplicationTests
+10:26:56.481 [main] INFO  c.e.m.Mvcdemo2ApplicationTests - Starting Mvcdemo2ApplicationTests using Java 21 with PID 69844 (started by lyc in C:\Users\lyc\Desktop\se-project\12\SEproject)
+10:26:56.482 [main] INFO  c.e.m.Mvcdemo2ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+10:26:57.416 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10:26:57.496 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 1 JPA repository interface.
+10:26:58.303 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10:26:58.422 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+10:26:58.484 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+10:26:58.897 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+10:26:58.941 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:26:59.150 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2353354a
+10:26:59.152 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:26:59.227 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+10:27:00.245 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+10:27:00.273 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+10:27:00.273 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 关系 "goods_tags" 不存在，忽略
+10:27:00.275 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+10:27:00.275 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "goods" 不存在
+10:27:00.275 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+10:27:00.275 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "goods_tags" 不存在
+10:27:00.276 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+10:27:00.276 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "student" 不存在
+10:27:00.365 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:27:01.358 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:27:02.171 [main] INFO  c.e.m.Mvcdemo2ApplicationTests - Started Mvcdemo2ApplicationTests in 5.966 seconds (process running for 7.511)
+10:27:03.015 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:27:03.042 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+10:27:03.047 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+10:27:34.980 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.mvcdemo2.Mvcdemo2ApplicationTests]: Mvcdemo2ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:27:35.115 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.mvcdemo2.Mvcdemo2Application for test class com.example.mvcdemo2.Mvcdemo2ApplicationTests
+10:27:35.528 [main] INFO  c.e.m.Mvcdemo2ApplicationTests - Starting Mvcdemo2ApplicationTests using Java 21 with PID 26548 (started by lyc in C:\Users\lyc\Desktop\se-project\12\SEproject)
+10:27:35.529 [main] INFO  c.e.m.Mvcdemo2ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+10:27:36.339 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10:27:36.410 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 1 JPA repository interface.
+10:27:37.170 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+10:27:37.289 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+10:27:37.346 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+10:27:37.686 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+10:27:37.736 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:27:37.922 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1ac0cdb0
+10:27:37.923 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:27:37.958 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+10:27:38.828 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+10:27:38.851 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+10:27:38.851 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 关系 "goods_tags" 不存在，忽略
+10:27:38.852 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+10:27:38.853 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "goods" 不存在
+10:27:38.854 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+10:27:38.854 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "goods_tags" 不存在
+10:27:38.854 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+10:27:38.854 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "student" 不存在
+10:27:38.896 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10:27:39.734 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10:27:40.436 [main] INFO  c.e.m.Mvcdemo2ApplicationTests - Started Mvcdemo2ApplicationTests in 5.169 seconds (process running for 6.343)
+10:27:41.203 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+10:27:41.222 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+10:27:41.226 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

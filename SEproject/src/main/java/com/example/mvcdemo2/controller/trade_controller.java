@@ -98,7 +98,6 @@ public class trade_controller {
         }
         tr.save(g);
         return "redirect:/tradeFrontPage";
-//        return "redirect:/tradeFrontPage";
     }
 //    public static String imageToBase64(String imagePath) {
 //        try {

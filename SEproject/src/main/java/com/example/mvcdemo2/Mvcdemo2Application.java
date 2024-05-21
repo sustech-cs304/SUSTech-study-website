@@ -1,6 +1,5 @@
 package com.example.mvcdemo2;
 
-import com.example.mvcdemo2.service.StudentService;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
