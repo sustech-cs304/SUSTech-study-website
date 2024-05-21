@@ -11,7 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+
+@SpringBootApplication(scanBasePackages = "com.example.mvcdemo2.controller")
 public class Mvcdemo2Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Mvcdemo2Application.class);
 
@@ -21,8 +22,5 @@ public class Mvcdemo2Application {
         LOGGER.debug("Customized DEBUG log {}", 2);
         LOGGER.error("Customized ERROR log {}", 3);
         LOGGER.trace("Customized TRACE log {}", 4);
-        //SpringApplication.run(Mvcdemo2Application.class, args);
     }
-
-
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>题库选择</title>
+    <link rel="stylesheet" href="/css/style_select.css">
+</head>
+<body>
+<header>
+    <h1>题库选择</h1>
+</header>
+<main>
+    <section class="quiz-container">
+        <h2>题库 1</h2>
+        <button onclick="startQuiz('quiz1')">开始回答</button>
+        <button onclick="viewHistory('quiz1')">查看回答历史</button>
+    </section>
+    <section class="quiz-container">
+        <h2>题库 2</h2>
+        <button onclick="startQuiz('quiz2')">开始回答</button>
+        <button onclick="viewHistory('quiz2')">查看回答历史</button>
+    </section>
+    <!-- 添加更多题库，按需添加 -->
+</main>
+<script>
+    function startQuiz(quizId) {
+        const numericId = quizId.substring(4);
+        window.location.href = `/quiz?id=${numericId}`;
+    }
+
+    function viewHistory(quizId) {
+        const numericId = quizId.substring(4);
+        const newUrl = `/api/quiz-history?id=${numericId}`;
+
+        // 重定向到新的URL
+        window.location.href = newUrl;
+    }
+</script>
+</body>
+</html>

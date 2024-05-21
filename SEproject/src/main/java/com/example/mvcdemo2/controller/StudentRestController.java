@@ -4,6 +4,8 @@ import com.example.mvcdemo2.model.Student;
 import com.example.mvcdemo2.service.StudentService;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/students")
+@ComponentScan(basePackages = {"com.example.mvcdemo2.service"}) // Add your service's package here
 public class StudentRestController {
     private final StudentService studentService;
 

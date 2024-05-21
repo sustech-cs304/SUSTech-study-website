@@ -6,9 +6,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.context.annotation.ComponentScan;
 @Controller
+@ComponentScan(basePackages = {"com.example.mvcdemo2.service"}) // Add your service's package here
 public class StudentController {
 
     private final StudentService studentService;
@@ -27,7 +29,25 @@ public class StudentController {
     public String showMain(Model model){
         //model.addAttribute("students", studentService.getStudents());
         LOGGER.info("Enter main page");
-        return "main";
+        return "gpa";
     }
 
+
+    @RequestMapping("/gpa")
+    public String showGPA(Model model){
+        //model.addAttribute("students", studentService.getStudents());
+        LOGGER.info("Enter gpa page");
+        return "gpa";
+    }
+
+    @GetMapping("/reservation_system")
+    public String reservationSystem() {
+        // Assuming 'main.html' is directly inside 'static' folder.
+//        return "forward:/main.html";
+        return "reservation_system";
+    }
+    @GetMapping("/")
+    public String home() {
+        return "main"; // Assuming 'main' is the name of your home page template
+    }
 }
