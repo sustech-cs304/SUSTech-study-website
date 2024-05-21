@@ -10,9 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+
+@SpringBootApplication(scanBasePackages = "com.example.mvcdemo2.controller")
 public class Mvcdemo2Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Mvcdemo2Application.class);
 

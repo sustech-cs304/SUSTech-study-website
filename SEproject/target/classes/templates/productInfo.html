@@ -1,0 +1,93 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>商品详情</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>商品详情</h1>-->
+<!--<p>商品名称: <span th:text="${product.name}"></span></p>-->
+<!--<p>商品价格: <span th:text="${product.price}"></span></p>-->
+<!--&lt;!&ndash; 其他商品信息 &ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <style>
+        /* CSS样式可以根据需要自行调整 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .seller-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .seller-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .seller-name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .follow-button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 10px;
+        }
+        .views {
+            font-size: 14px;
+            color: #999;
+            margin-left: 10px;
+        }
+        .description {
+            margin-bottom: 20px;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="seller-info">
+<!--    <img class="seller-avatar" th:src="@{'/getImage/' + ${account.id}}" alt="Seller Avatar">-->
+    <div>
+        <p class="seller-name" th:text="${product.seller}">卖家用户名</p>
+        <button class="follow-button">关注卖家</button>
+    </div>
+</div>
+
+<div class="product-info">
+    <p class="price" th:text="'¥ ' + ${product.price}">¥ 100.00</p>
+    <p class="views" th:text="'浏览量：' + ${product.price}">浏览量：1000</p>
+    <p class="description" th:text="${product.description}">商品描述：这是一个商品的描述</p>
+    <img class="product-image" th:src="@{'/getImage/' + ${product.good_id}}" alt="Product Image">
+</div>
+</body>
+</html>
+

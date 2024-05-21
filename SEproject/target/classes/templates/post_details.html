@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>帖子详情 - 校园助手</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+<header>
+    <!-- 在这里添加你的网站的导航栏 -->
+</header>
+
+<div class="post-container">
+    <aside class="sidebar">
+        <!-- 用户信息 -->
+        <img src="/img/User.png" alt="用户头像" class="user-avatar">
+        <h3 class="username">用户名</h3>
+    </aside>
+    <main id="post-detail" class="post-content">
+        <!-- 帖子详细信息将在这里插入 -->
+    </main>
+
+
+    <div id="comment-form">
+        <textarea id="comment-content" placeholder="写下你的评论..."></textarea>
+        <button id="submit-comment">提交评论</button>
+    </div>
+
+    <div id="comments-section">
+        <h2>评论</h2>
+        <div id="comments-list">
+            <!-- Repeat this div for each comment -->
+            <div class="comment">
+                <img src="/img/User.png" alt="用户头像" class="comment-avatar">
+                <div class="comment-content">
+                    <h3 class="comment-username">用户名</h3>
+                    <div class="comment-publish-time">发布时间</div>
+                    <div class="comment-text">评论内容</div>
+                    <div class="comment-actions">
+                        <button class="like-button">赞</button>
+                        <button class="dislike-button">踩</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of comment -->
+        </div>
+    </div>
+</div>
+
+<footer>
+    <button onclick="window.history.back();">返回</button>
+    <!-- 页脚信息 -->
+</footer>
+
+<script src="/js/post_details.js"></script>
+</body>
+</html>
