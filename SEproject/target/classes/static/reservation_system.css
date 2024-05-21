@@ -223,3 +223,28 @@ body, h1, h2, h3, p {
     height: auto; /* 高度自动调整 */
     display: flex; /* 默认不显示，直到有图片路径设置 */
 }
+
+.reservation-table {
+    width: 100%; /* 充满容器宽度 */
+    border-collapse: collapse; /* 边框合并，使之更整洁 */
+    margin-top: 20px; /* 与上方内容的间距 */
+    background-color: #f9f9f9; /* 轻微的背景色，提高可读性 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 细微的阴影，增强层次感 */
+}
+
+.reservation-table th, .reservation-table td {
+    border: 1px solid #ccc; /* 统一边框颜色 */
+    padding: 8px; /* 单元格内的填充，避免内容挤压 */
+    text-align: left; /* 文本对齐方式 */
+    font-size: 14px; /* 字体大小 */
+}
+
+.reservation-table th {
+    background-color: #e8e8e8; /* 列标题背景色 */
+    font-weight: bold; /* 字体加粗 */
+}
+
+.reservation-table tr:nth-child(odd) {
+    background-color: #f4f4f4; /* 为表格行添加条纹效果 */
+}
+

@@ -183,19 +183,19 @@ function showContent(subtype) {
             imageUrl = '/img.png';
             break;
         case '3-7人讨论室':
-            imageUrl = 'path/to/image-for-3-7-people.jpg';
+            imageUrl = '/img1.jpg';
             break;
         case '7-人讨论室':
-            imageUrl = 'path/to/image-for-7plus-people.jpg';
+            imageUrl = '/img2.jpg';
             break;
         case '小型会议室':
-            imageUrl = 'path/to/image-for-small-meeting-room.jpg';
+            imageUrl = '/img3.jpg';
             break;
         case '中型会议室':
-            imageUrl = 'path/to/image-for-medium-meeting-room.jpg';
+            imageUrl = '/img4.jpg';
             break;
         case '大型会议室':
-            imageUrl = 'path/to/image-for-large-meeting-room.jpg';
+            imageUrl = '/img5.png';
             break;
         default:
             imageUrl = ''; // 默认不显示图片
@@ -221,5 +221,58 @@ function showContent(subtype) {
 
     // 根据选择的房间类型更新地点选项
     updateLocationOptions(subtype);
-
 }
+
+function showReservedSpaces() {
+    // 隐藏所有不需要的元素
+    document.getElementById('content-display').style.display = 'none';
+    document.getElementById('reservation-details').style.display = 'none';
+    document.getElementById('image-display').style.display = 'none';
+
+    // 清空并显示表格区域
+    const tableArea = document.getElementById('content-display'); // 使用相同的内容显示区域
+    tableArea.innerHTML = ''; // 清空现有内容
+    tableArea.style.display = 'block'; // 确保区域可见
+
+    fetch('/reservations/all')
+        .then(response => response.json())
+        .then(data => {
+            const table = document.createElement('table');
+            table.className = 'reservation-table'; // 确保使用了样式类
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>日期</th>
+                        <th>时间段</th>
+                        <th>地点</th>
+                        <th>预约者姓名</th>
+                        <th>学号</th>
+                        <th>人数</th>
+                        <th>房间类型</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${data.map(item => `
+                        <tr>
+                            <td>${item.id}</td>
+                            <td>${item.date}</td>
+                            <td>${item.time_slot}</td>
+                            <td>${item.location}</td>
+                            <td>${item.firstName}</td>
+                            <td>${item.firstStudentId}</td>
+                            <td>${item.participants}</td>
+                            <td>${item.roomType}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            `;
+            tableArea.appendChild(table);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            tableArea.textContent = '无法加载数据。';
+        });
+}
+
+

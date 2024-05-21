@@ -13341,3 +13341,211 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 21:05:55.529 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
 21:06:05.783 [http-nio-8080-exec-6] INFO  c.e.m.c.ReservationController - 接收到的预约数据: Reservation{id=null, date='2024-05-23', time_slot='09:00-11:00', location='琳恩', participants=1, firstName='1', firstStudentId='1', roomType='1-2人讨论室'}
 21:06:14.456 [http-nio-8080-exec-8] INFO  c.e.m.c.ReservationController - 接收到的预约数据: Reservation{id=null, date='2024-05-16', time_slot='09:00-11:00', location='三教', participants=1, firstName='1', firstStudentId='2', roomType='1-2人讨论室'}
+21:10:36.939 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:10:36.946 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:10:36.949 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:15:38.283 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.10 with PID 5280 (D:\sustech\3down\software\12\SEproject\target\classes started by Jack in D:\sustech\3down\software\12\SEproject)
+15:15:38.284 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+15:15:38.827 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:15:38.866 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
+15:15:39.218 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+15:15:39.227 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:15:39.229 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:15:39.229 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+15:15:39.263 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:15:39.263 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 944 ms
+15:15:39.360 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:15:39.400 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+15:15:39.428 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:15:39.593 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:15:39.615 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:15:39.770 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7eee6c13
+15:15:39.771 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:15:39.811 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+15:15:40.337 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+15:15:40.352 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+15:15:40.352 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "reservation" 不存在
+15:15:40.353 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+15:15:40.353 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "student" 不存在
+15:15:40.380 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:15:40.540 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:15:40.768 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:15:40.785 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+15:15:40.789 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 2.758 seconds (process running for 3.35)
+15:15:40.791 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+15:15:40.791 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+15:15:50.751 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:15:50.751 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:15:50.751 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+15:16:25.118 [http-nio-8080-exec-7] INFO  c.e.m.c.ReservationController - 接收到的预约数据: Reservation{id=null, date='2024-05-26', time_slot='09:00-11:00', location='三教', participants=1, firstName='as', firstStudentId='1211', roomType='1-2人讨论室'}
+15:28:04.443 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:28:04.454 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:28:04.456 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:28:06.996 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.10 with PID 23212 (D:\sustech\3down\software\12\SEproject\target\classes started by Jack in D:\sustech\3down\software\12\SEproject)
+15:28:06.998 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+15:28:07.367 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:28:07.402 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+15:28:07.690 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+15:28:07.695 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:28:07.696 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:28:07.696 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+15:28:07.725 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:28:07.725 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 692 ms
+15:28:07.808 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:28:07.834 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+15:28:07.852 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:28:07.978 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:28:07.999 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:28:08.113 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b6b5352
+15:28:08.114 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:28:08.135 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+15:28:08.590 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+15:28:08.600 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+15:28:08.600 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "reservation" 不存在
+15:28:08.600 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+15:28:08.600 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - 表 "student" 不存在
+15:28:08.616 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:28:08.770 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:28:08.974 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:28:08.986 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+15:28:08.991 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 2.202 seconds (process running for 2.596)
+15:28:08.992 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+15:28:08.993 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+15:28:12.672 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:28:12.672 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:28:12.673 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:38:53.164 [http-nio-8080-exec-6] INFO  c.e.m.c.ReservationController - 接收到的预约数据: Reservation{id=null, date='2024-05-24', time_slot='09:00-11:00', location='琳恩', participants=1, firstName='sq', firstStudentId='1211', roomType='3-7人讨论室'}
+15:43:51.613 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:43:51.620 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:43:51.621 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:43:54.157 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.10 with PID 27792 (D:\sustech\3down\software\12\SEproject\target\classes started by Jack in D:\sustech\3down\software\12\SEproject)
+15:43:54.158 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+15:43:54.538 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:43:54.578 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+15:43:54.868 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+15:43:54.873 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:43:54.875 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:43:54.875 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+15:43:54.904 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:43:54.905 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 709 ms
+15:43:54.983 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:43:55.011 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+15:43:55.031 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:43:55.156 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:43:55.178 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:43:55.287 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15c16f19
+15:43:55.288 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:43:55.309 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+15:43:55.780 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+15:43:55.826 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:43:55.981 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:43:56.198 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:43:56.210 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+15:43:56.215 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 2.274 seconds (process running for 2.675)
+15:43:56.216 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+15:43:56.217 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+15:44:04.379 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:44:04.379 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:44:04.380 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:44:58.514 [http-nio-8080-exec-3] INFO  c.e.m.c.ReservationController - 接收到的预约数据: Reservation{id=null, date='2024-05-25', time_slot='09:00-11:00', location='琳恩', participants=1, firstName='sq', firstStudentId='1211', roomType='3-7人讨论室'}
+15:49:48.449 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:49:48.451 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:49:48.453 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:49:50.022 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.10 with PID 25768 (D:\sustech\3down\software\12\SEproject\target\classes started by Jack in D:\sustech\3down\software\12\SEproject)
+15:49:50.023 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+15:49:50.407 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:49:50.449 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+15:49:50.747 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+15:49:50.753 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:49:50.754 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:49:50.754 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+15:49:50.788 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:49:50.788 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 733 ms
+15:49:50.874 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:49:50.904 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+15:49:50.922 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:49:51.055 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:49:51.076 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:49:51.191 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1322b575
+15:49:51.192 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:49:51.214 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+15:49:51.682 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+15:49:51.718 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:49:51.879 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:49:52.087 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:49:52.100 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+15:49:52.105 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 2.299 seconds (process running for 2.725)
+15:49:52.106 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+15:49:52.106 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+15:49:56.581 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:49:56.581 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:49:56.582 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:53:34.206 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:53:34.207 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:53:34.209 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:53:35.952 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.10 with PID 1412 (D:\sustech\3down\software\12\SEproject\target\classes started by Jack in D:\sustech\3down\software\12\SEproject)
+15:53:35.953 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+15:53:36.325 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:53:36.362 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 2 JPA repository interfaces.
+15:53:36.642 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+15:53:36.648 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:53:36.649 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:53:36.649 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+15:53:36.678 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:53:36.678 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 690 ms
+15:53:36.760 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:53:36.789 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+15:53:36.807 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+15:53:36.930 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:53:36.952 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:53:37.061 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51af8049
+15:53:37.062 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:53:37.081 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+15:53:37.529 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+15:53:37.561 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:53:37.717 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:53:37.913 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:53:37.926 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+15:53:37.931 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 2.186 seconds (process running for 2.574)
+15:53:37.932 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+15:53:37.932 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+15:53:44.809 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:53:44.809 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:53:44.810 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:54:21.336 [http-nio-8080-exec-1] INFO  c.e.m.c.ReservationController - 接收到的预约数据: Reservation{id=null, date='2024-05-11', time_slot='09:00-11:00', location='理学院', participants=1, firstName='上品十六篇', firstStudentId='12112312', roomType='中型会议室'}
+21:07:11.279 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:07:11.291 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:07:11.295 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+21:07:15.809 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.10 with PID 26892 (D:\sustech\3down\software\12\SEproject\target\classes started by Jack in D:\sustech\3down\software\12\SEproject)
+21:07:15.811 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+21:07:16.254 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:07:16.293 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+21:07:16.594 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+21:07:16.601 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:07:16.602 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:07:16.602 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+21:07:16.647 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:07:16.648 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 802 ms
+21:07:16.732 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:07:16.772 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+21:07:16.794 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:07:16.947 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+21:07:16.965 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:07:17.101 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66298fe9
+21:07:17.102 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:07:17.126 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+21:07:17.650 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21:07:17.691 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:07:17.848 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:07:18.050 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:07:18.067 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+21:07:18.072 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 2.48 seconds (process running for 4.739)
+21:07:18.073 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+21:07:18.073 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+21:07:23.212 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:07:23.212 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:07:23.212 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+21:08:10.754 [http-nio-8080-exec-2] INFO  c.e.m.c.ReservationController - 接收到的预约数据: Reservation{id=null, date='2024-05-25', time_slot='09:00-11:00', location='商学院', participants=2, firstName='12112312', firstStudentId='谁去', roomType='中型会议室'}
+21:10:29.045 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:10:29.049 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:10:29.049 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
