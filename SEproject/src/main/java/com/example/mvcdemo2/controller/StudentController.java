@@ -32,11 +32,19 @@ public class StudentController {
         return "gpa";
     }
 
+
     @RequestMapping("/gpa")
     public String showGPA(Model model){
         //model.addAttribute("students", studentService.getStudents());
         LOGGER.info("Enter gpa page");
         return "gpa";
+    }
+
+    @GetMapping("/reservation_system")
+    public String reservationSystem() {
+        // Assuming 'main.html' is directly inside 'static' folder.
+//        return "forward:/main.html";
+        return "reservation_system";
     }
     @GetMapping("/")
     public String home() {
