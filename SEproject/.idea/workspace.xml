@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd72c587-f080-404b-a155-957eebed5e2d" name="Changes" comment="">
+      <change afterPath="$USER_HOME$/WXBot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dbUser.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbUser.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2dJPJyEd9Ek6tZ77G6i2Vg2ffl2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/软件工程/SEproject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
+    "spring.configuration.checksum": "43337e60a89cf8a3c9bc4c2facdb29ae",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\软件工程\SEproject\src\main\resources\static\js" />
+      <recent name="C:\Users\Lenovo\Desktop\软件工程\SEproject\src\main\resources\static\img" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Mvcdemo2Application (1)">
+    <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SEproject/templates/main.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Mvcdemo2Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mvcdemo2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.mvcdemo2.Mvcdemo2Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mvcdemo2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Mvcdemo2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="SEproject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.mvcdemo2.Mvcdemo2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Mvcdemo2Application (1)" />
+        <item itemvalue="JavaScript Debug.main.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd72c587-f080-404b-a155-957eebed5e2d" name="Changes" comment="" />
+      <created>1709723139515</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709723139515</updated>
+      <workItem from="1709723140622" duration="502000" />
+      <workItem from="1709723701145" duration="865000" />
+      <workItem from="1709724577993" duration="67000" />
+      <workItem from="1709724656225" duration="320000" />
+      <workItem from="1709724986457" duration="229000" />
+      <workItem from="1709725227962" duration="962000" />
+      <workItem from="1709726227131" duration="1482000" />
+      <workItem from="1709734235373" duration="3720000" />
+      <workItem from="1709773823641" duration="846000" />
+      <workItem from="1709777094250" duration="4482000" />
+      <workItem from="1709797338090" duration="3937000" />
+      <workItem from="1709804737724" duration="1893000" />
+      <workItem from="1709819594693" duration="896000" />
+      <workItem from="1709863328181" duration="667000" />
+      <workItem from="1710337432567" duration="2325000" />
+      <workItem from="1710404446779" duration="2699000" />
+      <workItem from="1710416222313" duration="2519000" />
+      <workItem from="1710418826710" duration="909000" />
+      <workItem from="1716358567735" duration="643000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
