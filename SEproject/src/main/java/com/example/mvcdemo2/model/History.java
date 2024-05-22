@@ -1,7 +1,14 @@
 package com.example.mvcdemo2.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "history")
 public class History {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String username;
     private String data;
     private Integer setID;
@@ -11,6 +18,10 @@ public class History {
         this.id = id;
         this.data = data;
         this.setID = setID;
+    }
+
+    public History() {
+
     }
 
     @Override
