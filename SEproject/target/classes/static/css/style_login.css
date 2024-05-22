@@ -1,0 +1,87 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.jpg'); /* 你的背景图片路径 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333; /* 文字颜色 */
+}
+
+/* 标题样式 */
+header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+header h1 {
+    color: #ffffff; /* 标题文字颜色，根据背景图片颜色进行调整 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* 如果需要，添加文字阴影以增强可读性 */
+    font-size: 2.5em; /* 根据需要调整字体大小 */
+    margin: 0;
+    padding: 20px 0;
+}
+
+#container {
+    max-width: 400px; /* 或更宽，根据需要调整 */
+    width: 90%; /* 如果页面宽度很小，它会占据90%的宽度 */
+    margin: auto; /* 居中显示 */
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 10px; /* 和标题之间的距离 */
+}
+
+/* 调整输入框宽度 */
+input[type=email], input[type=password], input[type=text] {
+    width: calc(100% - 20px); /* 减去padding的宽度 */
+    padding: 10px;
+    margin-bottom: 15px; /* 增加底部间距 */
+    /* 其余样式不变 */
+}
+
+button {
+    width: 100%; /* 使按钮宽度与输入框一致 */
+    padding: 10px;
+    margin: 10px 0; /* 添加间距 */
+    background-color: #007bff; /* 按钮背景颜色 */
+    color: white; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标悬停时的指针形状 */
+}
+
+/* 按钮在鼠标悬停时的样式 */
+button:hover {
+    background-color: #0056b3; /* 按钮背景颜色 - 悬停时 */
+    /* 其他样式根据需要进行调整 */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+/* 底部文字样式 */
+form p {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+form span {
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* 用于隐藏和显示表单的样式 */
+#loginForm {
+    display: block; /* 默认显示登录表单 */
+}
+
+#registrationForm {
+    display: none; /* 默认隐藏注册表单 */
+}

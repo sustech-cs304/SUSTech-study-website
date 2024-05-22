@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    background-image: url('../images/answer_sheet_background.jpg'); /* 你的背景图片路径 */
+    background-attachment: fixed; /* 设置背景图片固定，不随滚动条移动 */
+}
+
+header {
+    /* background-color: #007bff; */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.question {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px; /* 减少内边距可以减小框的大小 */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%; /* 你可以根据需要调整这个百分比 */
+    max-width: 600px; /* 或者使用最大宽度限制框的大小 */
+    margin-left: auto; /* 这将确保框在容器中居中 */
+    margin-right: auto; /* 这将确保框在容器中居中 */
+    opacity: 0.65; /* 设置不透明度为95% */
+}
+
+.question label {
+    display: block; /* 或者使用 'inline-block' 依据需要 */
+    margin: 5px 0;
+}
+
+button {
+    display: block; /* 将按钮设为块级元素 */
+    margin: 20px auto; /* 上下保持20px，左右自动调整以居中 */
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
