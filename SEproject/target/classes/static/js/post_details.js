@@ -59,83 +59,14 @@ function loadComments() {
 }
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     loadPostDetails();
-//     loadComments();
-//
-//     document.body.addEventListener('click', function(event) {
-//         console.log("正在点击拉！");
-//         if (event.target.id === 'submit-comment') {
-//             console.log("点击提交评论按钮！♪(^∇^*)")
-//             const commentContent = document.getElementById('comment-content').value;
-//             if (commentContent) {
-//                 const commentData = {
-//                     content: commentContent,
-//                     author: "keli", // 暂定作者为 "keli"
-//                     publishTime: new Date().toISOString() // 获取当前时间
-//                 };
-//                 fetch(`/posts/${postId}/comments`, {
-//                     method: 'POST',
-//                     headers: {
-//                         'Content-Type': 'application/json'
-//                     },
-//                     body: JSON.stringify(commentData)
-//                 })
-//                     .then(response => {
-//                         if (response.ok) {
-//                             loadComments(); // 重新加载评论
-//                             document.getElementById('comment-content').value = ''; // 清空输入框
-//                         } else {
-//                             throw new Error('Failed to submit comment');
-//                         }
-//                     })
-//                     .catch(error => {
-//                         console.error('Error submitting comment:', error);
-//                     });
-//             }
-//         }
-//         else if (event.target.classList.contains('like-button')) {
-//             // 处理点赞按钮
-//             const commentId = event.target.dataset.commentId;
-//             fetch(`/comments/${commentId}/like`, {
-//                 method: 'POST'
-//             })
-//                 .then(response => {
-//                     if (response.ok) {
-//                         loadComments(); // 重新加载评论
-//                     } else {
-//                         throw new Error('Failed to like comment');
-//                     }
-//                 })
-//                 .catch(error => {
-//                     console.error('Error liking comment:', error);
-//                 });
-//         } else if (event.target.classList.contains('dislike-button')) {
-//             // 处理点踩按钮
-//             const commentId = event.target.dataset.commentId;
-//             fetch(`/comments/${commentId}/dislike`, {
-//                 method: 'POST'
-//             })
-//                 .then(response => {
-//                     if (response.ok) {
-//                         loadComments(); // 重新加载评论
-//                     } else {
-//                         throw new Error('Failed to dislike comment');
-//                     }
-//                 })
-//                 .catch(error => {
-//                     console.error('Error disliking comment:', error);
-//                 });
-//         }
-//     });
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     loadPostDetails();
     loadComments();
 
     document.body.addEventListener('click', function(event) {
+        console.log("正在点击拉！");
         if (event.target.id === 'submit-comment') {
+            console.log("点击提交评论按钮！♪(^∇^*)")
             const commentContent = document.getElementById('comment-content').value;
             if (commentContent) {
                 const commentData = {
@@ -150,32 +81,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     body: JSON.stringify(commentData)
                 })
-                    .then(response => response.json())
-                    .then(newComment => {
-                        // 动态插入新评论
-                        const commentsList = document.getElementById('comments-list');
-                        const commentElement = document.createElement('div');
-                        commentElement.className = 'comment';
-                        commentElement.innerHTML = `
-                        <img src="/img/User.png" alt="用户头像" class="comment-avatar">
-                        <div class="comment-content">
-                            <p class="comment-username">${newComment.author}</p>
-                            <p class="comment-text">${newComment.content}</p>
-                            <p class="comment-date">${new Date(newComment.publishTime).toLocaleString()}</p>
-                            <div class="comment-actions">
-                                <button class="like-button" data-comment-id="${newComment.id}">赞 (${newComment.likes})</button>
-                                <button class="dislike-button" data-comment-id="${newComment.id}">踩 (${newComment.dislikes})</button>
-                            </div>
-                        </div>
-                    `;
-                        commentsList.appendChild(commentElement); // 添加新评论到评论列表的末尾
-                        document.getElementById('comment-content').value = ''; // 清空输入框
+                    .then(response => {
+                        if (response.ok) {
+                            loadComments(); // 重新加载评论
+                            document.getElementById('comment-content').value = ''; // 清空输入框
+                        } else {
+                            throw new Error('Failed to submit comment');
+                        }
                     })
                     .catch(error => {
                         console.error('Error submitting comment:', error);
                     });
             }
-        } else if (event.target.classList.contains('like-button')) {
+        }
+        else if (event.target.classList.contains('like-button')) {
             // 处理点赞按钮
             const commentId = event.target.dataset.commentId;
             fetch(`/comments/${commentId}/like`, {
@@ -210,6 +129,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
 

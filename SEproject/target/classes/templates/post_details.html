@@ -20,31 +20,32 @@
     <main id="post-detail" class="post-content">
         <!-- 帖子详细信息将在这里插入 -->
     </main>
-</div>
 
-<div id="comments-section">
-    <h2>评论</h2>
-    <div id="comments-list">
-        <!-- Repeat this div for each comment -->
-        <div class="comment">
-            <img src="/img/User.png" alt="用户头像" class="comment-avatar">
-            <div class="comment-content">
-                <h3 class="comment-username">用户名</h3>
-                <div class="comment-publish-time">发布时间</div>
-                <div class="comment-text">评论内容</div>
-                <div class="comment-actions">
-                    <button class="like-button">赞</button>
-                    <button class="dislike-button">踩</button>
+
+    <div id="comment-form">
+        <textarea id="comment-content" placeholder="写下你的评论..."></textarea>
+        <button id="submit-comment">提交评论</button>
+    </div>
+
+    <div id="comments-section">
+        <h2>评论</h2>
+        <div id="comments-list">
+            <!-- Repeat this div for each comment -->
+            <div class="comment">
+                <img src="/img/User.png" alt="用户头像" class="comment-avatar">
+                <div class="comment-content">
+                    <h3 class="comment-username">用户名</h3>
+                    <div class="comment-publish-time">发布时间</div>
+                    <div class="comment-text">评论内容</div>
+                    <div class="comment-actions">
+                        <button class="like-button">赞</button>
+                        <button class="dislike-button">踩</button>
+                    </div>
                 </div>
             </div>
+            <!-- End of comment -->
         </div>
-        <!-- End of comment -->
     </div>
-</div>
-
-<div id="comment-form">
-    <textarea id="comment-content" placeholder="写下你的评论..."></textarea>
-    <button id="submit-comment">提交评论</button>
 </div>
 
 <footer>
