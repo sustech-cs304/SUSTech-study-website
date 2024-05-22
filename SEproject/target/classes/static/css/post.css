@@ -1,4 +1,3 @@
-/* CSS样式 */
 .user-avatar {
     width: 50px; /* 头像大小调整为50px */
     height: 50px;
@@ -12,7 +11,7 @@
 }
 
 .post-container {
-    display: block;
+    display: flex;
     margin-top: 20px;
 }
 
@@ -23,69 +22,60 @@
 }
 
 .post-content {
-    margin-left: 150px; /* 为左侧栏留出空间 */
+    flex: 1;
     padding: 20px;
     border-left: 1px solid #ccc; /* 保持原来的分隔线 */
 }
 
+/* 确保评论部分是块级元素并占据整个宽度 */
 #comments-section {
+    margin-top: 20px;
     padding: 20px;
     background: #f9f9f9; /* 背景色 */
-}
-
-#comments-section {
-    position: absolute; /* 绝对定位将评论部分放在左下角 */
+    width: 100%;
+    position: relative;
     bottom: 0;
     left: 0;
-    width: 150px; /* 设置为侧边栏的宽度 */
-    padding: 20px;
-    background: #f9f9f9;
+}
+
+/* 确保评论列表是块级元素 */
+#comments-list {
+    display: block;
+}
+
+/* 确保每条评论占据整个宽度，并有适当的间距 */
+.comment {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 100%;
+}
+
+.comment-content {
+    overflow: hidden;
 }
 
 .comment-avatar {
-    grid-area: avatar;
-    width: 50px; /* 调整头像大小 */
+    width: 50px;
     height: 50px;
     border-radius: 50%;
-    align-self: end; /* 头像对齐到底部 */
+    float: left;
+    margin-right: 10px;
 }
 
 .comment-username {
-    grid-area: username;
-    align-self: start; /* 用户名对齐到顶部 */
+    font-weight: bold;
 }
 
 .comment-publish-time {
-    grid-area: date;
-    justify-self: end; /* 发布时间对齐到右边 */
-    align-self: start; /* 发布时间对齐到顶部 */
+    font-size: 0.8em;
+    color: #888;
 }
 
 .comment-text {
-    grid-area: content;
-    justify-self: start; /* 内容对齐到右边 */
-    align-self: end; /* 内容对齐到底部 */
-}
-
-/* 创建分隔线 */
-.comment::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background-color: #ccc;
-}
-
-.comment::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #ccc;
+    margin-top: 10px;
 }
 
 .comment-actions {
@@ -105,4 +95,12 @@
 
 .dislike-button {
     background-color: #f44336;
+}
+
+#comment-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    width: 100%;
 }
