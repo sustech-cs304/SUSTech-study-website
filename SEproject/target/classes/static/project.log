@@ -16245,3 +16245,647 @@ Caused by: org.postgresql.util.PSQLException: FATAL: database "reservation_syste
 00:33:14.367 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 00:33:14.419 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 00:33:14.424 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:00:09.455 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 13675 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+12:00:09.457 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+12:00:09.947 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:00:09.995 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 7 JPA repository interfaces.
+12:00:10.356 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+12:00:10.360 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+12:00:10.362 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:00:10.362 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+12:00:10.392 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:00:10.393 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 906 ms
+12:00:10.494 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:00:10.528 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+12:00:10.549 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+12:00:10.697 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:00:10.712 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:00:10.814 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@87691ebc
+12:00:10.815 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:00:10.851 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+12:00:11.395 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+12:00:11.411 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.411 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+12:00:11.412 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.412 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+12:00:11.413 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.413 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+12:00:11.414 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.414 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+12:00:11.415 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.415 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+12:00:11.416 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.416 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+12:00:11.417 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.417 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+12:00:11.418 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.418 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+12:00:11.418 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.418 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+12:00:11.418 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+12:00:11.418 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+12:00:11.504 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:00:11.675 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+12:00:12.270 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:00:12.288 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+12:00:12.513 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+12:00:12.522 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+12:00:12.538 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.362 seconds (process running for 3.863)
+12:00:12.540 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+12:00:12.540 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+12:00:21.246 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:00:21.294 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+12:00:21.297 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:02:35.186 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16158 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:02:35.188 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:02:35.897 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:02:35.947 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 7 JPA repository interfaces.
+14:02:36.424 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:02:36.429 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:02:36.430 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:02:36.430 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:02:36.462 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:02:36.463 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1127 ms
+14:02:36.632 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:02:36.681 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:02:36.703 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:02:36.829 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:02:36.847 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:02:36.926 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@493c3dda
+14:02:36.927 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:02:36.956 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:02:37.600 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:02:37.623 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.623 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:02:37.623 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.624 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:02:37.624 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.624 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:02:37.625 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.625 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:02:37.625 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.625 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:02:37.626 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.626 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:02:37.627 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.627 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:02:37.627 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.627 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:02:37.627 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.627 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:02:37.627 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:02:37.627 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:02:37.715 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:02:37.896 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:02:38.501 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:02:38.517 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:02:38.742 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:02:38.755 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:02:38.766 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 4.077 seconds (process running for 4.67)
+14:02:38.768 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:02:38.768 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:02:39.928 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:02:39.928 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:02:39.929 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:05:15.556 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:05:15.596 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:05:15.598 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:05:17.668 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16248 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:05:17.671 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:05:18.207 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:05:18.254 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 7 JPA repository interfaces.
+14:05:18.619 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:05:18.633 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:05:18.634 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:05:18.634 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:05:18.664 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:05:18.664 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 929 ms
+14:05:18.788 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:05:18.821 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:05:18.841 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:05:18.976 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:05:18.992 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:05:19.073 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8ca60e2e
+14:05:19.074 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:05:19.096 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:05:19.629 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:05:19.643 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.644 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:05:19.644 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.644 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:05:19.644 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.644 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:05:19.645 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.645 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:05:19.645 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.645 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:05:19.646 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.646 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:05:19.646 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.646 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:05:19.646 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.646 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:05:19.647 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.647 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:05:19.647 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:19.647 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:05:19.713 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:05:19.921 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:05:20.490 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:05:20.505 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:05:20.732 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:05:20.741 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:05:20.752 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.362 seconds (process running for 4.156)
+14:05:20.754 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:05:20.754 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:05:22.942 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:05:22.942 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:05:22.943 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:05:33.010 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:05:33.046 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:05:33.049 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:05:34.716 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16282 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:05:34.719 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:05:35.315 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:05:35.366 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 7 JPA repository interfaces.
+14:05:35.737 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:05:35.742 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:05:35.743 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:05:35.743 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:05:35.779 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:05:35.780 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1002 ms
+14:05:35.879 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:05:35.913 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:05:35.931 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:05:36.045 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:05:36.060 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:05:36.128 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d5937c0
+14:05:36.128 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:05:36.200 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:05:36.760 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:05:36.775 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.776 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:05:36.776 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.776 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:05:36.777 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.777 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:05:36.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:05:36.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.778 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:05:36.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:05:36.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:05:36.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.779 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:05:36.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:05:36.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:05:36.780 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:05:36.847 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:05:37.013 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:05:37.576 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:05:37.591 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:05:37.810 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:05:37.819 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:05:37.829 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.473 seconds (process running for 4.052)
+14:05:37.831 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:05:37.831 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:05:39.548 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:05:39.548 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:05:39.549 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:05:57.351 [http-nio-8080-exec-5] INFO  c.e.mvcdemo2.task.TopicPopularity - Enter main page
+14:06:00.602 [http-nio-8080-exec-2] INFO  c.e.mvcdemo2.task.TopicPopularity - Enter main page
+14:07:47.936 [http-nio-8080-exec-2] INFO  c.e.mvcdemo2.task.TopicPopularity - Enter main page
+14:10:03.006 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:10:03.044 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:10:03.045 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:10:05.799 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16426 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:10:05.802 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:10:06.322 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:10:06.443 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 7 JPA repository interfaces.
+14:10:06.908 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:10:06.913 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:10:06.914 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:10:06.915 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:10:06.944 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:10:06.944 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1106 ms
+14:10:07.085 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:10:07.119 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:10:07.140 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:10:07.287 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:10:07.302 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:10:07.363 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bc11cd15
+14:10:07.364 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:10:07.388 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:10:07.919 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:10:07.937 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.937 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:10:07.938 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.938 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:10:07.938 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.938 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:10:07.938 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.939 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:10:07.939 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.939 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:10:07.939 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.940 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:10:07.940 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.940 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:10:07.940 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.940 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:10:07.941 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.941 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:10:07.941 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:07.941 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:10:08.010 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:10:08.165 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:10:08.747 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:10:08.761 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:10:08.989 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:10:08.998 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:10:09.009 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.505 seconds (process running for 3.987)
+14:10:09.011 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:10:09.011 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:10:10.710 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:10:10.711 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:10:10.711 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+14:10:14.056 [http-nio-8080-exec-3] INFO  c.e.mvcdemo2.task.TopicPopularity - Enter main page
+14:10:50.991 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:10:51.071 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:10:51.073 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:10:53.071 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16468 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:10:53.085 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:10:53.665 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:10:53.733 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 7 JPA repository interfaces.
+14:10:54.494 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:10:54.507 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:10:54.510 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:10:54.511 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:10:54.550 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:10:54.551 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1391 ms
+14:10:54.712 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:10:54.757 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:10:54.788 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:10:54.943 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:10:54.964 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:10:55.039 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16472 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:10:55.041 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:10:55.087 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b803f496
+14:10:55.090 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:10:55.127 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:10:55.765 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:10:55.841 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 7 JPA repository interfaces.
+14:10:56.193 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:10:56.222 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.223 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:10:56.224 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.224 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:10:56.224 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.224 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:10:56.225 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.225 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:10:56.225 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.225 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:10:56.226 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.227 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:10:56.227 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.227 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:10:56.228 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.228 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:10:56.232 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.233 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:10:56.233 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:56.233 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:10:56.297 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:10:56.424 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:10:56.430 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:10:56.432 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:10:56.432 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:10:56.462 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:10:56.463 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1359 ms
+14:10:56.492 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:10:56.582 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:10:56.614 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:10:56.639 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:10:56.763 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:10:56.777 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:10:56.835 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d2bcf062
+14:10:56.836 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:10:56.856 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:10:57.100 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:10:57.117 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:10:57.365 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:10:57.379 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:10:57.391 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 4.594 seconds (process running for 5.051)
+14:10:57.393 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:10:57.393 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:10:57.421 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:10:57.503 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:10:57.666 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:10:57.975 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:10:58.016 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:10:58.018 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:10:58.324 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:10:58.341 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:10:58.572 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:10:58.585 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.875 seconds (process running for 4.748)
+14:10:58.587 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:10:58.588 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:10:58.598 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:10:58.601 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.601 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:10:58.602 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.602 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:10:58.602 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.602 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:10:58.602 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.602 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:10:58.603 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.603 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:10:58.603 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.603 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:10:58.604 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.604 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:10:58.604 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.604 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:10:58.604 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.604 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:10:58.605 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:10:58.605 [SpringApplicationShutdownHook] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:10:58.606 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:10:58.608 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:11:04.398 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16504 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:11:04.400 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:11:04.920 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:11:04.965 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 7 JPA repository interfaces.
+14:11:05.327 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:11:05.331 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:11:05.331 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:11:05.332 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:11:05.362 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:11:05.362 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 919 ms
+14:11:05.460 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:11:05.489 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:11:05.510 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:11:05.628 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:11:05.642 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:11:05.704 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4f20b324
+14:11:05.705 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:11:05.742 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:11:06.276 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:11:06.288 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.288 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:11:06.288 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.288 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:11:06.289 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.289 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:11:06.289 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.289 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:11:06.289 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.289 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:11:06.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:11:06.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:11:06.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:11:06.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:11:06.291 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:11:06.291 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:11:06.339 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:11:06.491 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:11:07.042 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:11:07.058 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:11:07.272 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:11:07.281 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:11:07.291 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.157 seconds (process running for 3.594)
+14:11:07.293 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:11:07.293 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:11:10.538 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:11:10.538 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:11:10.539 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+14:11:10.555 [http-nio-8080-exec-1] INFO  c.e.mvcdemo2.task.TopicPopularity - Enter main page
+14:15:09.404 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:15:09.445 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:15:09.446 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:15:11.573 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16579 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:15:11.578 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:15:12.085 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:15:12.138 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 7 JPA repository interfaces.
+14:15:12.495 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:15:12.501 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:15:12.502 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:15:12.502 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:15:12.534 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:15:12.534 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 908 ms
+14:15:12.632 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:15:12.664 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:15:12.684 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:15:12.832 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:15:12.845 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:15:12.920 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@cf8992a2
+14:15:12.921 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:15:12.942 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:15:13.477 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:15:13.488 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.488 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:15:13.489 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.489 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:15:13.489 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.489 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:15:13.489 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.489 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:15:13.490 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.490 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:15:13.490 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.490 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:15:13.490 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.490 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:15:13.491 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.491 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:15:13.491 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.491 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:15:13.491 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:15:13.491 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:15:13.548 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:15:13.697 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:15:14.269 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:15:14.283 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:15:14.487 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:15:14.496 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:15:14.506 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.261 seconds (process running for 3.693)
+14:15:14.508 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:15:14.508 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:15:16.219 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:15:16.219 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:15:16.219 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+14:15:31.043 [http-nio-8080-exec-6] INFO  c.e.mvcdemo2.task.TopicPopularity - Enter main page
+14:17:00.543 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:17:00.584 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:17:00.585 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:17:02.513 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16625 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:17:02.516 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:17:03.006 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:17:03.054 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 7 JPA repository interfaces.
+14:17:03.393 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:17:03.397 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:17:03.398 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:17:03.399 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:17:03.439 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:17:03.439 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 859 ms
+14:17:03.543 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:17:03.574 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:17:03.592 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:17:03.708 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:17:03.722 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:17:03.787 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@211ecaba
+14:17:03.788 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:17:03.810 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:17:04.359 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:17:04.370 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.370 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:17:04.371 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.371 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:17:04.372 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.372 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:17:04.372 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.372 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:17:04.372 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.373 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:17:04.373 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.373 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:17:04.374 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.374 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:17:04.374 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.374 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:17:04.374 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.374 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:17:04.374 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:17:04.374 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:17:04.426 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:17:04.577 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:17:05.146 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:17:05.160 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:17:05.389 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:17:05.398 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:17:05.409 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.151 seconds (process running for 3.598)
+14:17:05.411 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:17:05.411 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:17:07.292 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:17:07.292 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:17:07.293 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+14:30:40.404 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:30:40.453 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:30:40.455 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:30:42.344 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 16814 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:30:42.346 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:30:42.826 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:30:42.885 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 7 JPA repository interfaces.
+14:30:43.260 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:30:43.264 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:30:43.265 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:30:43.265 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:30:43.296 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:30:43.297 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 902 ms
+14:30:43.399 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:30:43.428 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:30:43.446 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:30:43.552 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:30:43.566 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:30:43.622 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@76c49f92
+14:30:43.623 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:30:43.652 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:30:44.164 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:30:44.177 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.178 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:30:44.178 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.178 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:30:44.179 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.179 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:30:44.179 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.179 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:30:44.179 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.179 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:30:44.180 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.180 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:30:44.180 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.180 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:30:44.180 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.180 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:30:44.181 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.181 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:30:44.181 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:30:44.181 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:30:44.242 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:30:44.393 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:30:44.934 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:30:44.950 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:30:45.159 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:30:45.167 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:30:45.178 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.1 seconds (process running for 3.506)
+14:30:45.180 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:30:45.180 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:30:48.255 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:30:48.256 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:30:48.256 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+14:53:30.361 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:53:30.435 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:53:30.438 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+14:53:32.389 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Starting Mvcdemo2Application using Java 17.0.9 with PID 17364 (/Users/sco/12/SEproject/target/classes started by sco in /Users/sco/12/SEproject)
+14:53:32.392 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - No active profile set, falling back to 1 default profile: "default"
+14:53:32.855 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:53:32.901 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 7 JPA repository interfaces.
+14:53:33.282 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+14:53:33.287 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+14:53:33.288 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:53:33.288 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+14:53:33.316 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:53:33.316 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 893 ms
+14:53:33.416 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:53:33.452 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+14:53:33.472 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+14:53:33.604 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:53:33.622 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:53:33.679 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5767eb83
+14:53:33.680 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:53:33.710 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:53:34.268 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:53:34.281 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.282 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "comments" does not exist, skipping
+14:53:34.282 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.282 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "goods_tags" does not exist, skipping
+14:53:34.283 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.283 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "comments" does not exist, skipping
+14:53:34.283 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.283 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods" does not exist, skipping
+14:53:34.283 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.283 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "goods_tags" does not exist, skipping
+14:53:34.284 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.284 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "history" does not exist, skipping
+14:53:34.285 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.285 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "posts" does not exist, skipping
+14:53:34.285 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.285 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "reservation" does not exist, skipping
+14:53:34.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.290 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "student" does not exist, skipping
+14:53:34.291 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:53:34.291 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:53:34.338 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:53:34.488 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+14:53:35.027 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:53:35.042 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:53:35.247 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+14:53:35.256 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+14:53:35.267 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Started Mvcdemo2Application in 3.183 seconds (process running for 3.639)
+14:53:35.268 [main] INFO  c.e.mvcdemo2.Mvcdemo2Application - Customized INFO log 1
+14:53:35.268 [main] ERROR c.e.mvcdemo2.Mvcdemo2Application - Customized ERROR log 3
+14:54:05.232 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:54:05.233 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:54:05.235 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+15:03:49.514 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:03:49.574 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:03:49.576 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
