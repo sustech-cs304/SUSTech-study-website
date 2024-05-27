@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd72c587-f080-404b-a155-957eebed5e2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbUser.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbUser.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/post_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/post_details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/post_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/post_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dbUser.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbUser.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/post.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/post_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/post_details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/project.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/post_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/post_details.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -155,7 +143,8 @@
       <workItem from="1710416222313" duration="2519000" />
       <workItem from="1710418826710" duration="909000" />
       <workItem from="1716358567735" duration="643000" />
-      <workItem from="1716368228145" duration="4188000" />
+      <workItem from="1716368228145" duration="4429000" />
+      <workItem from="1716516373420" duration="364000" />
     </task>
     <servers />
   </component>
