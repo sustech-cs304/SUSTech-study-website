@@ -8,30 +8,43 @@
 </head>
 <body>
 <header>
-  <!-- 可以在这里添加你的网站的导航栏 -->
+  <nav class="navbar">
+    <div class="nav-brand">学习建议论坛</div>
+    <a href="http://localhost:8080/" class="nav-item active">首页</a>
+    <div class="nav-user">
+      <span>keli</span>
+    </div>
+  </nav>
 </header>
 
 <main>
   <!-- 搜索和过滤区域 -->
   <section id="search-and-filter">
-    <input type="text" id="search-post" placeholder="搜索帖子">
-    <button id="search-btn">搜索</button>
-    <select id="filter-tags" title="Filter posts by tags" aria-label="Filter posts by tags">
-      <option value="all">所有标签</option>
-      <option value="course_materials">课程资料分享</option>
-      <option value="study_advice">学习建议</option>
-      <option value="question_help">问题求助</option>
-    </select>
-    <select id="filter-time" title="Filter posts by time" aria-label="Filter posts by time">
-      <option value="newest">最新</option>
-      <option value="oldest">最旧</option>
-    </select>
+    <div id="center-content">
+      <div id="post-button">
+        <a href="/new_post" class="btn btn-primary">发布新帖子</a>
+      </div>
+      <div id="search-filter">
+        <input type="text" id="search-post" placeholder="搜索帖子">
+        <select id="filter-tags" title="Filter posts by tags" aria-label="Filter posts by tags">
+          <option value="all">所有标签</option>
+          <option value="course_materials">课程资料分享</option>
+          <option value="study_advice">学习建议</option>
+          <option value="question_help">问题求助</option>
+        </select>
+        <select id="filter-time" title="Filter posts by time" aria-label="Filter posts by time">
+          <option value="newest">最新</option>
+          <option value="oldest">最旧</option>
+        </select>
+        <button id="search-btn">搜索</button>
+      </div>
+    </div>
   </section>
 
   <!-- 发布按钮 -->
-  <section id="post-button">
-    <a href="/new_post" class="btn btn-primary">发布新帖子</a>
-  </section>
+<!--  <section id="post-button">-->
+<!--    <a href="/new_post" class="btn btn-primary">发布新帖子</a>-->
+<!--  </section>-->
 
   <!-- 帖子预览列表 -->
   <div id="posts-preview">
