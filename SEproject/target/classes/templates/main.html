@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academic Assistant System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     /* 样式可以根据需要进行修改 */
     .navbar {
       background-color: #333;
       overflow: hidden;
+      display: flex;
+      justify-content: space-between; /* 让内容均匀分布 */
+      align-items: center; /* 让内容垂直居中 */
+      padding: 0 20px; /* 添加一些左右边距 */
     }
 
     .navbar a {
-      float: left;
-      display: block;
       color: white;
       text-align: center;
       padding: 14px 20px;
@@ -25,45 +28,70 @@
       color: black;
     }
 
-    .avatar {
-      float: right;
-      padding: 14px 20px;
+    .navbar-title {
+      text-align: center; /* 让标题居中 */
       color: white;
     }
 
     .avatar img {
       border-radius: 50%;
+      width: 50px; /* 设置图片宽度 */
+      height: 50px; /* 设置图片高度 */
     }
 
-    .news {
-      text-align: center;
-      padding: 20px;
+    /* 隐藏菜单内容 */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
     }
 
-    .sidebar {
-      float: left;
-      width: 50%;
-      padding: 20px;
+    /* 链接样式 */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
     }
 
-    .dialog {
-      float: right;
-      width: 50%;
-      padding: 20px;
+    /* 链接悬停时的背景色 */
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+
+    /* 显示菜单内容 */
+    .show {display:block;}
+
+    .dropbtn {
+      font-size: 20px;
+      padding: 16px 20px;
     }
   </style>
 </head>
 <body>
 
 <div class="navbar">
-  <a href="/ai_chat" class="btn btn-primary">AI对话</a>
-  <a href="gpa2.html">GPA系统</a>
-  <a href="/advice" class="btn btn-primary">学习建议</a>
-  <a href="/selection">辅导咨询</a>
-  <a href="/tradeFrontPage">二手交易</a>
-  <a href="http://localhost:8080/reservation_system" class="nav-item">空间预约</a>
+  <div>
+    <!-- 菜单按钮 -->
+    <div class="dropdown">
+      <button onclick="toggleMenu()" class="dropbtn"><i class="fas fa-bars"></i></button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="/ai_chat">AI对话</a>
+        <a href="gpa2.html">GPA系统</a>
+        <a href="/advice">学习建议</a>
+        <a href="/selection">辅导咨询</a>
+        <a href="/tradeFrontPage">二手交易</a>
+        <a href="http://localhost:8080/reservation_system">空间预约</a>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-title">
+    <h1>Academic Assistant System</h1>
+  </div>
   <div class="avatar">
-    <img src="avatar.jpg" alt="Avatar" width="50" height="50">
+    <img src="avatar.jpg" alt="Avatar">
   </div>
 </div>
 
@@ -72,19 +100,40 @@
 </div>
 
 <div class="news">
-  <h2>热门帖子</h2>
-  <p>内容</p>
+  <h2>News</h2>
+  <p>[May, 2024] The final examinations for the Spring Semester of 2024 are scheduled from June 11 to June 21, 2024.</p>
 </div>
 
 <div class="sidebar">
-  <h2>热点新闻</h2>
-  <p>内容</p>
+  <h2>Important Notice</h2>
+  <p>Please Sign up before using.</p>
 </div>
 
 <div class="dialog">
   <h2>AI对话</h2>
   <textarea rows="4" cols="50"></textarea>
 </div>
+
+<script>
+  // JavaScript 函数来切换显示菜单内容
+  function toggleMenu() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // 如果用户点击菜单以外的地方，关闭菜单
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
 
 </body>
 </html>
