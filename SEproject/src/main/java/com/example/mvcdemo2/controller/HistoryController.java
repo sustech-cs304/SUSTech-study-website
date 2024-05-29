@@ -14,10 +14,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @RestController
 public class HistoryController {
-    String usrName = "jerry";
+
+    String usrName = "";
+    public void setUsrName(String usrName) {
+        this.usrName = usrName;
+    }
+
     @Autowired
     private HistoryRepository historyRepository;
     @GetMapping("/his")
@@ -51,8 +55,5 @@ public class HistoryController {
         Map<String, String> response = new HashMap<>();
         response.put("url", "/selection");
         return ResponseEntity.ok(response);
-//        return ResponseEntity.status(HttpStatus.FOUND)
-//                .header(HttpHeaders.LOCATION, "/selection")
-//                .build();
     }
 }

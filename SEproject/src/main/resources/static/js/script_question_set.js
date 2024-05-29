@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
-    const quizId = params.get('quiz');  // 从 URL 获取 quiz 参数
+    const quizId = params.get('id');  // 从 URL 获取 quizId 参数
     console.log(quizId);
     console.log("hahahaah");
 
     if (quizId) {
         document.getElementById('quizIdText').innerText = quizId;  // 显示当前题库ID
 
-        // 构建请求 URL，这里假设您的服务器有一个 API 或静态文件来提供数据
-        const url = `/data/${quizId}.json`;
+        // 构建请求 URL，这里假设本地 JSON 文件的命名规则为 quiz_<quizId>.json
+        const url = `/data/quiz${quizId}.json`;
 
         fetch(url)
             .then(response => {
@@ -28,73 +28,54 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Quiz ID is missing from the URL');
         document.getElementById('questions-container').innerText = 'Quiz ID is missing.';
     }
-    console.log("hahahaah");
 
     document.getElementById('quizForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
         const formData = new FormData(event.target);
-        const answers = {};
+        let answersString = '';
 
-        formData.forEach((value, key) => {
-            if (!answers[key]) {
-                answers[key] = [];
-            }
-            answers[key].push(value);
+        const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
+        selectedAnswers.forEach(answer => {
+            const trimmedValue = answer.value.substring(2);
+            answersString += trimmedValue;
         });
 
-        fetch('/save-answers', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(answers) // 将答案对象转换为 JSON 字符串
+        console.log('Submitting answers:', answersString);  // 添加日志
+        alert('Submitting answers: ' + answersString);  // 使用 alert 显示答案字符串
+
+        const url = `/save-answers?answers=${encodeURIComponent(answersString)}&quizId=${encodeURIComponent(quizId)}`;
+        console.log('Request URL:', url);  // 添加日志
+
+        fetch(url, {
+            method: 'POST'
         })
             .then(response => {
+                console.log('Response status:', response.status);  // 添加日志
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 return response.json();
             })
             .then(data => {
-                console.log("success ！！！");
-                // 使用返回的 URL 进行重定向
+                console.log('Received response:', data);  // 添加日志
                 if (data.url) {
-                    console.log("success");
                     window.location.href = data.url;
                 } else {
-                    // 在出错时重定向到错误页面
                     window.location.href = '/error-page';
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                // 在出错时重定向到错误页面
                 window.location.href = '/error-page';
             });
-
-
-
-        // fetch('/save-answers', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(answers)
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log('Answers saved:', data);
-        //         alert('答案已保存');
-        //     })
-        //     .catch(error => console.error('Error saving answers:', error));
     });
 });
 
 function displayQuestions(questions) {
-    const container = document.getElementById('quizForm');
+    const container = document.getElementById('questions-container');
     if (!container) {
-        console.error('Quiz form container not found!');
+        console.error('Questions container not found!');
         return;
     }
 
@@ -110,20 +91,23 @@ function displayQuestions(questions) {
 
         const optionsList = document.createElement('ul');
         item.options.forEach((option, optionIndex) => {
+            const optionItem = document.createElement('li');
+
             const optionLabel = document.createElement('label');
             optionLabel.classList.add('option-label');
 
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.name = `question_${index}`; // 可以根据需要调整name属性
-            checkbox.value = option;
-            checkbox.id = `question_${index}_option_${optionIndex}`;
+            const radioButton = document.createElement('input');
+            radioButton.type = 'radio';
+            radioButton.name = `question_${index}`; // 使用相同的name属性，以实现单选效果
+            radioButton.value = option;
+            radioButton.id = `question_${index}_option_${optionIndex}`;
 
             const optionText = document.createTextNode(option);
 
-            optionLabel.appendChild(checkbox);
+            optionLabel.appendChild(radioButton);
             optionLabel.appendChild(optionText);
-            optionsList.appendChild(optionLabel);
+            optionItem.appendChild(optionLabel);
+            optionsList.appendChild(optionItem);
         });
         questionElem.appendChild(optionsList);
 

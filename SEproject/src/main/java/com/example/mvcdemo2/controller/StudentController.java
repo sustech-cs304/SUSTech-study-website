@@ -48,6 +48,11 @@ public class StudentController {
     }
     @GetMapping("/")
     public String home() {
+        return "login"; // Assuming 'main' is the name of your home page template
+    }
+
+    @GetMapping("/main_page")
+    public String mainPage() {
         return "main"; // Assuming 'main' is the name of your home page template
     }
 }
