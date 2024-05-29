@@ -29,7 +29,7 @@ public class StudentController {
     public String showMain(Model model){
         //model.addAttribute("students", studentService.getStudents());
         LOGGER.info("Enter main page");
-        return "gpa";
+        return "main";
     }
 
 
@@ -37,7 +37,7 @@ public class StudentController {
     public String showGPA(Model model){
         //model.addAttribute("students", studentService.getStudents());
         LOGGER.info("Enter gpa page");
-        return "gpa";
+        return "gpa2";
     }
 
     @GetMapping("/reservation_system")
