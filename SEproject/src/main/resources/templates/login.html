@@ -1,75 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+<header>
+  <h1>心理健康测评系统</h1>
+</header>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Assistant System - 登录</title>
-  <style>
-    /* 样式可以根据需要进行修改 */
-    .container {
-      margin: auto;
-      width: 50%;
-      padding: 20px;
-    }
-
-    input[type=text], input[type=password] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    button:hover {
-      opacity: 0.8;
-    }
-
-    .container {
-      padding: 16px;
-    }
-
-    span.psw {
-      float: right;
-      padding-top: 16px;
-    }
-  </style>
+  <title>User Login and Registration</title>
+  <link rel="stylesheet" href="/css/style_login.css">
 </head>
+
 <body>
-
-<div class="container">
-  <h2>Academic Assistant System - 登录</h2>
-  <form action="/action_page.php">
-    <div class="imgcontainer">
-      <img src="avatar.jpg" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>用户名</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>密码</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">登录</button>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">注册</button>
-      <span class="psw">忘记 <a href="#">密码？</a></span>
-    </div>
+<div id="container">
+  <form id="loginForm" onsubmit="login(event)">
+    <h2>Login</h2>
+    <input type="text" id="loginUsername" placeholder="Username" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button type="submit">Login</button>
+    <p>Not registered? <span onclick="toggleForms('registration')">Create an account</span></p>
+    <p>Forgot password? <span onclick="toggleForms('changePassword')">Change Password</span></p>
+  </form>
+  <form id="registrationForm" onsubmit="register(event)" style="display: none;">
+    <h2>Register</h2>
+    <input type="text" id="registerUsername" placeholder="Username" required>
+    <input type="password" id="registerPassword" placeholder="Password" required>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+    <button type="submit">Register</button>
+    <p>Already have an account? <span onclick="toggleForms('login')">Login here</span></p>
+  </form>
+  <form id="changePasswordForm" onsubmit="changePassword(event)" style="display: none;">
+    <h2>Change Password</h2>
+    <input type="text" id="changeUsername" placeholder="Username" required>
+    <input type="password" id="oldPassword" placeholder="Old Password" required>
+    <input type="password" id="newPassword" placeholder="New Password" required>
+    <input type="password" id="confirmNewPassword" placeholder="Confirm New Password" required>
+    <button type="submit">Change Password</button>
+    <p>Remembered your password? <span onclick="toggleForms('login')">Login here</span></p>
   </form>
 </div>
+<script>
+  function toggleForms(formToShow) {
+    var loginForm = document.getElementById("loginForm");
+    var registrationForm = document.getElementById("registrationForm");
+    var changePasswordForm = document.getElementById("changePasswordForm");
 
+    // Hide all forms
+    loginForm.style.display = "none";
+    registrationForm.style.display = "none";
+    changePasswordForm.style.display = "none";
+
+    // Show the selected form
+    if (formToShow === 'login') {
+      loginForm.style.display = "block";
+    } else if (formToShow === 'registration') {
+      registrationForm.style.display = "block";
+    } else if (formToShow === 'changePassword') {
+      changePasswordForm.style.display = "block";
+    }
+  }
+
+  async function login(event) {
+    event.preventDefault();
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const response = await fetch(`/user/find?username=${username}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      const user = await response.json();
+      if (user && user.password === password) {
+        window.location.href = '/main_page'; // 修改为跳转到 main.html
+      } else {
+        alert('Invalid username or password');
+      }
+    } else {
+      alert('User not found');
+    }
+  }
+
+  async function register(event) {
+    event.preventDefault();
+    const username = document.getElementById("registerUsername").value;
+    const password = document.getElementById("registerPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+      alert('Passwords do not match, the second typing is different!');
+      return;
+    }
+
+    const response = await fetch(`/user/create?username=${username}&password=${password}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, password })
+    });
+
+    if (response.ok) {
+      window.location.href = '/main_page'; // 修改为跳转到 main.html
+    } else {
+      const errorResult = await response.json();
+      alert(errorResult.message || 'Failed to create account');
+    }
+  }
+
+  async function changePassword(event) {
+    event.preventDefault();
+    const username = document.getElementById("changeUsername").value;
+    const oldPassword = document.getElementById("oldPassword").value;
+    const newPassword = document.getElementById("newPassword").value;
+    const confirmNewPassword = document.getElementById("confirmNewPassword").value;
+
+    if (newPassword !== confirmNewPassword) {
+      alert('New passwords do not match!');
+      return;
+    }
+
+    const response = await fetch('/user/change-password', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username, oldPassword, newPassword })
+    });
+
+    if (response.ok) {
+      alert('Password changed successfully');
+      window.location.href = '/main_page'; // 修改为跳转到 main.html
+    } else {
+      const errorResult = await response.json();
+      alert(errorResult.message || 'Failed to change password');
+    }
+  }
+</script>
 </body>
 </html>

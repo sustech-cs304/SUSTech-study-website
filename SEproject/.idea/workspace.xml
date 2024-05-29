@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd72c587-f080-404b-a155-957eebed5e2d" name="Changes" comment="">
-      <change afterPath="$USER_HOME$/WXBot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
-    </list>
+    <list default="true" id="cd72c587-f080-404b-a155-957eebed5e2d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,19 +21,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Scodive&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:sustech-cs304/12.git&quot;,
-    &quot;accountId&quot;: &quot;62d86273-df80-4f59-a6e5-ead6e2763d42&quot;
-  }
-}</component>
-  <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
@@ -66,12 +48,11 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Mvcdemo2Application (1).executor": "Run",
     "Spring Boot.Mvcdemo2Application.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "demo",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/软件工程/SEproject",
+    "last_opened_file_path": "C:/Users/creegon/Desktop/软件工程/SEproject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -138,8 +119,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
       </set>
     </attachedChunks>
   </component>
@@ -171,9 +151,7 @@
       <workItem from="1710418826710" duration="909000" />
       <workItem from="1716358567735" duration="643000" />
       <workItem from="1716368228145" duration="4188000" />
-      <workItem from="1716523201044" duration="21000" />
-      <workItem from="1716530514435" duration="6414000" />
-      <workItem from="1716987753234" duration="2746000" />
+      <workItem from="1716983284227" duration="4085000" />
     </task>
     <servers />
   </component>

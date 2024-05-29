@@ -29,7 +29,7 @@ public class StudentController {
     public String showMain(Model model){
         //model.addAttribute("students", studentService.getStudents());
         LOGGER.info("Enter main page");
-        return "main";
+        return "gpa";
     }
 
 
@@ -37,7 +37,7 @@ public class StudentController {
     public String showGPA(Model model){
         //model.addAttribute("students", studentService.getStudents());
         LOGGER.info("Enter gpa page");
-        return "gpa2";
+        return "gpa";
     }
 
     @GetMapping("/reservation_system")
@@ -48,6 +48,11 @@ public class StudentController {
     }
     @GetMapping("/")
     public String home() {
+        return "login"; // Assuming 'main' is the name of your home page template
+    }
+
+    @GetMapping("/main_page")
+    public String mainPage() {
         return "main"; // Assuming 'main' is the name of your home page template
     }
 }

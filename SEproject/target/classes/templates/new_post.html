@@ -40,8 +40,13 @@
 </header>
 
 <main class="new-post-container">
+  <a href="http://localhost:8080/advice" class="btn btn-secondary" id="back-button">返回</a>
   <h2>发布新帖子</h2>
   <form id="new-post-form" class="form-layout" onsubmit="handleSubmit(event)">
+    <div class="form-section">
+      <label for="new-post-title">标题:</label>
+      <input type="text" id="new-post-title" placeholder="请输入帖子标题" required>
+    </div>
     <div class="form-section">
       <label for="new-post-category">选择类别:</label>
       <select id="new-post-category">
@@ -50,10 +55,6 @@
         <option value="question_help">问题求助</option>
         <!-- 这里可以添加更多的类别 -->
       </select>
-    </div>
-    <div class="form-section">
-      <label for="new-post-title">标题:</label>
-      <input type="text" id="new-post-title" placeholder="请输入帖子标题" required>
     </div>
     <div class="form-section">
       <label for="new-post-content">正文:</label>
@@ -70,5 +71,3 @@
 </footer>
 </body>
 </html>
-
-

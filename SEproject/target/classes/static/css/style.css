@@ -113,24 +113,110 @@ body {
 }
 
 .new-post-container {
-    max-width: 1200px;
+    max-width: 600px; /* 或者其他你认为合适的宽度 */
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 使容器高度占满整个视口高度 */
 }
 
 .form-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    align-items: start;
+    width: 100%;
 }
 
+/* 添加返回按钮样式 */
+#back-button {
+    margin-bottom: 20px;
+    background-color: #6c757d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* 添加圆角 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 添加简单的阴影 */
+    transition: background-color 0.3s, box-shadow 0.3s; /* 添加过渡效果使按钮在交互时更平滑 */
+    padding: 10px 20px;
+    margin-left: -500px; /* 负值可以向左移动 */
+}
+
+#back-button:hover {
+    background-color: #5a6268; /* 鼠标悬停时的背景颜色 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* 鼠标悬停时的阴影 */
+}
+
+#back-button:active {
+    background-color: #545b62; /* 鼠标点击时的背景颜色 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 模拟按钮被按下的效果 */
+}
+
+/* Styles for navbar */
+.navbar {
+    /*padding-top: 20px; !* 增加顶部内边距 *!*/
+    /*padding-bottom: 20px; !* 增加底部内边距 *!*/
+    background-color: #333; /* Grey-black background */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    position: relative; /* For absolute positioning of dropdown menu */
+}
+
+.nav-user span {
+    margin-right: 5px; /* Spacing between user name and dropdown arrow */
+}
+
+.nav-brand {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-item {
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none; /* 去掉链接下划线 */
+}
+
+.nav-item.active {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+/* 鼠标悬停在“首页”上时的样式 */
+.nav-item:hover {
+    color: #5091cd; /* 改变文字颜色 */
+}
 
 #search-and-filter {
     display: flex;
     justify-content: center;
-    gap: 10px;
     margin-top: 20px;
+}
+
+#center-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-filter input, #search-filter select, #search-btn {
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px; /* 添加右边距，保持间距一致 */
 }
 
 #search-and-filter input, #search-and-filter select, #post-button button {
@@ -141,7 +227,12 @@ body {
 #post-button {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+    /*flex-shrink: 0;*/
+}
+#post-button, #search-filter {
+    display: flex;
+    align-items: center;
 }
 
 #post-button button {

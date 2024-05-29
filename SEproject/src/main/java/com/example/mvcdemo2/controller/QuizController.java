@@ -23,6 +23,12 @@ public class QuizController {
     public String quizSelection() {
         return "quizSelection"; // 返回quizSelection.html页面
     }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login"; // 返回quizSelection.html页面
+    }
+
 //    @PostMapping("/quiz-selection")
 //    public RedirectView selectQuiz(@RequestParam("quizId") String quizId) {
 //        return new RedirectView("/quiz?id=" + quizId);
