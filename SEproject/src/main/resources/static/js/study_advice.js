@@ -42,14 +42,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.addEventListener('click', function(event) {
         console.log("点击了！！！！！！！！")
-        if (event.target.id === 'search-btn') {
-            console.log("点击了搜索按钮");
-            const searchValue = document.getElementById('search-post').value;
-            const filterCategory = document.getElementById('filter-tags').value;
-            const filterTime = document.getElementById('filter-time').value;
+         if (event.target.id === 'my-btn') {
+            console.log("点击了查找我自己的帖子按钮");
+            loadMyPosts();
+        } else if (event.target.id === 'search-btn') {
+             console.log("点击了搜索按钮");
+             const searchValue = document.getElementById('search-post').value;
+             const filterCategory = document.getElementById('filter-tags').value;
+             const filterTime = document.getElementById('filter-time').value;
 
-            loadFilteredPosts(searchValue, filterCategory, filterTime);
-        }
+             loadFilteredPosts(searchValue, filterCategory, filterTime);
+         }
     });
 });
 
@@ -94,5 +97,41 @@ function loadFilteredPosts(title, category, sortBy) {
         .catch(error => {
             console.error('Error loading filtered posts:', error);
             document.getElementById('post-container').textContent = '加载帖子失败: ' + error;
+        });
+
+}
+
+function loadMyPosts() {
+    fetch('/posts/search_by_user')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(posts => {
+            const postsContainer = document.getElementById('post-container');
+            postsContainer.innerHTML = ''; // 清空当前帖子列表
+
+            // 添加帖子到页面
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+                postElement.innerHTML = `
+          <div class="title">${post.title}</div>
+          <div class="category">${post.category}</div>
+          <div class="author">${post.author}</div>
+          <div class="date">${new Date(post.publishTime).toLocaleString()}</div>
+        `;
+                // 绑定点击事件
+                postElement.onclick = function() {
+                    window.location.href = `/posts/${post.id}?id=${post.id}`;
+                };
+                postsContainer.appendChild(postElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading my posts:', error);
+            document.getElementById('post-container').textContent = '加载我的帖子失败: ' + error;
         });
 }
