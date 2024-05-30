@@ -10,7 +10,7 @@ import jakarta.persistence.*;
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Integer id;
         @Column(name = "username")
-        private String name;
+        private String username;
         @Column(name = "D1S")
         private String D1S;
         @Column(name = "D1X")
@@ -101,7 +101,7 @@ import jakarta.persistence.*;
         }
 
         public String getName() {
-            return name;
+            return username;
         }
 
 
@@ -110,13 +110,13 @@ import jakarta.persistence.*;
         }
 
         public void setName(String name) {
-            this.name = name;
+            this.username = name;
         }
 
 
-        public GPA(Integer id, String name, String password) {
+        public GPA(Integer id, String username, String password) {
             this.id = id;
-            this.name = name;
+            this.username = username;
             //this.password = password;
         }
     }

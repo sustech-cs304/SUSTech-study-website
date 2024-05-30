@@ -80,21 +80,21 @@
 <body>
 <div class="navbar">
     <a href="/">首页</a>
-<!--    <a href="#">二手商品</a>-->
+    <!--    <a href="#">二手商品</a>-->
     <a href="/postGoods">发布商品</a>
     <a href="#">我的账户</a>
     <a href="#">退出</a>
 </div>
 
-<div class="search-box">
-    <input type="text" class="search-input" placeholder="搜索商品..." th:value="${searchQuery}">
-    <button class="search-btn">搜索</button>
-</div>
+<form class="search-box" method="GET" action="/search">
+    <input type="text" name="searchQuery" class="search-input" placeholder="搜索商品..." th:value="${searchQuery}">
+    <button type="submit" class="search-btn">搜索</button>
+</form>
 
 <div class="recommendations">
     <div class="recommendation" th:each="product : ${recommendedProducts}">
-<!--        <img th:src="@{'/getImage/' + ${product.good_id}}" alt="Product Image"/>-->
-<!--        <h3 th:text="${product.name}">商品名称</h3>-->
+        <!--        <img th:src="@{'/getImage/' + ${product.good_id}}" alt="Product Image"/>-->
+        <!--        <h3 th:text="${product.name}">商品名称</h3>-->
         <a th:href="@{'/productInfo?id=' + ${product.good_id}}"> <!-- 设置跳转链接及传递商品ID -->
             <img th:src="@{'/getImage/' + ${product.good_id}}" alt="Product Image"/>
             <h3 th:text="${product.name}">商品名称</h3>

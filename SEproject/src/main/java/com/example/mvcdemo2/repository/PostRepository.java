@@ -29,5 +29,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query(value = "SELECT COUNT(*) FROM posts WHERE author = :author", nativeQuery = true)
     int countPostsByAuthor(@Param("author") String author);
 
-
+    // 根据作者查询帖子
+    @Query("SELECT p FROM Post p WHERE p.author = :author ORDER BY p.publishTime DESC")
+    List<Post> findByAuthor(@Param("author") String author);
 }

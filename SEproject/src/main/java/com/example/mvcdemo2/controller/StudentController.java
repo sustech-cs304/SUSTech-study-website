@@ -32,6 +32,13 @@ public class StudentController {
         return "main";
     }
 
+    @RequestMapping("/history")
+    public String showgpahistory(Model model){
+        //model.addAttribute("students", studentService.getStudents());
+        LOGGER.info("Enter main page");
+        return "gpahistory";
+    }
+
 
     @RequestMapping("/gpa")
     public String showGPA(Model model){

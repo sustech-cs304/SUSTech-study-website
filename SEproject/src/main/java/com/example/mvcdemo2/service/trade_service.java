@@ -12,7 +12,10 @@ import org.springframework.util.StreamUtils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 @Service
 @ComponentScan(basePackages = {"com.example.mvcdemo2.repository"})
@@ -25,6 +28,18 @@ public class trade_service{
         this.trade_repository = trade_repository;
     }
 
+    public List<goods> searchGoods(String searchQuery) {
+        // 通过正则表达式进行宽松匹配
+        Pattern pattern = Pattern.compile(".*" + searchQuery + ".*", Pattern.CASE_INSENSITIVE);
+
+        List<goods> goodsList = trade_repository.findByNameContaining(searchQuery);
+
+        // 筛选并排序
+        return goodsList.stream()
+                .filter(goods -> pattern.matcher(goods.getName()).matches())
+                .sorted((g1, g2) -> Integer.compare(g2.getView(), g1.getView()))
+                .collect(Collectors.toList());
+    }
 //    @Transactional
 //    public void saveImageToDatabase(int goodsId) throws IOException {
 //        Optional<goods> optionalGoods = trade_repository.findById(goodsId);

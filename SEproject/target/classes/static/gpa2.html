@@ -13,14 +13,16 @@
     .navbar {
       background-color: #333;
       overflow: hidden;
+      display: flex;
+      justify-content: flex-start; /* 左对齐 */
+      align-items: center;
+      padding: 0 20px;
     }
 
     .navbar a {
-      float: left;
-      display: block;
       color: white;
       text-align: center;
-      padding: 14px 20px;
+      padding: 14px 10px; /* 减少按钮之间的间距 */
       text-decoration: none;
     }
 
@@ -29,14 +31,20 @@
       color: black;
     }
 
-    .avatar {
-      float: right;
-      padding: 14px 20px;
+    .navbar-title {
+      text-align: center;
       color: white;
+      flex: 1; /* 让标题占据剩余空间，实现居中效果 */
     }
 
     .avatar img {
       border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+    .avatar {
+      padding: 14px 20px; /* 图标的内边距 */
+      color: white;
     }
 
     h1 {
@@ -110,24 +118,36 @@
       margin-right: 20px;
     }
 
+
     .button-container {
-      text-align: right;
+      text-align: left;
+      margin-left: 100px; /* 增加左侧边距 */
       margin-top: 20px; /* Add margin to separate from the table */
+
     }
+
+
+
+    #gpaRuleSelect {
+      width: 20%; /* 修改选择规则的选项框宽度 */
+    }
+
   </style>
 </head>
 <body>
 <div class="navbar">
   <a href="/main" class="btn btn-primary">首页</a>
-  <a href="/gradehistory">历史成绩</a>
+  <a href="/gpahistory.html">历史成绩</a>
   <a href="/advice" class="btn btn-primary">学习建议</a>
   <a href="/selection">辅导咨询</a>
+  <div class="navbar-title">
+    <h1>GPA Calculator</h1>
+  </div>
   <div class="avatar">
     <img src="avatar.jpg" alt="Avatar" width="50" height="50">
   </div>
 </div>
 
-<h1>GPA Calculator</h1>
 <div class="container">
   <div>
     <table id="gradeTable">
@@ -140,20 +160,24 @@
     <div class="button-container">
       <button onclick="addRow()">添加一行</button>
       <button onclick="calculateGPA()">计算GPA</button>
+      <button onclick="saveGPA()">保存成绩</button>
     </div>
+    <div id="resultBox" class="result-box"></div>
   </div>
   <div>
     <label for="gpaRuleSelect">选择规则：</label>
     <select id="gpaRuleSelect" onchange="changeGPARule()">
-      <option value="default">学校A规则</option>
-      <option value="schoolB">学校B规则</option>
-      <option value="schoolC">学校C规则</option>
+      <option value="default">标准4.0</option>
+      <option value="schoolB">改进4.0</option>
+      <option value="schoolC">南科大4.0</option>
+      <option value="schoolD">加拿大4.3</option>
     </select>
     <h3>换算规则：</h3>
     <ul id="gpaRulesList">
-      <li>学校A规则：90及以上为4.0，80-89为3.0，70-79为2.0，60-69为1.0，60以下为0.0</li>
-      <li>学校B规则：95及以上为4.0，85-94为3.5，75-84为2.5，60-74为1.0，60以下为0.0</li>
-      <li>学校C规则：...</li>
+      <li>标准4.0规则：90及以上为4.0，80-89为3.0，70-79为2.0，60-69为1.0，60以下为0.0</li>
+      <li>改进4.0规则：95及以上为4.0，85-94为3.5，75-84为2.5，60-74为1.0，60以下为0.0</li>
+      <li>南科大4.0规则：97及以上为4.0，93-96为3.94，90-92为3.85，87-89为3.73，83-86为3.55，80-82为3.32，77-79为3.09，73-76为2.78，70-72为2.42，67-69为2.08，63-66为1.63，60-62为1.15，60以下为0.0</li>
+      <li>加拿大4.3规则：90及以上为4.3，85-89为4.0，80-84为3.7，75-79为3.3，70-74为3.0，65-69为2.7，60-64为2.3，60以下为0.0</li>
       <!-- 添加更多规则的说明 -->
     </ul>
   </div>
@@ -169,6 +193,45 @@
                 <td><input type="number" class="score" step="1" min="0"></td>
             `;
     document.getElementById('gradeTable').appendChild(newRow);
+  }
+  let currentUsername = '';
+
+  function fetchCurrentUsername() {
+    return fetch('/get_user_name')
+            .then(response => response.text())
+            .then(username => {
+              currentUsername = username;
+              document.getElementById('username-span').innerText = currentUsername;
+            })
+            .catch(error => {
+              console.error('Error fetching current user:', error);
+            });
+  }
+
+  function saveGPA() {
+    fetchCurrentUsername()
+    calculateGPA();
+
+    // 获取 GPA 结果
+    var gpaResult = document.getElementById('result').innerText.split(": ")[1];
+    var username = "Andy"; // Replace this with actual username retrieval logic
+
+    var d3x = gpaResult;
+
+    fetch('/api/gpa/save', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, d3x }),
+    })
+            .then(response => response.json())
+            .then(data => {
+              console.log('Success:', data);
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
   }
 
   function changeGPARule() {
@@ -229,8 +292,51 @@
           gradePoint = 0.0;
         }
       } else if (selectedRule === 'schoolC') {
-        // 学校C规则
-        // 添加学校C规则的逻辑
+        if (score >= 97) {
+          gradePoint = 4.0;
+        } else if (score >= 93) {
+          gradePoint = 3.94;
+        } else if (score >= 90) {
+          gradePoint = 3.85;
+        } else if (score >= 87) {
+          gradePoint = 3.73;
+        } else if (score >= 83) {
+          gradePoint = 3.55;
+        } else if (score >= 80) {
+          gradePoint = 3.32;
+        } else if (score >= 77) {
+          gradePoint = 3.09;
+        } else if (score >= 73) {
+          gradePoint = 2.78;
+        } else if (score >= 70) {
+          gradePoint = 2.42;
+        } else if (score >= 67) {
+          gradePoint = 2.08;
+        } else if (score >= 63) {
+          gradePoint = 1.63;
+        } else if (score >= 60) {
+          gradePoint = 1.15;
+        } else {
+          gradePoint = 0.0;
+        }
+      } else if (selectedRule === 'schoolD') {
+        if (score >= 90) {
+          gradePoint = 4.3;
+        } else if (score >= 85) {
+          gradePoint = 4.0;
+        } else if (score >= 80) {
+          gradePoint = 3.7;
+        } else if (score >= 75) {
+          gradePoint = 3.3;
+        } else if (score >= 70) {
+          gradePoint = 3.0;
+        } else if (score >= 65) {
+          gradePoint = 2.7;
+        } else if (score >= 60) {
+          gradePoint = 2.3;
+        } else {
+          gradePoint = 0.0;
+        }
       }
 
       totalCredits += credit;
@@ -239,6 +345,7 @@
 
     var gpa = totalGradePoints / totalCredits;
     document.getElementById('result').innerText = "GPA: " + gpa.toFixed(2);
+
   }
 
   // 添加初始三行空白的输入行

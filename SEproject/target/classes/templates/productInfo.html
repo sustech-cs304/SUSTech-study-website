@@ -75,19 +75,18 @@
 </head>
 <body>
 <div class="seller-info">
-<!--    <img class="seller-avatar" th:src="@{'/getImage/' + ${account.id}}" alt="Seller Avatar">-->
+    <!--    <img class="seller-avatar" th:src="@{'/getImage/' + ${account.id}}" alt="Seller Avatar">-->
     <div>
         <p class="seller-name" th:text="${product.seller}">卖家用户名</p>
         <button class="follow-button">关注卖家</button>
     </div>
-</div>
+</div>++
 
 <div class="product-info">
     <p class="price" th:text="'¥ ' + ${product.price}">¥ 100.00</p>
-    <p class="views" th:text="'浏览量：' + ${product.price}">浏览量：1000</p>
+    <p class="views" th:text="'浏览量：' + ${product.view}">浏览量：1000</p>
     <p class="description" th:text="${product.description}">商品描述：这是一个商品的描述</p>
     <img class="product-image" th:src="@{'/getImage/' + ${product.good_id}}" alt="Product Image">
 </div>
 </body>
 </html>
-
