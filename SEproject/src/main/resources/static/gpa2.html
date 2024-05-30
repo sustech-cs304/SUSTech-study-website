@@ -13,14 +13,16 @@
     .navbar {
       background-color: #333;
       overflow: hidden;
+      display: flex;
+      justify-content: flex-start; /* 左对齐 */
+      align-items: center;
+      padding: 0 20px;
     }
 
     .navbar a {
-      float: left;
-      display: block;
       color: white;
       text-align: center;
-      padding: 14px 20px;
+      padding: 14px 10px; /* 减少按钮之间的间距 */
       text-decoration: none;
     }
 
@@ -29,14 +31,20 @@
       color: black;
     }
 
-    .avatar {
-      float: right;
-      padding: 14px 20px;
+    .navbar-title {
+      text-align: center;
       color: white;
+      flex: 1; /* 让标题占据剩余空间，实现居中效果 */
     }
 
     .avatar img {
       border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+    .avatar {
+      padding: 14px 20px; /* 图标的内边距 */
+      color: white;
     }
 
     h1 {
@@ -110,10 +118,20 @@
       margin-right: 20px;
     }
 
+
     .button-container {
-      text-align: right;
+      text-align: left;
+      margin-left: 100px; /* 增加左侧边距 */
       margin-top: 20px; /* Add margin to separate from the table */
+
     }
+
+
+
+    #gpaRuleSelect {
+      width: 10%; /* 修改选择规则的选项框宽度 */
+    }
+
   </style>
 </head>
 <body>
@@ -122,12 +140,14 @@
   <a href="/gradehistory">历史成绩</a>
   <a href="/advice" class="btn btn-primary">学习建议</a>
   <a href="/selection">辅导咨询</a>
+  <div class="navbar-title">
+    <h1>GPA Calculator</h1>
+  </div>
   <div class="avatar">
     <img src="avatar.jpg" alt="Avatar" width="50" height="50">
   </div>
 </div>
 
-<h1>GPA Calculator</h1>
 <div class="container">
   <div>
     <table id="gradeTable">
@@ -141,6 +161,7 @@
       <button onclick="addRow()">添加一行</button>
       <button onclick="calculateGPA()">计算GPA</button>
     </div>
+    <div id="resultBox" class="result-box"></div>
   </div>
   <div>
     <label for="gpaRuleSelect">选择规则：</label>
@@ -238,7 +259,9 @@
     }
 
     var gpa = totalGradePoints / totalCredits;
-    document.getElementById('result').innerText = "GPA: " + gpa.toFixed(2);
+    var gpaResultElement = document.getElementById('gpaResult');
+    gpaResultElement.innerText = "GPA: " + gpa.toFixed(2);
+
   }
 
   // 添加初始三行空白的输入行

@@ -19,6 +19,9 @@ public class PostController {
     @Autowired
     private CommentRepository commentRepository;
 
+    @Autowired
+    private HistoryController historyController;
+
     @PostMapping("/new_post")
     public Post createPost(@RequestBody Post post) {
         return postRepository.save(post);
@@ -110,5 +113,12 @@ public class PostController {
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @GetMapping("/posts/search_by_user")
+    public ResponseEntity<List<Post>> getPostsByUser() {
+        String username = historyController.usrName; // 获取当前用户名
+        List<Post> posts = postRepository.findByAuthor(username);
+        return ResponseEntity.ok(posts);
     }
 }

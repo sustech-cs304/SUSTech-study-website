@@ -24,6 +24,11 @@ public class HistoryController {
 
     @Autowired
     private HistoryRepository historyRepository;
+
+    @GetMapping("get_user_name")
+    public String GetUserName(){
+        return usrName;
+    }
     @GetMapping("/his")
     public List<History> findAllHistory(){
         List<History> allHistory = historyRepository.findAllHistory();
