@@ -2,6 +2,7 @@ package com.example.mvcdemo2.controller;
 
 import com.example.mvcdemo2.model.goods;
 import com.example.mvcdemo2.repository.trade_repository;
+import com.example.mvcdemo2.service.trade_service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
@@ -30,8 +31,10 @@ import java.util.Optional;
 public class trade_controller {
     @Autowired
     private trade_repository tr;
+    @Autowired
+    private trade_service ts;
 
-    public trade_controller(trade_repository tr){
+    public trade_controller(trade_repository tr) {
         this.tr = tr;
     }
 
@@ -72,7 +75,15 @@ public class trade_controller {
     public String getProductInfo(@RequestParam("id") int productId, Model model) {
         // 根据商品ID查询商品信息，这里假设使用 ProductService 来处理
         Optional<goods> g = tr.findById(productId);
-
+        if (g.isPresent()) {
+            System.out.println("add view!");
+            goods goods = g.get();
+            goods.setView(goods.getView() + 1);  // 调用 goods 类中的方法
+            tr.save(goods);
+        } else {
+            // 处理找不到 productId 的情况
+            System.out.println("could not find product according to the productID");
+        }
         // 将查询到的商品信息放入Model中，以便在前端页面渲染
         model.addAttribute("product", g.orElse(null));
 
@@ -81,13 +92,14 @@ public class trade_controller {
     }
 
     @GetMapping("/postGoods")
-    public String postProduct(){
+    public String postProduct() {
         return "postPage";
     }
 
     @PostMapping("/submit-product")
-    public String updateGoods(goods g, @RequestParam("imageFromNet") MultipartFile imageFile)  {
-        g.setSeller("tim");
+    public String updateGoods(String username, goods g, @RequestParam("imageFromNet") MultipartFile imageFile) {
+        g.setSeller(username);
+        g.setView(0);
         try {
             byte[] imageData = imageFile.getBytes();
             System.out.println("Image data length: " + imageData.length);
@@ -99,14 +111,12 @@ public class trade_controller {
         tr.save(g);
         return "redirect:/tradeFrontPage";
     }
-//    public static String imageToBase64(String imagePath) {
-//        try {
-//            Path path = Paths.get(imagePath);
-//            byte[] imageBytes = Files.readAllBytes(path);
-//            return Base64.getEncoder().encodeToString(imageBytes);
-//        } catch (IOException e) {
-//            System.err.println("Error reading image file: " + e.getMessage());
-//            return null;
-//        }
-//    }
+
+    @GetMapping("/search")
+    public String search(@RequestParam("searchQuery") String searchQuery, Model model) {
+        System.out.println("into search");
+        List<goods> searchResults = ts.searchGoods(searchQuery);
+        model.addAttribute("recommendedProducts", searchResults);
+        return "frontpage";
+    }
 }

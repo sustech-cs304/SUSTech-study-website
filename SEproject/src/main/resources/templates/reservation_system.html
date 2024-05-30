@@ -5,14 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>空间预约系统</title>
     <link rel="stylesheet" href="/reservation_system.css">
+    <script>
+        let currentUsername = '';
 
+        function fetchCurrentUsername() {
+            return fetch('/get_user_name')
+                .then(response => response.text())
+                .then(username => {
+                    currentUsername = username;
+                    document.getElementById('username-span').innerText = currentUsername;
+                })
+                .catch(error => {
+                    console.error('Error fetching current user:', error);
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchCurrentUsername();
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar">
     <div class="nav-brand">空间预约系统</div>
     <a href="http://localhost:8080/" class="nav-item active">首页</a>
     <div class="nav-user">
-        <span>tim</span>
+        <span id="username-span">tim</span>
         <button class="dropdown-toggle" id="dropdownMenuButton">▼</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="#">个人中心</a>
@@ -41,11 +59,9 @@
         <div class="category">
             <button class="tab-link" onclick="showReservedSpaces()">已预约空间</button>
         </div>
-
     </div>
 
     <div class="content">
-
         <div id="content-display">选择一个类别以显示内容</div>
 
         <div id="image-display">
@@ -69,13 +85,11 @@
 
                 <label for="location">预约地点:</label>
                 <select id="location" name="location" required>
-
                     <option value="" disabled selected>请选择地点</option>
                 </select>
 
                 <label for="participants">预约人数:</label>
-                <input type="number" id="participants" name="participants" min="1" required
-                       onchange="addParticipantDetails(this.value)">
+                <input type="number" id="participants" name="participants" min="1" required onchange="addParticipantDetails(this.value)">
 
                 <input type="hidden" id="room_type" name="room_type">
 
@@ -89,9 +103,7 @@
 
 <!-- 右侧内容容器 -->
 <div class="container2">
-
 </div>
-
 
 <script src="/reservation_system.js"></script>
 </body>

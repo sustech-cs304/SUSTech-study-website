@@ -18,6 +18,16 @@ public class goods {
     private byte[] image;
     private String description;
 
+    public int getView() {
+        return view;
+    }
+
+    public void setView(int view) {
+        this.view = view;
+    }
+
+    private int view;
+
     public goods(String name, int price, List<String> tags, String seller, byte[] image, String description) {
         this.name = name;
         this.price = price;

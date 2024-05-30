@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-start; /* 左对齐 */
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 10px; /* 减少按钮之间的间距 */
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar-title {
+            text-align: center;
+            color: white;
+            flex: 1; /* 让标题占据剩余空间，实现居中效果 */
+        }
+
+        .avatar img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        .avatar {
+            padding: 14px 20px; /* 图标的内边距 */
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #gpaChart {
+            width: 100%;
+            height: 400px;
+        }
+
+        .average-gpa {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        .target-gpa {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn-return {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a class="btn-return" onclick="window.history.back()">返回</a>
+
+    <div class="navbar-title">
+        <h1>GPA Chart</h1>
+    </div>
+    <div class="avatar">
+        <img src="avatar.jpg" alt="Avatar" width="50" height="50">
+    </div>
+</div>
+<div class="container">
+
+    <canvas id="gpaChart"></canvas>
+    <div class="average-gpa" id="averageGPA"></div>
+    <div class="target-gpa">
+        <label for="targetGPA">Enter Target GPA:</label>
+        <input type="number" id="targetGPA" step="0.01" min="0" max="4" placeholder="Target GPA" />
+        <button onclick="updateChart()">Update</button>
+    </div>
+</div>
+
+<script>
+    let currentUsername = '';
+    let gpaValues = [];
+    const semesters = ['d1S', 'd1X', 'd2S', 'd2X', 'd3S', 'd3X', 'd4S', 'd4X'];
+    const fixedAverageGPA = [3.56, 3.65, 3.42, 3.5, 2.7, 3.21, 0, 0];
+
+    function fetchCurrentUsername() {
+        return fetch('/get_user_name')
+            .then(response => response.text())
+            .then(username => {
+                currentUsername = username;
+                document.getElementById('username-span').innerText = currentUsername;
+            })
+            .catch(error => {
+                console.error('Error fetching current user:', error);
+            });
+    }
+
+    async function fetchGPA() {
+        await fetchCurrentUsername();
+        const username = currentUsername;
+        try {
+            const response = await fetch(`/api/gpa/user/${username}`);
+            if (!response.ok) {
+                throw new Error('User not found');
+            }
+
+            const gpaData = await response.json();
+            console.log('Fetched GPA Data:', gpaData);
+
+            gpaValues = semesters.map(semester => {
+                const value = parseFloat(gpaData[semester]);
+                return isNaN(value) ? 0 : value;
+            });
+
+            console.log('GPA Values:', gpaValues);
+
+            const validGPAValues = gpaValues.filter(value => value !== 0);
+
+            const averageGPA = validGPAValues.reduce((acc, val) => acc + val, 0) / validGPAValues.length;
+            document.getElementById('averageGPA').innerText = `Average GPA: ${averageGPA.toFixed(2)}`;
+
+            const ctx = document.getElementById('gpaChart').getContext('2d');
+            renderChart(ctx, semesters, gpaValues, fixedAverageGPA);
+
+        } catch (error) {
+            alert(error.message);
+            console.error('Error fetching GPA data:', error);
+        }
+    }
+
+    function renderChart(ctx, labels, data, fixedData) {
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'GPA',
+                    data: data,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }, {
+                    label: 'Average GPA',
+                    data: fixedData,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                    borderDash: [5, 5]
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 4
+                    }
+                }
+            }
+        });
+    }
+
+    async function updateChart() {
+        const targetGPA = parseFloat(document.getElementById('targetGPA').value);
+        if (isNaN(targetGPA)) {
+            alert('Please enter a valid target GPA.');
+            return;
+        }
+
+        const validGPAValues = gpaValues.filter(value => value !== 0);
+        const currentSum = validGPAValues.reduce((acc, val) => acc + val, 0);
+        const numValidGPAValues = validGPAValues.length;
+        const numZeroGPAValues = gpaValues.length - numValidGPAValues;
+
+        const requiredTotalGPA = targetGPA * gpaValues.length;
+        const requiredZeroGPAValue = (requiredTotalGPA - currentSum) / numZeroGPAValues;
+
+        if (requiredZeroGPAValue < 0 || requiredZeroGPAValue > 4) {
+            alert('Target GPA is not achievable with the given constraints.');
+            return;
+        }
+
+        const updatedGPAValues = gpaValues.map(value => value === 0 ? requiredZeroGPAValue : value);
+
+        const chart = Chart.getChart('gpaChart');
+        chart.data.datasets[0].data = updatedGPAValues;
+        chart.update();
+
+        document.getElementById('averageGPA').innerText = `Target GPA: ${targetGPA.toFixed(2)}`;
+    }
+
+    fetchGPA();
+
+</script>
+
+</body>
+</html>
