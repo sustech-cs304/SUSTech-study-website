@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0 ;
+        }
+
+        /* Styles for navbar */
+        .navbar {
+            background-color: #333; /* Grey-black background */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+        }
+
+        .nav-brand {
+            font-weight: bold;
+            font-size: 24px;
+            text-decoration: none; /* 去掉链接下划线 */
+            color: white; /* 默认颜色为白色 */
+        }
+
+        .nav-item {
+            font-weight: bold;
+            font-size: 24px;
+            text-decoration: none; /* 去掉链接下划线 */
+            color: white; /* 默认颜色为白色 */
+        }
+
+        .nav-item.active {
+            font-weight: bold;
+            font-size: 24px;
+            color: white;
+        }
+
+        .nav-user {
+            display: flex;
+            align-items: center;
+            position: relative; /* For absolute positioning of dropdown menu */
+        }
+
+        .nav-user span {
+            margin-right: 5px; /* Spacing between user name and dropdown arrow */
+        }
+
+        /* Dropdown toggle button */
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            display: none; /* 默认隐藏下拉菜单 */
+            position: absolute; /* 绝对定位 */
+            right: 0;
+            top: 100%; /* 下拉菜单在触发元素正下方 */
+            background-color: white; /* 背景色 */
+            flex-direction: row; /* 项目横向排列 */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* 可选的阴影效果 */
+        }
+
+        /* Show/hide the dropdown */
+        .show {
+            display: block;
+        }
+
+        /*Dropdown item */
+        .dropdown-item {
+            color: black;
+            padding: 10px 20px; /* 适当调整内边距 */
+            text-decoration: none; /* 移除下划线 */
+            display: block; /* 设置为块级元素以填充宽度 */
+            white-space: nowrap; /* 防止内容换行 */
+        }
+
+        .dropdown-item:hover {
+            background-color: #f2f2f2; /* Light grey background on hover */
+        }
+
+        .nav-user:hover .dropdown-menu {
+            display: flex; /* 显示下拉菜单 */
+        }
+
+        .nav-item:hover {
+            color: #5091cd; /* 改变文字颜色 */
+        }
+
+        .nav-brand:hover {
+            color: #5091cd; /* 改变文字颜色 */
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 50px auto; /* 上下保持 50px, 左右自动居中 */
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            margin-left: 50px; /* 左边距推开内容区域离侧边栏 */
+            background-color: #fff; /* 背景颜色设置为白色，与侧边栏区分开 */
+            border: 1px solid #ddd; /* 添加边框 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 可选：添加阴影效果 */
+        }
+
+        .reservation-table {
+            width: 100%; /* 充满容器宽度 */
+            border-collapse: collapse; /* 边框合并，使之更整洁 */
+            margin-top: 20px; /* 与上方内容的间距 */
+            background-color: #f9f9f9; /* 轻微的背景色，提高可读性 */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 细微的阴影，增强层次感 */
+        }
+
+        .reservation-table th, .reservation-table td {
+            border: 1px solid #ccc; /* 统一边框颜色 */
+            padding: 8px; /* 单元格内的填充，避免内容挤压 */
+            text-align: left; /* 文本对齐方式 */
+            font-size: 14px; /* 字体大小 */
+        }
+
+        .reservation-table th {
+            background-color: #e8e8e8; /* 列标题背景色 */
+            font-weight: bold; /* 字体加粗 */
+        }
+
+        .reservation-table tr:nth-child(odd) {
+            background-color: #f4f4f4; /* 为表格行添加条纹效果 */
+        }
+    </style>
+    <script>
+        let currentUsername = '';
+
+        function fetchCurrentUsername() {
+            return fetch('/get_user_name')
+                .then(response => response.text())
+                .then(username => {
+                    currentUsername = username;
+                    document.getElementById('username-span').innerText = currentUsername;
+                    fetchUserReservations(currentUsername);
+                })
+                .catch(error => {
+                    console.error('Error fetching current user:', error);
+                });
+        }
+
+        function fetchUserReservations(username) {
+            fetch('/reservations/all')
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById('reservation-table');
+                    const tbody = table.querySelector('tbody');
+                    tbody.innerHTML = '';
+
+                    data.forEach(item => {
+                        if (item.firstName === username || item.firstStudentId === username) {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${item.id}</td>
+                                <td>${item.date}</td>
+                                <td>${item.time_slot}</td>
+                                <td>${item.location}</td>
+                                <td>${item.firstName}</td>
+                                <td>${item.firstStudentId}</td>
+                                <td>${item.participants}</td>
+                                <td>${item.roomType}</td>
+                                <td>${item.status}</td>
+                                <td>
+                                    <button onclick="checkInReservation(${item.id})">签到</button>
+                                    <button onclick="cancelReservation(${item.id})">取消</button>
+                                </td>
+                            `;
+                            tbody.appendChild(row);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching reservations:', error);
+                });
+        }
+
+        function checkInReservation(reservationId) {
+            fetch(`/reservations/${reservationId}/checkin`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('签到成功！');
+                        fetchUserReservations(currentUsername);
+                    } else {
+                        alert('签到失败，请重试。');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function cancelReservation(reservationId) {
+            fetch(`/reservations/${reservationId}`, {
+                method: 'DELETE'
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('取消成功！');
+                        fetchUserReservations(currentUsername);
+                    } else {
+                        alert('取消失败，请重试。');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchCurrentUsername();
+        });
+    </script>
+</head>
+<body>
+<nav class="navbar">
+    <a href="http://localhost:8080/reservation_system" class="nav-brand">空间预约系统</a>
+    <a href="http://localhost:8080/main_page" class="nav-item">首页</a>
+    <div class="nav-user">
+        <span id="username-span">tim</span>
+        <button class="dropdown-toggle" id="dropdownMenuButton">▼</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="http://localhost:8080/res_pc">个人中心</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="content">
+        <h1>个人中心</h1>
+        <table class="reservation-table" id="reservation-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>日期</th>
+                <th>时间段</th>
+                <th>地点</th>
+                <th>预约者姓名</th>
+                <th>学号</th>
+                <th>人数</th>
+                <th>房间类型</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- 预约记录将被插入到这里 -->
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

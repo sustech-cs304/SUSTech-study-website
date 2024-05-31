@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.util.List;
 
 @RestController
@@ -37,5 +38,27 @@ public class ReservationController {
         }
         return new ResponseEntity<>(reservations, HttpStatus.OK);
     }
+
+    // 新添加的检查重复预约的方法
+    @PutMapping("/{reservationId}/checkin")
+    public ResponseEntity<Void> checkInReservation(@PathVariable Long reservationId) {
+        boolean success = reservationService.checkInReservation(reservationId);
+        if (success) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @DeleteMapping("/{reservationId}")
+    public ResponseEntity<Void> cancelReservation(@PathVariable Long reservationId) {
+        boolean success = reservationService.cancelReservation(reservationId);
+        if (success) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 
 }

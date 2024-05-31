@@ -1,9 +1,6 @@
 package com.example.mvcdemo2.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 
 @Entity
@@ -19,6 +16,8 @@ public class Reservation {
     private String firstStudentId; // 第一位预约者的学号
     private String roomType; // 房间类型
     // Getters and setters
+    @Column(nullable = false, columnDefinition = "VARCHAR(50) DEFAULT '未签到'")
+    private String status = "未签到";
 
     public Long getId() {
         return id;
@@ -83,6 +82,13 @@ public class Reservation {
     public void setRoomType(String roomType) {
         this.roomType = roomType;
     }
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
     @Override
     public String toString() {
         return "Reservation{" +
@@ -94,6 +100,7 @@ public class Reservation {
                 ", firstName='" + firstName + '\'' +
                 ", firstStudentId='" + firstStudentId + '\'' +
                 ", roomType='" + roomType + '\'' +
+                ", status='" + status + '\'' +
                 '}';
     }
 }

@@ -22,37 +22,73 @@ function bindDropdownToggle() {
     });
 }
 
+// function bindFormSubmit() {
+//     var form = document.getElementById('reservation-form');
+//     form.addEventListener('submit', function (event) {
+//         event.preventDefault();
+//         const formData = new FormData(form);
+//         let reservationData = Object.fromEntries(formData.entries());
+//         // reservationData.time_slot = form['time-slot'].value
+//         // 打印出表单数据，用于调试
+//         console.log('提交的预约数据:', reservationData);
+//
+//         // 将预约数据转换为字符串，显示在弹窗中
+//         const confirmationMessage = createConfirmationMessage(reservationData);
+//         alert(confirmationMessage);
+//
+//         // 在此处添加其他与提交相关的代码...
+//         submitReservation(reservationData);
+//         // 重置子分类显示和侧边栏状态
+//         resetSubcategories();
+//
+//         // 重置表单
+//         event.target.reset();
+//
+//         // 重置内容显示区
+//         document.getElementById('content-display').textContent = '选择一个类别以显示内容';
+//
+//         // 清除动态生成的姓名和学号输入字段
+//         document.getElementById('participant-details').innerHTML = '';
+//
+//         document.getElementById('image-display').style.display = 'none';
+//          // 确保默认状态为隐藏
+//
+//     });
+// }
+
 function bindFormSubmit() {
     var form = document.getElementById('reservation-form');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         const formData = new FormData(form);
         let reservationData = Object.fromEntries(formData.entries());
-        // reservationData.time_slot = form['time-slot'].value
-        // 打印出表单数据，用于调试
-        console.log('提交的预约数据:', reservationData);
 
-        // 将预约数据转换为字符串，显示在弹窗中
-        const confirmationMessage = createConfirmationMessage(reservationData);
-        alert(confirmationMessage);
+        // 检查是否有重复预约
+        checkDuplicateReservation(reservationData, function (isDuplicate) {
+            if (isDuplicate) {
+                alert('相同时间段的预约已存在，请选择其他时间或地点。');
+            } else {
+                // 将预约数据转换为字符串，显示在弹窗中
+                const confirmationMessage = createConfirmationMessage(reservationData);
+                alert(confirmationMessage);
 
-        // 在此处添加其他与提交相关的代码...
-        submitReservation(reservationData);
-        // 重置子分类显示和侧边栏状态
-        resetSubcategories();
+                // 提交预约数据
+                submitReservation(reservationData);
+                // 重置子分类显示和侧边栏状态
+                resetSubcategories();
 
-        // 重置表单
-        event.target.reset();
+                // 重置表单
+                event.target.reset();
 
-        // 重置内容显示区
-        document.getElementById('content-display').textContent = '选择一个类别以显示内容';
+                // 重置内容显示区
+                document.getElementById('content-display').textContent = '选择一个类别以显示内容';
 
-        // 清除动态生成的姓名和学号输入字段
-        document.getElementById('participant-details').innerHTML = '';
+                // 清除动态生成的姓名和学号输入字段
+                document.getElementById('participant-details').innerHTML = '';
 
-        document.getElementById('image-display').style.display = 'none';
-         // 确保默认状态为隐藏
-
+                document.getElementById('image-display').style.display = 'none'; // 确保默认状态为隐藏
+            }
+        });
     });
 }
 
@@ -61,6 +97,34 @@ function createConfirmationMessage(data) {
     return `预约日期: ${data.date}\n预约时间段: ${data.time_slot}\n预约地点: ${data.location}\n预约人数: ${data.participants}`;
 }
 
+// function submitReservation(reservationData) {
+//     const firstNameInput = document.querySelector('input[name="name1"]');
+//     const firstStudentIdInput = document.querySelector('input[name="studentId1"]');
+//     const roomType = document.getElementById('room_type').value; // 获取隐藏字段的值
+//
+//     fetch('/reservations', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({
+//             date: reservationData.date,
+//             time_slot: reservationData.time_slot,
+//             location: reservationData.location,
+//             participants: Number(reservationData.participants), // 确保是整数
+//             firstName: firstNameInput ? firstNameInput.value : '', // 添加第一位预约者的姓名
+//             firstStudentId: firstStudentIdInput ? firstStudentIdInput.value : '', // 添加第一位预约者的学号
+//             roomType: roomType // 包括房间类型
+//         }),
+//     })
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log('Success:', data);
+//         })
+//         .catch((error) => {
+//             console.error('Error:', error);
+//         });
+// }
 function submitReservation(reservationData) {
     const firstNameInput = document.querySelector('input[name="name1"]');
     const firstStudentIdInput = document.querySelector('input[name="studentId1"]');
@@ -78,7 +142,8 @@ function submitReservation(reservationData) {
             participants: Number(reservationData.participants), // 确保是整数
             firstName: firstNameInput ? firstNameInput.value : '', // 添加第一位预约者的姓名
             firstStudentId: firstStudentIdInput ? firstStudentIdInput.value : '', // 添加第一位预约者的学号
-            roomType: roomType // 包括房间类型
+            roomType: roomType, // 包括房间类型
+            status: '未签到' // 设置默认状态为未签到
         }),
     })
         .then(response => response.json())
@@ -87,6 +152,25 @@ function submitReservation(reservationData) {
         })
         .catch((error) => {
             console.error('Error:', error);
+        });
+}
+
+function checkDuplicateReservation(reservationData, callback) {
+    // 模拟服务器端的重复预约检查
+    fetch(`/reservations/all`)
+        .then(response => response.json())
+        .then(data => {
+            // 检查是否有重复预约
+            const isDuplicate = data.some(reservation =>
+                reservation.date === reservationData.date &&
+                reservation.time_slot === reservationData.time_slot &&
+                reservation.location === reservationData.location
+            );
+            callback(isDuplicate);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            callback(false);
         });
 }
 
@@ -250,6 +334,7 @@ function showReservedSpaces() {
                         <th>学号</th>
                         <th>人数</th>
                         <th>房间类型</th>
+                        <th>状态</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -263,6 +348,7 @@ function showReservedSpaces() {
                             <td>${item.firstStudentId}</td>
                             <td>${item.participants}</td>
                             <td>${item.roomType}</td>
+                            <td>${item.status}</td>
                         </tr>
                     `).join('')}
                 </tbody>
@@ -271,7 +357,7 @@ function showReservedSpaces() {
         })
         .catch(error => {
             console.error('Error:', error);
-            tableArea.textContent = '无法加载数据。';
+            tableArea.textContent = '当前暂无预约';
         });
 }
 
