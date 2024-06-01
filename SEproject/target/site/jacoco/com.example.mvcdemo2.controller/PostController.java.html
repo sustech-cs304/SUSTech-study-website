@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PostController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mvcdemo2</a> &gt; <a href="index.source.html" class="el_package">com.example.mvcdemo2.controller</a> &gt; <span class="el_source">PostController.java</span></div><h1>PostController.java</h1><pre class="source lang-java linenums">package com.example.mvcdemo2.controller;
+
+import com.example.mvcdemo2.model.*;
+import com.example.mvcdemo2.repository.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+
+@Controller
+<span class="fc" id="L15">public class PostController {</span>
+    @Autowired
+    private PostRepository postRepository;
+
+    @Autowired
+    private CommentRepository commentRepository;
+
+    @Autowired
+    private HistoryController historyController;
+
+    @PostMapping(&quot;/new_post&quot;)
+    public Post createPost(@RequestBody Post post) {
+<span class="nc" id="L27">        return postRepository.save(post);</span>
+    }
+
+    @GetMapping(&quot;/posts&quot;)
+    public ResponseEntity&lt;List&lt;Post&gt;&gt; getAllPosts() {
+<span class="nc" id="L32">        List&lt;Post&gt; posts = postRepository.findAll();</span>
+<span class="nc" id="L33">        return ResponseEntity.ok(posts); // 返回状态码200和帖子数据</span>
+    }
+
+    @GetMapping(&quot;/posts/{id}&quot;)
+    public String getPostDetails(@PathVariable Long id, Model model) {
+<span class="nc" id="L38">        Optional&lt;Post&gt; post = postRepository.findById(id);</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        if (post.isPresent()) {</span>
+<span class="nc" id="L40">            model.addAttribute(&quot;post&quot;, post.get());</span>
+<span class="nc" id="L41">            return &quot;post_details&quot;; // 返回 post_details.html 对应的视图名称</span>
+        } else {
+            // 可以选择重定向到一个错误页面或者返回一个错误信息
+<span class="nc" id="L44">            return &quot;error_page&quot;; // 或者是 return &quot;redirect:/some_path&quot;;</span>
+        }
+    }
+
+
+
+    @GetMapping(&quot;/posts/id={id}&quot;)
+    public ResponseEntity&lt;Post&gt; getPostById(@PathVariable Long id) {
+<span class="nc" id="L52">        Optional&lt;Post&gt; post = postRepository.findById(id);</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        if (post.isPresent()) {</span>
+<span class="nc" id="L54">            return ResponseEntity.ok(post.get());</span>
+        } else {
+<span class="nc" id="L56">            return ResponseEntity.notFound().build();</span>
+        }
+    }
+
+    // 在您的 PostController 中
+    @GetMapping(&quot;/posts/search&quot;)
+    public ResponseEntity&lt;List&lt;Post&gt;&gt; searchPosts(
+            @RequestParam(required = false) String title,
+            @RequestParam(defaultValue = &quot;all&quot;) String category,
+            @RequestParam(defaultValue = &quot;newest&quot;) String sortBy) {
+
+<span class="nc" id="L67">        List&lt;Post&gt; posts = postRepository.findByTitleContainingAndCategoryOrderByPublishTime(</span>
+                title, category, sortBy);
+
+<span class="nc" id="L70">        return ResponseEntity.ok(posts);</span>
+    }
+
+    @PostMapping(&quot;/posts/{postId}/comments&quot;)
+    public ResponseEntity&lt;Comment&gt; createComment(@PathVariable Long postId, @RequestBody Comment comment) {
+<span class="nc" id="L75">        Optional&lt;Post&gt; post = postRepository.findById(postId);</span>
+<span class="nc bnc" id="L76" title="All 2 branches missed.">        if (post.isPresent()) {</span>
+<span class="nc" id="L77">            comment.setPost(post.get());</span>
+<span class="nc" id="L78">            Comment savedComment = commentRepository.save(comment);</span>
+<span class="nc" id="L79">            return ResponseEntity.ok(savedComment);</span>
+        } else {
+<span class="nc" id="L81">            return ResponseEntity.notFound().build();</span>
+        }
+    }
+
+
+    @GetMapping(&quot;/posts/{postId}/comments&quot;)
+    public ResponseEntity&lt;List&lt;Comment&gt;&gt; getCommentsByPostId(@PathVariable Long postId) {
+<span class="nc" id="L88">        List&lt;Comment&gt; comments = commentRepository.findByPostIdOrderByPublishTimeDesc(postId);</span>
+<span class="nc" id="L89">        return ResponseEntity.ok(comments);</span>
+    }
+
+    @PostMapping(&quot;/comments/{commentId}/like&quot;)
+    public ResponseEntity&lt;Void&gt; likeComment(@PathVariable Long commentId) {
+<span class="nc" id="L94">        Optional&lt;Comment&gt; comment = commentRepository.findById(commentId);</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        if (comment.isPresent()) {</span>
+<span class="nc" id="L96">            Comment updatedComment = comment.get();</span>
+<span class="nc" id="L97">            updatedComment.setLikes(updatedComment.getLikes() + 1);</span>
+<span class="nc" id="L98">            commentRepository.save(updatedComment);</span>
+<span class="nc" id="L99">            return ResponseEntity.ok().build();</span>
+        } else {
+<span class="nc" id="L101">            return ResponseEntity.notFound().build();</span>
+        }
+    }
+
+    @PostMapping(&quot;/comments/{commentId}/dislike&quot;)
+    public ResponseEntity&lt;Void&gt; dislikeComment(@PathVariable Long commentId) {
+<span class="nc" id="L107">        Optional&lt;Comment&gt; comment = commentRepository.findById(commentId);</span>
+<span class="nc bnc" id="L108" title="All 2 branches missed.">        if (comment.isPresent()) {</span>
+<span class="nc" id="L109">            Comment updatedComment = comment.get();</span>
+<span class="nc" id="L110">            updatedComment.setDislikes(updatedComment.getDislikes() + 1);</span>
+<span class="nc" id="L111">            commentRepository.save(updatedComment);</span>
+<span class="nc" id="L112">            return ResponseEntity.ok().build();</span>
+        } else {
+<span class="nc" id="L114">            return ResponseEntity.notFound().build();</span>
+        }
+    }
+
+    @GetMapping(&quot;/posts/search_by_user&quot;)
+    public ResponseEntity&lt;List&lt;Post&gt;&gt; getPostsByUser() {
+<span class="nc" id="L120">        String username = historyController.usrName; // 获取当前用户名</span>
+<span class="nc" id="L121">        List&lt;Post&gt; posts = postRepository.findByAuthor(username);</span>
+<span class="nc" id="L122">        return ResponseEntity.ok(posts);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

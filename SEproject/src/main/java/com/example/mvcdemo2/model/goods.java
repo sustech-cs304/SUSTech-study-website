@@ -85,6 +85,10 @@ public class goods {
         this.seller = seller;
     }
 
+    public void setGood_id(int good_id) {
+        this.good_id = good_id;
+    }
+
     public void setImage(byte[] image) {
         this.image = image;
     }

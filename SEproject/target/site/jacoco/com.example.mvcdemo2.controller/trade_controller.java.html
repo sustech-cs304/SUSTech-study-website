@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>trade_controller.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mvcdemo2</a> &gt; <a href="index.source.html" class="el_package">com.example.mvcdemo2.controller</a> &gt; <span class="el_source">trade_controller.java</span></div><h1>trade_controller.java</h1><pre class="source lang-java linenums">package com.example.mvcdemo2.controller;
+
+import com.example.mvcdemo2.model.goods;
+import com.example.mvcdemo2.repository.trade_repository;
+import com.example.mvcdemo2.service.trade_service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.util.ResourceUtils;
+import org.springframework.util.StreamUtils;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Base64;
+import java.util.List;
+import java.util.Optional;
+
+@Controller
+@ComponentScan(basePackages = {&quot;com.example.mvcdemo2.service&quot;})
+public class trade_controller {
+    @Autowired
+    private trade_repository tr;
+    @Autowired
+    private trade_service ts;
+
+<span class="fc" id="L37">    public trade_controller(trade_repository tr) {</span>
+<span class="fc" id="L38">        this.tr = tr;</span>
+<span class="fc" id="L39">    }</span>
+
+    @GetMapping(&quot;/tradeFrontPage&quot;)
+    public String begin(Model model) throws IOException {
+//        List&lt;String&gt; l = new ArrayList&lt;&gt;();
+//        l.add(&quot;animation&quot;);
+//        l.add(&quot;hand-painting&quot;);
+//        l.add(&quot;personally-made&quot;);
+//        File imageFile = ResourceUtils.getFile(&quot;E:\\好图\\d1689ca80dbb3b24e4aedf93f9c4a0821657184802962.jpeg&quot;);
+//        byte[] imageData = StreamUtils.copyToByteArray(new FileInputStream(imageFile));
+//        File imageFile1 = ResourceUtils.getFile(&quot;C:\\Users\\lyc\\Desktop\\pixiv\\115662672_p0_master1200.jpg&quot;);
+//        byte[] imageData1 = StreamUtils.copyToByteArray(new FileInputStream(imageFile1));
+//
+//        insertData(&quot;drawing&quot;, 100, l, imageData, &quot;seller&quot;, &quot;this is just a test good&quot;);
+//        insertData(&quot;drawing&quot;, 100, l, imageData1, &quot;seller&quot;, &quot;this is just a test good&quot;);
+//        insertData(&quot;drawing&quot;, 100, l, imageData1, &quot;seller&quot;, &quot;this is just a test good&quot;);
+//        insertData(&quot;drawing&quot;, 100, l, imageData1, &quot;seller&quot;, &quot;this is just a test good&quot;);
+//        insertData(&quot;drawing&quot;, 100, l, imageData1, &quot;seller&quot;, &quot;this is just a test good&quot;);
+//        insertData(&quot;drawing&quot;, 100, l, imageData1, &quot;seller&quot;, &quot;this is just a test good&quot;);
+<span class="nc" id="L58">        model.addAttribute(&quot;recommendedProducts&quot;, tr.findAll());</span>
+<span class="nc" id="L59">        return &quot;frontpage&quot;;</span>
+    }
+
+    public void insertData(String name, int price, List&lt;String&gt; tag, byte[] image, String seller, String description) {
+<span class="nc" id="L63">        goods entity = new goods();</span>
+<span class="nc" id="L64">        entity.setName(name);</span>
+<span class="nc" id="L65">        entity.setPrice(price);</span>
+<span class="nc" id="L66">        entity.setSeller(seller);</span>
+<span class="nc" id="L67">        entity.setTags(tag);</span>
+<span class="nc" id="L68">        entity.setImage(image);</span>
+<span class="nc" id="L69">        entity.setDescription(description);</span>
+
+<span class="nc" id="L71">        tr.save(entity);</span>
+<span class="nc" id="L72">    }</span>
+
+    @GetMapping(&quot;/productInfo&quot;)
+    public String getProductInfo(@RequestParam(&quot;id&quot;) int productId, Model model) {
+        // 根据商品ID查询商品信息，这里假设使用 ProductService 来处理
+<span class="nc" id="L77">        Optional&lt;goods&gt; g = tr.findById(productId);</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">        if (g.isPresent()) {</span>
+<span class="nc" id="L79">            System.out.println(&quot;add view!&quot;);</span>
+<span class="nc" id="L80">            goods goods = g.get();</span>
+<span class="nc" id="L81">            goods.setView(goods.getView() + 1);  // 调用 goods 类中的方法</span>
+<span class="nc" id="L82">            tr.save(goods);</span>
+<span class="nc" id="L83">        } else {</span>
+            // 处理找不到 productId 的情况
+<span class="nc" id="L85">            System.out.println(&quot;could not find product according to the productID&quot;);</span>
+        }
+        // 将查询到的商品信息放入Model中，以便在前端页面渲染
+<span class="nc" id="L88">        model.addAttribute(&quot;product&quot;, g.orElse(null));</span>
+
+        // 返回商品信息页面的模板文件名，比如productInfo.html
+<span class="nc" id="L91">        return &quot;productInfo&quot;;</span>
+    }
+
+    @GetMapping(&quot;/postGoods&quot;)
+    public String postProduct() {
+<span class="nc" id="L96">        return &quot;postPage&quot;;</span>
+    }
+
+    @PostMapping(&quot;/submit-product&quot;)
+    public String updateGoods(String username, goods g, @RequestParam(&quot;imageFromNet&quot;) MultipartFile imageFile) {
+<span class="nc" id="L101">        g.setSeller(username);</span>
+<span class="nc" id="L102">        g.setView(0);</span>
+        try {
+<span class="nc" id="L104">            byte[] imageData = imageFile.getBytes();</span>
+<span class="nc" id="L105">            System.out.println(&quot;Image data length: &quot; + imageData.length);</span>
+<span class="nc" id="L106">            g.setImage(imageData); // 将上传的图片文件转换为字节数组并保存</span>
+<span class="nc" id="L107">        } catch (IOException e) {</span>
+            // 处理文件上传异常
+<span class="nc" id="L109">            e.printStackTrace();</span>
+<span class="nc" id="L110">        }</span>
+<span class="nc" id="L111">        tr.save(g);</span>
+<span class="nc" id="L112">        return &quot;redirect:/tradeFrontPage&quot;;</span>
+    }
+
+    @GetMapping(&quot;/search&quot;)
+    public String search(@RequestParam(&quot;searchQuery&quot;) String searchQuery, Model model) {
+<span class="nc" id="L117">        System.out.println(&quot;into search&quot;);</span>
+<span class="nc" id="L118">        List&lt;goods&gt; searchResults = ts.searchGoods(searchQuery);</span>
+<span class="nc" id="L119">        model.addAttribute(&quot;recommendedProducts&quot;, searchResults);</span>
+<span class="nc" id="L120">        return &quot;frontpage&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

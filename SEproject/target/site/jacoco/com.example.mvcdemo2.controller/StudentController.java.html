@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudentController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mvcdemo2</a> &gt; <a href="index.source.html" class="el_package">com.example.mvcdemo2.controller</a> &gt; <span class="el_source">StudentController.java</span></div><h1>StudentController.java</h1><pre class="source lang-java linenums">package com.example.mvcdemo2.controller;
+
+import com.example.mvcdemo2.service.StudentService;
+import com.example.mvcdemo2.task.TopicPopularity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.context.annotation.ComponentScan;
+@Controller
+@ComponentScan(basePackages = {&quot;com.example.mvcdemo2.service&quot;}) // Add your service's package here
+public class StudentController {
+
+    private final StudentService studentService;
+<span class="fc" id="L17">    private static final Logger LOGGER = LoggerFactory.getLogger(TopicPopularity.class);</span>
+<span class="fc" id="L18">    public StudentController(StudentService studentService) {</span>
+<span class="fc" id="L19">        this.studentService = studentService;</span>
+<span class="fc" id="L20">    }</span>
+
+    @RequestMapping(&quot;/list&quot;)
+    public String getStudents(Model model){
+<span class="nc" id="L24">        model.addAttribute(&quot;students&quot;, studentService.getStudents());</span>
+<span class="nc" id="L25">        return &quot;index&quot;;</span>
+    }
+
+    @RequestMapping(&quot;/main&quot;)
+    public String showMain(Model model){
+        //model.addAttribute(&quot;students&quot;, studentService.getStudents());
+<span class="nc" id="L31">        LOGGER.info(&quot;Enter main page&quot;);</span>
+<span class="nc" id="L32">        return &quot;main&quot;;</span>
+    }
+
+    @RequestMapping(&quot;/history&quot;)
+    public String showgpahistory(Model model){
+        //model.addAttribute(&quot;students&quot;, studentService.getStudents());
+<span class="nc" id="L38">        LOGGER.info(&quot;Enter main page&quot;);</span>
+<span class="nc" id="L39">        return &quot;gpahistory&quot;;</span>
+    }
+
+
+    @RequestMapping(&quot;/gpa&quot;)
+    public String showGPA(Model model){
+        //model.addAttribute(&quot;students&quot;, studentService.getStudents());
+<span class="nc" id="L46">        LOGGER.info(&quot;Enter gpa page&quot;);</span>
+<span class="nc" id="L47">        return &quot;gpa2&quot;;</span>
+    }
+
+    @GetMapping(&quot;/reservation_system&quot;)
+    public String reservationSystem() {
+        // Assuming 'main.html' is directly inside 'static' folder.
+//        return &quot;forward:/main.html&quot;;
+<span class="nc" id="L54">        return &quot;reservation_system&quot;;</span>
+    }
+
+    @GetMapping(&quot;/res_pc&quot;)
+    public String res_pc() {
+        // Assuming 'main.html' is directly inside 'static' folder.
+//        return &quot;forward:/main.html&quot;;
+<span class="nc" id="L61">        return &quot;res_pc&quot;;</span>
+    }
+    @GetMapping(&quot;/&quot;)
+    public String home() {
+<span class="nc" id="L65">        return &quot;login&quot;; // Assuming 'main' is the name of your home page template</span>
+    }
+
+    @GetMapping(&quot;/main_page&quot;)
+    public String mainPage() {
+<span class="nc" id="L70">        return &quot;main&quot;; // Assuming 'main' is the name of your home page template</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

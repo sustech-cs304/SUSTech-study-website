@@ -5,27 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd72c587-f080-404b-a155-957eebed5e2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/res_pc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/AdviceControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/ReservationControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/ReservationRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/ReservationServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/ReservationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/StudentServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/trade_serviceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/ReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dbUser.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbUser.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/trade_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/trade_service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/reservation_system.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/reservation_system.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservation_system.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservation_system.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dbUser.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbUser.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/model/goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/model/goods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/service/trade_service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/service/trade_service.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/project.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/reservation_system.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/reservation_system.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/reservation_system.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reservation_system.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mvcdemo2-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mvcdemo2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.Mvcdemo2ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.Mvcdemo2ApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.Mvcdemo2ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.Mvcdemo2ApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +41,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,41 +79,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Mvcdemo2Application.executor&quot;: &quot;Debug&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sco/12/SEproject/src/main/resources/templates&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;43337e60a89cf8a3c9bc4c2facdb29ae&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Mvcdemo2Application.executor": "Debug",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/sco/12/SEproject/src/main/resources/templates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDK",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable",
+    "spring.configuration.checksum": "43337e60a89cf8a3c9bc4c2facdb29ae",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
@@ -132,19 +141,79 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Mvcdemo2Application">
-    <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SEproject/templates/main.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Mvcdemo2Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReservationRepositoryTest">
+    <configuration name="HistoryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvcdemo2" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.mvcdemo2.Mvcdemo2Application" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.mvcdemo2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.HistoryControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HistoryControllerTest.testSaveAnswers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mvcdemo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mvcdemo2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.HistoryControllerTest" />
+      <option name="METHOD_NAME" value="testSaveAnswers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mvcdemo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mvcdemo2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.ReservationControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mvcdemo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mvcdemo2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.ReservationRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mvcdemo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mvcdemo2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.ReservationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,7 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Mvcdemo2Application (1)" />
+        <item itemvalue="JUnit.ReservationRepositoryTest" />
+        <item itemvalue="JUnit.ReservationTest" />
+        <item itemvalue="JUnit.ReservationControllerTest" />
+        <item itemvalue="JUnit.HistoryControllerTest" />
+        <item itemvalue="JUnit.HistoryControllerTest.testSaveAnswers" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +274,8 @@
       <workItem from="1716983284227" duration="4085000" />
       <workItem from="1717060971465" duration="8273000" />
       <workItem from="1717133246542" duration="6768000" />
-      <workItem from="1717147376126" duration="1257000" />
+      <workItem from="1717147376126" duration="1650000" />
+      <workItem from="1717221530443" duration="7191000" />
     </task>
     <servers />
   </component>

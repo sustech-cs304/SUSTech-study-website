@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>QuizController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mvcdemo2</a> &gt; <a href="index.source.html" class="el_package">com.example.mvcdemo2.controller</a> &gt; <span class="el_source">QuizController.java</span></div><h1>QuizController.java</h1><pre class="source lang-java linenums">package com.example.mvcdemo2.controller;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.view.RedirectView;
+
+@Controller
+<span class="fc" id="L12">public class QuizController {</span>
+
+    @GetMapping(&quot;/quiz&quot;)
+    public String showQuiz(@RequestParam(name = &quot;quiz&quot;, required = false) String quizId, Model model) {
+<span class="nc bnc" id="L16" title="All 2 branches missed.">        if (quizId != null) {</span>
+<span class="nc" id="L17">            model.addAttribute(&quot;quizId&quot;, quizId);</span>
+        }
+<span class="nc" id="L19">        return &quot;quiz&quot;;</span>
+    }
+
+    @GetMapping(&quot;/selection&quot;)
+    public String quizSelection() {
+<span class="nc" id="L24">        return &quot;quizSelection&quot;; // 返回quizSelection.html页面</span>
+    }
+
+    @GetMapping(&quot;/login&quot;)
+    public String login() {
+<span class="nc" id="L29">        return &quot;login&quot;; // 返回quizSelection.html页面</span>
+    }
+
+//    @PostMapping(&quot;/quiz-selection&quot;)
+//    public RedirectView selectQuiz(@RequestParam(&quot;quizId&quot;) String quizId) {
+//        return new RedirectView(&quot;/quiz?id=&quot; + quizId);
+//    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

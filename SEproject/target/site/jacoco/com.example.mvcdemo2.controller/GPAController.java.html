@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GPAController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mvcdemo2</a> &gt; <a href="index.source.html" class="el_package">com.example.mvcdemo2.controller</a> &gt; <span class="el_source">GPAController.java</span></div><h1>GPAController.java</h1><pre class="source lang-java linenums">package com.example.mvcdemo2.controller;
+
+import com.example.mvcdemo2.model.GPA;
+import com.example.mvcdemo2.repository.GPARepository;
+import com.example.mvcdemo2.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@RestController
+@RequestMapping(&quot;/api/gpa&quot;)
+<span class="fc" id="L18">public class GPAController {</span>
+    @Autowired
+    private GPARepository gpaRepository;
+
+    @PostMapping(&quot;/save&quot;)
+    @Transactional
+    public ResponseEntity&lt;String&gt; saveGPA(@RequestBody GPARequest gpaRequest) {
+        try {
+<span class="nc" id="L26">            gpaRepository.saveGPA(gpaRequest.getUsername(), gpaRequest.getD3x());</span>
+<span class="nc" id="L27">            return new ResponseEntity&lt;&gt;(&quot;GPA saved successfully&quot;, HttpStatus.OK);</span>
+<span class="nc" id="L28">        } catch (Exception e) {</span>
+<span class="nc" id="L29">            return new ResponseEntity&lt;&gt;(&quot;Error saving GPA: &quot; + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);</span>
+        }
+    }
+    @GetMapping(&quot;/user/{username}&quot;)
+    public ResponseEntity&lt;GPA&gt; getGPAByUsername(@PathVariable String username) {
+<span class="nc" id="L34">        GPA gpa = gpaRepository.findByUsername(username);</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (gpa != null) {</span>
+<span class="nc" id="L36">            return new ResponseEntity&lt;&gt;(gpa, HttpStatus.OK);</span>
+        } else {
+<span class="nc" id="L38">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+        }
+    }
+    @RequestMapping(&quot;/gpahistory&quot;)
+    public String showgpahistory(Model model){
+        //model.addAttribute(&quot;students&quot;, studentService.getStudents());
+<span class="nc" id="L44">        return &quot;gpahistory&quot;;</span>
+    }
+}
+<span class="nc" id="L47">class GPARequest {</span>
+    private String username;
+    private String d3x;
+
+    public String getUsername() {
+<span class="nc" id="L52">        return username;</span>
+    }
+
+    public void setUsername(String username) {
+<span class="nc" id="L56">        this.username = username;</span>
+<span class="nc" id="L57">    }</span>
+
+    public String getD3x() {
+<span class="nc" id="L60">        return d3x;</span>
+    }
+
+    public void setD3x(String d3x) {
+<span class="nc" id="L64">        this.d3x = d3x;</span>
+<span class="nc" id="L65">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
