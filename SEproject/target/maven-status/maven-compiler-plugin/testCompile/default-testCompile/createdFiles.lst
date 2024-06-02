@@ -5,6 +5,7 @@ com\example\mvcdemo2\CommentTest.class
 com\example\mvcdemo2\PostControllerTest.class
 com\example\mvcdemo2\UsersTest.class
 com\example\mvcdemo2\HistoryTest.class
+com\example\mvcdemo2\TopicPopularityTest.class
 com\example\mvcdemo2\ReservationControllerTest.class
 com\example\mvcdemo2\trade_serviceTest.class
 com\example\mvcdemo2\UserRepositoryTest.class

@@ -15,18 +15,13 @@ D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\reposi
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\ReservationController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\Mvcdemo2Application.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\AdviceController.java
-D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\demos\web\PathVariableController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\QuizController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\AdminController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\PostController.java
-D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\Data\Loader.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\GPA.java
-D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\task\RelatedTopics.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\GPAController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\User.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\service\StudentService.java
-D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\demos\web\BasicController.java
-D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\task\BugPopularity.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\service\ReservationService.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\Tag.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\repository\ReservationRepository.java
@@ -42,4 +37,3 @@ D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\contro
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\Admin.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\Student.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\service\trade_service.java
-D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\demos\web\User.java

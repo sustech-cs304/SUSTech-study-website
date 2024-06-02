@@ -19,15 +19,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TopicPopularity {
     @Autowired
     private final StudentService studentService;
-<span class="nc" id="L22">    private static final Logger LOGGER = LoggerFactory.getLogger(TopicPopularity.class);</span>
+<span class="fc" id="L22">    private static final Logger LOGGER = LoggerFactory.getLogger(TopicPopularity.class);</span>
 
-<span class="nc" id="L24">    public static StringBuilder result = new StringBuilder(&quot;[&quot;);</span>
-<span class="nc" id="L25">    public static StringBuilder result2 = new StringBuilder(&quot;[&quot;);</span>
-<span class="nc" id="L26">    public static StringBuilder result3 = new StringBuilder(&quot;[&quot;);</span>
+<span class="fc" id="L24">    public static StringBuilder result = new StringBuilder(&quot;[&quot;);</span>
+<span class="fc" id="L25">    public static StringBuilder result2 = new StringBuilder(&quot;[&quot;);</span>
+<span class="fc" id="L26">    public static StringBuilder result3 = new StringBuilder(&quot;[&quot;);</span>
 
-<span class="nc" id="L28">    public TopicPopularity(StudentService studentService) {</span>
-<span class="nc" id="L29">        this.studentService = studentService;</span>
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L28">    public TopicPopularity(StudentService studentService) {</span>
+<span class="fc" id="L29">        this.studentService = studentService;</span>
+<span class="fc" id="L30">    }</span>
 
     @GetMapping(&quot;/word&quot;)
     public String yourPage(Model model) {
@@ -39,17 +39,17 @@ public class TopicPopularity {
 
 
     private static List&lt;String&gt; splitTags(String tagsString) {
-<span class="nc" id="L42">        List&lt;String&gt; tags = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L42">        List&lt;String&gt; tags = new ArrayList&lt;&gt;();</span>
 
-<span class="nc bnc" id="L44" title="All 4 branches missed.">        if (tagsString != null &amp;&amp; !tagsString.isEmpty()) {</span>
+<span class="pc bpc" id="L44" title="2 of 4 branches missed.">        if (tagsString != null &amp;&amp; !tagsString.isEmpty()) {</span>
             // 以逗号分隔，并去除每个标签的双引号
-<span class="nc" id="L46">            String[] tagArray = tagsString.split(&quot;,&quot;);</span>
-<span class="nc bnc" id="L47" title="All 2 branches missed.">            for (String tag : tagArray) {</span>
-<span class="nc" id="L48">                tags.add(tag.trim().replaceAll(&quot;^\&quot;|\&quot;$&quot;, &quot;&quot;));</span>
+<span class="fc" id="L46">            String[] tagArray = tagsString.split(&quot;,&quot;);</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            for (String tag : tagArray) {</span>
+<span class="fc" id="L48">                tags.add(tag.trim().replaceAll(&quot;^\&quot;|\&quot;$&quot;, &quot;&quot;));</span>
             }
         }
 
-<span class="nc" id="L52">        return tags;</span>
+<span class="fc" id="L52">        return tags;</span>
     }
 
     public static void main(String[] args) {
@@ -57,21 +57,28 @@ public class TopicPopularity {
 
 <span class="nc" id="L58">    }</span>
     private static Object[][] convertArray(String[][] inputArray) {//转换数组为词云接受的对象
-<span class="nc" id="L60">        int rows = inputArray.length;</span>
-<span class="nc" id="L61">        int cols = inputArray[0].length;</span>
-<span class="nc" id="L62">        Object[][] outputArray = new Object[rows][cols];</span>
+<span class="fc" id="L60">        int rows = inputArray.length;</span>
+<span class="fc" id="L61">        int cols = inputArray[0].length;</span>
+<span class="fc" id="L62">        Object[][] outputArray = new Object[rows][cols];</span>
 
-<span class="nc bnc" id="L64" title="All 2 branches missed.">        for (int i = 0; i &lt; rows; i++) {</span>
-<span class="nc bnc" id="L65" title="All 2 branches missed.">            for (int j = 0; j &lt; cols; j++) {</span>
-<span class="nc bnc" id="L66" title="All 2 branches missed.">                if (j == 1) {</span>
-<span class="nc" id="L67">                    outputArray[i][j] = Integer.parseInt(inputArray[i][j]);</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        for (int i = 0; i &lt; rows; i++) {</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">            for (int j = 0; j &lt; cols; j++) {</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">                if (j == 1) {</span>
+<span class="fc" id="L67">                    outputArray[i][j] = Integer.parseInt(inputArray[i][j]);</span>
                 } else {
-<span class="nc" id="L69">                    outputArray[i][j] = inputArray[i][j];</span>
+<span class="fc" id="L69">                    outputArray[i][j] = inputArray[i][j];</span>
                 }
             }
         }
 
-<span class="nc" id="L74">        return outputArray;</span>
+<span class="fc" id="L74">        return outputArray;</span>
+    }
+    public List&lt;String&gt; publicSplitTags(String tagsString) {
+<span class="fc" id="L77">        return splitTags(tagsString);</span>
+    }
+
+    public Object[][] publicConvertArray(String[][] inputArray) {
+<span class="fc" id="L81">        return convertArray(inputArray);</span>
     }
 }
 

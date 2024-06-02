@@ -5,66 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8e148e1-b555-412c-b0c1-ee66a855b7f1" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/AdminControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/AdminRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/AdminTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/HistoryControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/HistoryRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/HistoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/QuizControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/UserControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/UserRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/UserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/UsersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/wordreal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/TopicPopularityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/Data/Loader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/Data/data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/Data/data2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/demos/web/BasicController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/demos/web/PathVariableController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/demos/web/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/task/BugPopularity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/task/RelatedTopics.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/task/TopicPopularity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/task/TopicPopularity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/Data/Loader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/demos/web/BasicController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/demos/web/PathVariableController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/demos/web/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/BugPopularity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/RelatedTopics$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/RelatedTopics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/TopicPopularity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/TopicPopularity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/project.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/HistoryController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/HistoryController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/HistoryController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/HistoryController.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/QuizController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/QuizController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/QuizController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/QuizController.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.controller/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.model/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.model/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/com.example.mvcdemo2.model/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2024-06-02T10-00-10_062.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.AIControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.AIControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.AdviceControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.AdviceControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.CommentRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.CommentRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.CommentTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.CommentTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.Mvcdemo2ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.Mvcdemo2ApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.PostControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.PostControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.PostRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.PostRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.PostTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.PostTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.ReservationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.ReservationControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.ReservationRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.ReservationRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.ReservationServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.ReservationServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.ReservationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.ReservationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.StudentServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.StudentServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.trade_serviceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.trade_serviceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.AIControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.AIControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.AdviceControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.AdviceControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.CommentRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.CommentRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.CommentTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.CommentTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.Mvcdemo2ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.Mvcdemo2ApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.PostControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.PostControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.PostRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.PostRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.PostTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.PostTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.ReservationControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.ReservationControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.ReservationRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.ReservationRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.ReservationServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.ReservationServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.ReservationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.ReservationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.StudentServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.StudentServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.trade_serviceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.trade_serviceTest.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -115,6 +78,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -149,7 +113,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryTest">
+  <component name="RunManager" selected="Spring Boot.Mvcdemo2Application">
     <configuration name="AdminRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvcdemo2" />
       <extension name="coverage">
@@ -160,6 +124,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
       <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.AdminRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BugPopularityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mvcdemo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.mvcdemo2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.BugPopularityTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,7 +159,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TopicPopularityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvcdemo2" />
       <extension name="coverage">
         <pattern>
@@ -189,7 +168,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.HistoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.TopicPopularityTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -210,21 +189,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mvcdemo2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.mvcdemo2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.UsersTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Mvcdemo2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="mvcdemo2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.mvcdemo2.Mvcdemo2Application" />
@@ -234,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TopicPopularityTest" />
+        <item itemvalue="JUnit.BugPopularityTest" />
         <item itemvalue="JUnit.UserRepositoryTest" />
         <item itemvalue="JUnit.HistoryRepositoryTest" />
         <item itemvalue="JUnit.AdminRepositoryTest" />
-        <item itemvalue="JUnit.UsersTest" />
-        <item itemvalue="JUnit.HistoryTest" />
       </list>
     </recent_temporary>
   </component>

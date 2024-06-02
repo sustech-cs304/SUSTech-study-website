@@ -11,14 +11,7 @@ mvcdemo2,com.example.mvcdemo2.model,Student,56,30,0,0,25,11,16,2,16,2
 mvcdemo2,com.example.mvcdemo2.model,Admin,0,32,0,0,0,12,0,7,0,7
 mvcdemo2,com.example.mvcdemo2.model,Users,0,44,0,0,0,17,0,9,0,9
 mvcdemo2,com.example.mvcdemo2.model,Reservation,0,89,0,0,0,30,0,20,0,20
-mvcdemo2,com.example.mvcdemo2.demos.web,BasicController,35,0,0,0,11,0,6,0,6,0
-mvcdemo2,com.example.mvcdemo2.demos.web,PathVariableController,10,0,0,0,3,0,3,0,3,0
-mvcdemo2,com.example.mvcdemo2.demos.web,User,17,0,0,0,7,0,5,0,5,0
-mvcdemo2,com.example.mvcdemo2.Data,Loader,377,0,22,0,127,0,22,0,11,0
-mvcdemo2,com.example.mvcdemo2.task,RelatedTopics.new Comparator() {...},14,0,0,0,2,0,2,0,2,0
-mvcdemo2,com.example.mvcdemo2.task,TopicPopularity,132,0,12,0,27,0,12,0,6,0
-mvcdemo2,com.example.mvcdemo2.task,BugPopularity,24,0,0,0,9,0,6,0,6,0
-mvcdemo2,com.example.mvcdemo2.task,RelatedTopics,476,0,28,0,97,0,26,0,12,0
+mvcdemo2,com.example.mvcdemo2.task,TopicPopularity,14,124,2,10,5,24,4,10,2,6
 mvcdemo2,com.example.mvcdemo2.controller,AdviceController,0,9,0,0,0,4,0,4,0,4
 mvcdemo2,com.example.mvcdemo2.controller,StudentController,32,10,0,0,12,4,8,2,8,2
 mvcdemo2,com.example.mvcdemo2.controller,UserController,0,126,0,8,0,31,0,9,0,5
