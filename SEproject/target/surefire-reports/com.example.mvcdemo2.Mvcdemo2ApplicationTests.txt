@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.example.mvcdemo2.Mvcdemo2ApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.224 s -- in com.example.mvcdemo2.Mvcdemo2ApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.009 s -- in com.example.mvcdemo2.Mvcdemo2ApplicationTests

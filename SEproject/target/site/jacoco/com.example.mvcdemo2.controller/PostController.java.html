@@ -29,16 +29,16 @@ import java.util.Optional;
 
     @GetMapping(&quot;/posts&quot;)
     public ResponseEntity&lt;List&lt;Post&gt;&gt; getAllPosts() {
-<span class="nc" id="L32">        List&lt;Post&gt; posts = postRepository.findAll();</span>
-<span class="nc" id="L33">        return ResponseEntity.ok(posts); // 返回状态码200和帖子数据</span>
+<span class="fc" id="L32">        List&lt;Post&gt; posts = postRepository.findAll();</span>
+<span class="fc" id="L33">        return ResponseEntity.ok(posts); // 返回状态码200和帖子数据</span>
     }
 
     @GetMapping(&quot;/posts/{id}&quot;)
     public String getPostDetails(@PathVariable Long id, Model model) {
-<span class="nc" id="L38">        Optional&lt;Post&gt; post = postRepository.findById(id);</span>
-<span class="nc bnc" id="L39" title="All 2 branches missed.">        if (post.isPresent()) {</span>
-<span class="nc" id="L40">            model.addAttribute(&quot;post&quot;, post.get());</span>
-<span class="nc" id="L41">            return &quot;post_details&quot;; // 返回 post_details.html 对应的视图名称</span>
+<span class="fc" id="L38">        Optional&lt;Post&gt; post = postRepository.findById(id);</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">        if (post.isPresent()) {</span>
+<span class="fc" id="L40">            model.addAttribute(&quot;post&quot;, post.get());</span>
+<span class="fc" id="L41">            return &quot;post_details&quot;; // 返回 post_details.html 对应的视图名称</span>
         } else {
             // 可以选择重定向到一个错误页面或者返回一个错误信息
 <span class="nc" id="L44">            return &quot;error_page&quot;; // 或者是 return &quot;redirect:/some_path&quot;;</span>
@@ -49,9 +49,9 @@ import java.util.Optional;
 
     @GetMapping(&quot;/posts/id={id}&quot;)
     public ResponseEntity&lt;Post&gt; getPostById(@PathVariable Long id) {
-<span class="nc" id="L52">        Optional&lt;Post&gt; post = postRepository.findById(id);</span>
-<span class="nc bnc" id="L53" title="All 2 branches missed.">        if (post.isPresent()) {</span>
-<span class="nc" id="L54">            return ResponseEntity.ok(post.get());</span>
+<span class="fc" id="L52">        Optional&lt;Post&gt; post = postRepository.findById(id);</span>
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">        if (post.isPresent()) {</span>
+<span class="fc" id="L54">            return ResponseEntity.ok(post.get());</span>
         } else {
 <span class="nc" id="L56">            return ResponseEntity.notFound().build();</span>
         }
@@ -72,11 +72,11 @@ import java.util.Optional;
 
     @PostMapping(&quot;/posts/{postId}/comments&quot;)
     public ResponseEntity&lt;Comment&gt; createComment(@PathVariable Long postId, @RequestBody Comment comment) {
-<span class="nc" id="L75">        Optional&lt;Post&gt; post = postRepository.findById(postId);</span>
-<span class="nc bnc" id="L76" title="All 2 branches missed.">        if (post.isPresent()) {</span>
-<span class="nc" id="L77">            comment.setPost(post.get());</span>
-<span class="nc" id="L78">            Comment savedComment = commentRepository.save(comment);</span>
-<span class="nc" id="L79">            return ResponseEntity.ok(savedComment);</span>
+<span class="fc" id="L75">        Optional&lt;Post&gt; post = postRepository.findById(postId);</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if (post.isPresent()) {</span>
+<span class="fc" id="L77">            comment.setPost(post.get());</span>
+<span class="fc" id="L78">            Comment savedComment = commentRepository.save(comment);</span>
+<span class="fc" id="L79">            return ResponseEntity.ok(savedComment);</span>
         } else {
 <span class="nc" id="L81">            return ResponseEntity.notFound().build();</span>
         }
@@ -85,8 +85,8 @@ import java.util.Optional;
 
     @GetMapping(&quot;/posts/{postId}/comments&quot;)
     public ResponseEntity&lt;List&lt;Comment&gt;&gt; getCommentsByPostId(@PathVariable Long postId) {
-<span class="nc" id="L88">        List&lt;Comment&gt; comments = commentRepository.findByPostIdOrderByPublishTimeDesc(postId);</span>
-<span class="nc" id="L89">        return ResponseEntity.ok(comments);</span>
+<span class="fc" id="L88">        List&lt;Comment&gt; comments = commentRepository.findByPostIdOrderByPublishTimeDesc(postId);</span>
+<span class="fc" id="L89">        return ResponseEntity.ok(comments);</span>
     }
 
     @PostMapping(&quot;/comments/{commentId}/like&quot;)
