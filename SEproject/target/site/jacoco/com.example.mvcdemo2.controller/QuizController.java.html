@@ -13,20 +13,20 @@ import org.springframework.web.servlet.view.RedirectView;
 
     @GetMapping(&quot;/quiz&quot;)
     public String showQuiz(@RequestParam(name = &quot;quiz&quot;, required = false) String quizId, Model model) {
-<span class="nc bnc" id="L16" title="All 2 branches missed.">        if (quizId != null) {</span>
-<span class="nc" id="L17">            model.addAttribute(&quot;quizId&quot;, quizId);</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        if (quizId != null) {</span>
+<span class="fc" id="L17">            model.addAttribute(&quot;quizId&quot;, quizId);</span>
         }
-<span class="nc" id="L19">        return &quot;quiz&quot;;</span>
+<span class="fc" id="L19">        return &quot;quiz&quot;;</span>
     }
 
     @GetMapping(&quot;/selection&quot;)
     public String quizSelection() {
-<span class="nc" id="L24">        return &quot;quizSelection&quot;; // 返回quizSelection.html页面</span>
+<span class="fc" id="L24">        return &quot;quizSelection&quot;; // 返回quizSelection.html页面</span>
     }
 
     @GetMapping(&quot;/login&quot;)
     public String login() {
-<span class="nc" id="L29">        return &quot;login&quot;; // 返回quizSelection.html页面</span>
+<span class="fc" id="L29">        return &quot;login&quot;; // 返回quizSelection.html页面</span>
     }
 
 //    @PostMapping(&quot;/quiz-selection&quot;)

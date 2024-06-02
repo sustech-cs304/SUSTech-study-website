@@ -2,6 +2,7 @@ com\example\mvcdemo2\model\Users.class
 com\example\mvcdemo2\repository\UserRepository.class
 com\example\mvcdemo2\repository\HistoryRepository.class
 com\example\mvcdemo2\controller\AdviceController.class
+com\example\mvcdemo2\controller\AdminController.class
 com\example\mvcdemo2\controller\ImageTestController.class
 com\example\mvcdemo2\task\BugPopularity.class
 com\example\mvcdemo2\model\Tag.class
@@ -25,6 +26,7 @@ com\example\mvcdemo2\task\RelatedTopics.class
 com\example\mvcdemo2\task\RelatedTopics$1.class
 com\example\mvcdemo2\model\Reservation.class
 com\example\mvcdemo2\controller\trade_controller.class
+com\example\mvcdemo2\model\Admin.class
 com\example\mvcdemo2\repository\GPARepository.class
 com\example\mvcdemo2\controller\GPAController.class
 com\example\mvcdemo2\model\Student.class
@@ -34,6 +36,7 @@ com\example\mvcdemo2\model\Post.class
 com\example\mvcdemo2\model\Comment.class
 com\example\mvcdemo2\model\History.class
 com\example\mvcdemo2\model\User.class
+com\example\mvcdemo2\repository\AdminRepository.class
 com\example\mvcdemo2\controller\StudentRestController.class
 com\example\mvcdemo2\demos\web\PathVariableController.class
 com\example\mvcdemo2\controller\GPARequest.class

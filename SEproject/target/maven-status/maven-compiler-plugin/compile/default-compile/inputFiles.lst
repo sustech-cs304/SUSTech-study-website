@@ -17,6 +17,7 @@ D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\Mvcdem
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\AdviceController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\demos\web\PathVariableController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\QuizController.java
+D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\AdminController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\PostController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\Data\Loader.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\GPA.java
@@ -35,8 +36,10 @@ D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\task\T
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\UserController.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\goods.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\ImageTestController.java
+D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\repository\AdminRepository.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\Users.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\controller\HistoryController.java
+D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\Admin.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\model\Student.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\service\trade_service.java
 D:\sustech\3down\software\12\SEproject\src\main\java\com\example\mvcdemo2\demos\web\User.java
