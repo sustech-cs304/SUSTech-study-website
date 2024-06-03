@@ -119,4 +119,20 @@ import jakarta.persistence.*;
             this.username = username;
             //this.password = password;
         }
+
+        @Override
+        public String toString() {
+            return "GPA{" +
+                    "id=" + id +
+                    ", username='" + username + '\'' +
+                    ", D1S='" + D1S + '\'' +
+                    ", D1X='" + D1X + '\'' +
+                    ", D2S='" + D2S + '\'' +
+                    ", D2X='" + D2X + '\'' +
+                    ", D3S='" + D3S + '\'' +
+                    ", D3X='" + D3X + '\'' +
+                    ", D4S='" + D4S + '\'' +
+                    ", D4X='" + D4X + '\'' +
+                    '}';
+        }
     }
