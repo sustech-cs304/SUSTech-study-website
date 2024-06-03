@@ -36,10 +36,16 @@ public class trade_service{
 
         // 筛选并排序
         return goodsList.stream()
-                .filter(goods -> pattern.matcher(goods.getName()).matches())
+                .filter(goods -> {
+                    boolean matches = pattern.matcher(goods.getName()).matches();
+                    System.out.println("匹配结果：" + goods.getName() + " - " + matches);  // 调试输出
+                    return matches;
+                })
                 .sorted((g1, g2) -> Integer.compare(g2.getView(), g1.getView()))
                 .collect(Collectors.toList());
     }
+
+
 //    @Transactional
 //    public void saveImageToDatabase(int goodsId) throws IOException {
 //        Optional<goods> optionalGoods = trade_repository.findById(goodsId);

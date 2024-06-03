@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>我的商品</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .product-list {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-list th, .product-list td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .product-list th {
+            background-color: #f2f2f2;
+        }
+        .product-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        .product-name {
+            font-weight: bold;
+        }
+        .price {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>我的商品</h1>
+    <input type="hidden" id="username" value="">
+    <form id="fetchProductsForm" method="GET" action="/fetchProducts">
+        <input type="hidden" name="username" id="usernameField">
+        <button type="submit">查看我的商品</button>
+    </form>
+    <table class="product-list" id="productTable">
+        <thead>
+        <tr>
+            <th>商品图片</th>
+            <th>商品名称</th>
+            <th>价格</th>
+            <th>浏览量</th>
+            <th>联系方式</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td><img class="product-image" th:src="@{'/getImage/' + ${product.good_id}}" alt="商品图片"></td>
+            <td class="product-name" th:text="${product.name}">商品名称</td>
+            <td class="price" th:text="'¥ ' + ${product.price}">¥ 100.00</td>
+            <td th:text="${product.view}">1000</td>
+            <td th:text="${product.contact}">电话: 123-456-7890</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function fetchCurrentUsername() {
+        return fetch('/get_user_name')
+            .then(response => response.text())
+            .then(username => {
+                document.getElementById('username').value = username;
+                document.getElementById('usernameField').value = username;
+            })
+            .catch(error => {
+                console.error('Error fetching current user:', error);
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        fetchCurrentUsername();
+    });
+
+    document.getElementById('fetchProductsForm').onsubmit = function () {
+        if (!document.getElementById('username').value) {
+            alert("无法获取用户名，请稍后重试");
+            return false;
+        }
+    };
+</script>
+</body>
+</html>
