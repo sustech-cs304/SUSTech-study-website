@@ -4,29 +4,33 @@
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
-<span class="fc" id="L12">public class QuizController {</span>
+<span class="fc" id="L10">public class QuizController {</span>
+
+    @GetMapping(&quot;/main&quot;)
+    public String showMain(){
+<span class="nc" id="L14">        return &quot;main&quot;;</span>
+    }
 
     @GetMapping(&quot;/quiz&quot;)
-    public String showQuiz(@RequestParam(name = &quot;quiz&quot;, required = false) String quizId, Model model) {
-<span class="fc bfc" id="L16" title="All 2 branches covered.">        if (quizId != null) {</span>
-<span class="fc" id="L17">            model.addAttribute(&quot;quizId&quot;, quizId);</span>
+    public String showQuiz(@RequestParam(name = &quot;id&quot;, required = false) String quizId, Model model) {
+<span class="fc" id="L19">        System.out.println(&quot;Received quizId: &quot; + quizId);</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (quizId != null) {</span>
+<span class="fc" id="L21">            model.addAttribute(&quot;quizId&quot;, quizId);</span>
         }
-<span class="fc" id="L19">        return &quot;quiz&quot;;</span>
+<span class="fc" id="L23">        return &quot;quiz&quot;;</span>
     }
 
     @GetMapping(&quot;/selection&quot;)
     public String quizSelection() {
-<span class="fc" id="L24">        return &quot;quizSelection&quot;; // 返回quizSelection.html页面</span>
+<span class="fc" id="L28">        return &quot;quizSelection&quot;; // 返回quizSelection.html页面</span>
     }
 
     @GetMapping(&quot;/login&quot;)
     public String login() {
-<span class="fc" id="L29">        return &quot;login&quot;; // 返回quizSelection.html页面</span>
+<span class="fc" id="L33">        return &quot;login&quot;; // 返回quizSelection.html页面</span>
     }
 
 //    @PostMapping(&quot;/quiz-selection&quot;)

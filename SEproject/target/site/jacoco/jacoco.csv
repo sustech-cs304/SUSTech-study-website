@@ -2,7 +2,7 @@ GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_
 mvcdemo2,com.example.mvcdemo2,Mvcdemo2Application,25,7,0,0,6,2,1,2,1,2
 mvcdemo2,com.example.mvcdemo2.model,Tag,3,0,0,0,1,0,1,0,1,0
 mvcdemo2,com.example.mvcdemo2.model,History,0,56,0,0,0,21,0,11,0,11
-mvcdemo2,com.example.mvcdemo2.model,GPA,79,3,0,0,34,2,21,1,21,1
+mvcdemo2,com.example.mvcdemo2.model,GPA,13,91,0,0,6,31,2,21,2,21
 mvcdemo2,com.example.mvcdemo2.model,Post,4,106,0,0,2,36,1,18,1,18
 mvcdemo2,com.example.mvcdemo2.model,User,8,33,0,0,1,14,1,7,1,7
 mvcdemo2,com.example.mvcdemo2.model,goods,42,38,0,0,18,16,12,6,12,6
@@ -16,7 +16,7 @@ mvcdemo2,com.example.mvcdemo2.controller,AdviceController,0,9,0,0,0,4,0,4,0,4
 mvcdemo2,com.example.mvcdemo2.controller,StudentController,32,10,0,0,12,4,8,2,8,2
 mvcdemo2,com.example.mvcdemo2.controller,UserController,0,126,0,8,0,31,0,9,0,5
 mvcdemo2,com.example.mvcdemo2.controller,trade_controller,122,6,2,0,36,3,7,1,6,1
-mvcdemo2,com.example.mvcdemo2.controller,QuizController,0,16,0,2,0,6,0,5,0,4
+mvcdemo2,com.example.mvcdemo2.controller,QuizController,2,20,0,2,1,7,1,5,1,4
 mvcdemo2,com.example.mvcdemo2.controller,GPARequest,17,0,0,0,7,0,5,0,5,0
 mvcdemo2,com.example.mvcdemo2.controller,ImageTestController,15,6,2,0,4,3,2,1,1,1
 mvcdemo2,com.example.mvcdemo2.controller,GPAController,42,3,2,0,9,1,4,1,3,1
