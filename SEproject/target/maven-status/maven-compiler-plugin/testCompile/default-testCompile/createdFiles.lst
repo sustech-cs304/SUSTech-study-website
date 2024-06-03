@@ -1,12 +1,14 @@
 com\example\mvcdemo2\HistoryRepositoryTest.class
 com\example\mvcdemo2\StudentServiceTest.class
 com\example\mvcdemo2\PostTest.class
+com\example\mvcdemo2\GPATest.class
 com\example\mvcdemo2\CommentTest.class
 com\example\mvcdemo2\PostControllerTest.class
 com\example\mvcdemo2\UsersTest.class
 com\example\mvcdemo2\HistoryTest.class
 com\example\mvcdemo2\TopicPopularityTest.class
 com\example\mvcdemo2\ReservationControllerTest.class
+com\example\mvcdemo2\GPARepositoryTest.class
 com\example\mvcdemo2\trade_serviceTest.class
 com\example\mvcdemo2\UserRepositoryTest.class
 com\example\mvcdemo2\AdviceControllerTest.class
@@ -24,3 +26,4 @@ com\example\mvcdemo2\Mvcdemo2ApplicationTests.class
 com\example\mvcdemo2\UserTest.class
 com\example\mvcdemo2\AdminControllerTest.class
 com\example\mvcdemo2\AdminRepositoryTest.class
+com\example\mvcdemo2\StudentControllerTest.class

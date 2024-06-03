@@ -30,7 +30,7 @@ public class QuizControllerTest {
 
     @Test
     public void testShowQuizWithQuizId() throws Exception {
-        mockMvc.perform(get("/quiz").param("quiz", "123"))
+        mockMvc.perform(get("/quiz").param("id", "123"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("quiz"))
                 .andExpect(model().attribute("quizId", "123"));
