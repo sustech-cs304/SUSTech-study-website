@@ -4,30 +4,96 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e148e1-b555-412c-b0c1-ee66a855b7f1" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/wordreal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/mvcdemo2/TopicPopularityTest.java" afterDir="false" />
+    <list default="true" id="cd72c587-f080-404b-a155-957eebed5e2d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/Data/Loader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/Data/data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/Data/data2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/demos/web/BasicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/demos/web/PathVariableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/demos/web/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/task/BugPopularity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/task/RelatedTopics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/task/TopicPopularity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/task/TopicPopularity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvcdemo2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/trade_controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/trade_controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/trade_repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/trade_repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/trade_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service/trade_service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dbUser.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbUser.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/data/quiz1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/data/quiz1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/gpa2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/gpa2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script_question_set.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/script_question_set.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/study_advice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/study_advice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/Data/Loader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/demos/web/BasicController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/demos/web/PathVariableController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/demos/web/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/BugPopularity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/RelatedTopics$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/RelatedTopics.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/TopicPopularity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/task/TopicPopularity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/frontpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/frontpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/new_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/new_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/postPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/postPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/quiz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/reservation_system.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/reservation_system.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/study_advice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/study_advice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/controller/trade_controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/controller/trade_controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/model/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/model/History.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/model/History.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/model/goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/model/goods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/repository/PostRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/repository/trade_repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/repository/trade_repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/service/trade_service.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mvcdemo2/service/trade_service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dbUser.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbUser.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/Scripts/gpacalc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/Scripts/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/Scripts/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/gpacalc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/data/quiz1.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/data/quiz1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/gpa2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/gpa2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/Bot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/keli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/LLMBackEnd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/script_question_set.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/script_question_set.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/study_advice.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/study_advice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/project.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/frontpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/frontpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/new_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/new_post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/postPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/postPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/productInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/productInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/quiz.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/quiz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/reservation_system.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/reservation_system.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/study_advice.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/study_advice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mvcdemo2-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/mvcdemo2-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mvcdemo2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mvcdemo2-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.Mvcdemo2ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.mvcdemo2.Mvcdemo2ApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.Mvcdemo2ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.mvcdemo2.Mvcdemo2ApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/resources/static/project.log" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/static/project.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,27 +103,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Scodive&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:sustech-cs304/12.git&quot;,
-    &quot;accountId&quot;: &quot;62d86273-df80-4f59-a6e5-ead6e2763d42&quot;
-  }
-}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/AdminController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller/HistoryController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model/Admin.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository/AdminRepository.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
@@ -76,34 +135,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.AIControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AdviceControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommentRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommentTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PostTest.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Mvcdemo2Application.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/creegon/Desktop/软件工程/SEproject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;43337e60a89cf8a3c9bc4c2facdb29ae&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/service" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/model" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/repository" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/mvcdemo2/controller" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
       <recent name="C:\Users\Lenovo\Desktop\软件工程\SEproject\src\main\resources\static\js" />
+      <recent name="C:\Users\Lenovo\Desktop\软件工程\SEproject\src\main\resources\static\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -114,7 +190,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Mvcdemo2Application">
-    <configuration name="AdminRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvcdemo2" />
       <extension name="coverage">
         <pattern>
@@ -123,13 +199,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.AdminRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.CommentRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BugPopularityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvcdemo2" />
       <extension name="coverage">
         <pattern>
@@ -138,13 +214,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.BugPopularityTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.CommentTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HistoryRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvcdemo2" />
       <extension name="coverage">
         <pattern>
@@ -153,13 +229,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.HistoryRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.PostControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TopicPopularityTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvcdemo2" />
       <extension name="coverage">
         <pattern>
@@ -168,13 +244,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.TopicPopularityTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.PostRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mvcdemo2" />
       <extension name="coverage">
         <pattern>
@@ -183,7 +259,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.mvcdemo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.UserRepositoryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.example.mvcdemo2.PostTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -198,19 +274,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TopicPopularityTest" />
-        <item itemvalue="JUnit.BugPopularityTest" />
-        <item itemvalue="JUnit.UserRepositoryTest" />
-        <item itemvalue="JUnit.HistoryRepositoryTest" />
-        <item itemvalue="JUnit.AdminRepositoryTest" />
+        <item itemvalue="JUnit.CommentRepositoryTest" />
+        <item itemvalue="JUnit.PostControllerTest" />
+        <item itemvalue="JUnit.PostRepositoryTest" />
+        <item itemvalue="JUnit.PostTest" />
+        <item itemvalue="JUnit.CommentTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
       </set>
     </attachedChunks>
   </component>
@@ -243,13 +318,17 @@
       <workItem from="1716358567735" duration="643000" />
       <workItem from="1716368228145" duration="4188000" />
       <workItem from="1716983284227" duration="4085000" />
-      <workItem from="1717060971465" duration="9476000" />
-      <workItem from="1717060971465" duration="8273000" />
-      <workItem from="1717133246542" duration="6768000" />
-      <workItem from="1717147376126" duration="1650000" />
-      <workItem from="1717221530443" duration="8767000" />
-      <workItem from="1717293222004" duration="322000" />
-      <workItem from="1717307988461" duration="349000" />
+      <workItem from="1716993177162" duration="108000" />
+      <workItem from="1716996922757" duration="1177000" />
+      <workItem from="1717034951307" duration="4276000" />
+      <workItem from="1717053818940" duration="1319000" />
+      <workItem from="1717055214123" duration="6934000" />
+      <workItem from="1717160145630" duration="691000" />
+      <workItem from="1717220316958" duration="619000" />
+      <workItem from="1717235774066" duration="615000" />
+      <workItem from="1717247219714" duration="106000" />
+      <workItem from="1717248126802" duration="3008000" />
+      <workItem from="1717319976797" duration="304000" />
     </task>
     <servers />
   </component>

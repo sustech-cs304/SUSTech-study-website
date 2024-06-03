@@ -23,6 +23,10 @@
     </section>
     <!-- 添加更多题库，按需添加 -->
 </main>
+<section class="back-to-main">
+    <button onclick="goToMainPage()">回到主页面</button>
+</section>
+
 <script>
     function startQuiz(quizId) {
         const numericId = quizId.substring(4);
@@ -36,6 +40,7 @@
         // 重定向到新的URL
         window.location.href = newUrl;
     }
+    function goToMainPage(){window.location.href ='main';}
 </script>
 </body>
 </html>

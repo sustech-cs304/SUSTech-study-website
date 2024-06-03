@@ -4,15 +4,19 @@ package com.example.mvcdemo2.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class QuizController {
 
+    @GetMapping("/main")
+    public String showMain(){
+        return "main";
+    }
+
     @GetMapping("/quiz")
-    public String showQuiz(@RequestParam(name = "quiz", required = false) String quizId, Model model) {
+    public String showQuiz(@RequestParam(name = "id", required = false) String quizId, Model model) {
+        System.out.println("Received quizId: " + quizId);
         if (quizId != null) {
             model.addAttribute("quizId", quizId);
         }
