@@ -34,12 +34,14 @@ public class trade_controller {
     @Autowired
     private trade_service ts;
 
+    private String usr;
+
     public trade_controller(trade_repository tr) {
         this.tr = tr;
     }
 
     @GetMapping("/tradeFrontPage")
-    public String begin(Model model) throws IOException {
+    public String begin(Model model, String username) throws IOException {
 //        List<String> l = new ArrayList<>();
 //        l.add("animation");
 //        l.add("hand-painting");
@@ -56,6 +58,7 @@ public class trade_controller {
 //        insertData("drawing", 100, l, imageData1, "seller", "this is just a test good");
 //        insertData("drawing", 100, l, imageData1, "seller", "this is just a test good");
         model.addAttribute("recommendedProducts", tr.findAll());
+        this.usr = username;
         return "frontpage";
     }
 
@@ -118,5 +121,13 @@ public class trade_controller {
         List<goods> searchResults = ts.searchGoods(searchQuery);
         model.addAttribute("recommendedProducts", searchResults);
         return "frontpage";
+    }
+
+    @GetMapping("/fetchProducts")
+    public String fetchProducts(String username, Model model) {
+        System.out.println("this is usr:" + username);
+        List<goods> products = tr.findBySeller(username);
+        model.addAttribute("products", products);
+        return "myAccount";
     }
 }

@@ -22,14 +22,14 @@ import java.io.IOException;
 
     @GetMapping(&quot;/getImage/{id}&quot;)
     public ResponseEntity&lt;InputStreamResource&gt; getImage(@PathVariable int id) throws IOException {
-<span class="nc" id="L25">        goods goods = goodsRepository.findById(id).orElse(null);</span>
-<span class="nc bnc" id="L26" title="All 4 branches missed.">        if (goods != null &amp;&amp; goods.getImage() != null) {</span>
-<span class="nc" id="L27">            byte[] imageData = goods.getImage();</span>
-<span class="nc" id="L28">            return ResponseEntity.ok()</span>
-<span class="nc" id="L29">                    .contentType(org.springframework.http.MediaType.IMAGE_JPEG)</span>
-<span class="nc" id="L30">                    .body(new InputStreamResource(new ByteArrayInputStream(imageData)));</span>
+<span class="fc" id="L25">        goods goods = goodsRepository.findById(id).orElse(null);</span>
+<span class="fc bfc" id="L26" title="All 4 branches covered.">        if (goods != null &amp;&amp; goods.getImage() != null) {</span>
+<span class="fc" id="L27">            byte[] imageData = goods.getImage();</span>
+<span class="fc" id="L28">            return ResponseEntity.ok()</span>
+<span class="fc" id="L29">                    .contentType(org.springframework.http.MediaType.IMAGE_JPEG)</span>
+<span class="fc" id="L30">                    .body(new InputStreamResource(new ByteArrayInputStream(imageData)));</span>
         } else {
-<span class="nc" id="L32">            return ResponseEntity.notFound().build();</span>
+<span class="fc" id="L32">            return ResponseEntity.notFound().build();</span>
         }
     }
 }

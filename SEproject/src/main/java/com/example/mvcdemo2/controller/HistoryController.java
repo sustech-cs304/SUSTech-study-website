@@ -22,6 +22,10 @@ public class HistoryController {
         this.usrName = usrName;
     }
 
+    public String getUsrName() {
+        return usrName;
+    }
+
     @Autowired
     private HistoryRepository historyRepository;
     @Autowired

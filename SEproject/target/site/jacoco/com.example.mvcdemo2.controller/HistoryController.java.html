@@ -22,38 +22,42 @@ import java.util.Map;
 <span class="fc" id="L22">        this.usrName = usrName;</span>
 <span class="fc" id="L23">    }</span>
 
+    public String getUsrName() {
+<span class="nc" id="L26">        return usrName;</span>
+    }
+
     @Autowired
     private HistoryRepository historyRepository;
     @Autowired
     private AdminRepository adminRepository;
     @GetMapping(&quot;get_user_name&quot;)
     public String GetUserName(){
-<span class="fc" id="L31">        return usrName;</span>
+<span class="fc" id="L35">        return usrName;</span>
     }
 
     @GetMapping(&quot;/his&quot;)
     public List&lt;History&gt; findAllHistory(){
-<span class="fc" id="L36">        List&lt;History&gt; allHistory = historyRepository.findAllHistory();</span>
-<span class="fc" id="L37">        return allHistory;</span>
+<span class="fc" id="L40">        List&lt;History&gt; allHistory = historyRepository.findAllHistory();</span>
+<span class="fc" id="L41">        return allHistory;</span>
     }
     @GetMapping(&quot;/hisname&quot;)
     public List&lt;History&gt; findHistoryByUsername() {
-<span class="fc" id="L41">        List&lt;History&gt; hisByName = historyRepository.findByUsername(usrName);</span>
-<span class="fc" id="L42">        return hisByName;</span>
+<span class="fc" id="L45">        List&lt;History&gt; hisByName = historyRepository.findByUsername(usrName);</span>
+<span class="fc" id="L46">        return hisByName;</span>
     }
 
     @GetMapping(&quot;/api/quiz-history&quot;)
     public ModelAndView findHistoryByUsernameAndID(@RequestParam(&quot;id&quot;) int id) {
-<span class="fc" id="L47">        Admin admin = adminRepository.findAdmin(usrName);</span>
-<span class="fc" id="L48">        List&lt;History&gt; historyList = null;</span>
-<span class="pc bpc" id="L49" title="1 of 2 branches missed.">        if(admin == null){</span>
-<span class="fc" id="L50">            historyList = historyRepository.findHisByNameAndID(usrName, id);</span>
+<span class="fc" id="L51">        Admin admin = adminRepository.findAdmin(usrName);</span>
+<span class="fc" id="L52">        List&lt;History&gt; historyList = null;</span>
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">        if(admin == null){</span>
+<span class="fc" id="L54">            historyList = historyRepository.findHisByNameAndID(usrName, id);</span>
         }else{
-<span class="nc" id="L52">            historyList = historyRepository.findAll();</span>
+<span class="nc" id="L56">            historyList = historyRepository.findAll();</span>
         }
-<span class="fc" id="L54">        ModelAndView mav = new ModelAndView(&quot;history&quot;); // 视图名称，对应模板文件名</span>
-<span class="fc" id="L55">        mav.addObject(&quot;historyList&quot;, historyList);</span>
-<span class="fc" id="L56">        return mav;</span>
+<span class="fc" id="L58">        ModelAndView mav = new ModelAndView(&quot;history&quot;); // 视图名称，对应模板文件名</span>
+<span class="fc" id="L59">        mav.addObject(&quot;historyList&quot;, historyList);</span>
+<span class="fc" id="L60">        return mav;</span>
     }
 
     @PostMapping(&quot;/save-answers&quot;)
@@ -62,12 +66,12 @@ import java.util.Map;
             @RequestParam(&quot;quizId&quot;) int quizId) {
 
         // 处理答案字符串并保存到数据库
-<span class="fc" id="L65">        historyRepository.saveAnswers(usrName, answers, quizId);</span>
+<span class="fc" id="L69">        historyRepository.saveAnswers(usrName, answers, quizId);</span>
 
         // 假设成功保存后返回一个URL用于重定向
-<span class="fc" id="L68">        Map&lt;String, String&gt; response = new HashMap&lt;&gt;();</span>
-<span class="fc" id="L69">        response.put(&quot;url&quot;, &quot;/selection&quot;);</span>
-<span class="fc" id="L70">        return ResponseEntity.ok(response);</span>
+<span class="fc" id="L72">        Map&lt;String, String&gt; response = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L73">        response.put(&quot;url&quot;, &quot;/selection&quot;);</span>
+<span class="fc" id="L74">        return ResponseEntity.ok(response);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

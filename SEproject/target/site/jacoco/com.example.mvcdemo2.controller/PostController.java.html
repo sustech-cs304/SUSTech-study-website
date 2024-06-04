@@ -64,21 +64,21 @@ import java.util.Optional;
             @RequestParam(defaultValue = &quot;all&quot;) String category,
             @RequestParam(defaultValue = &quot;newest&quot;) String sortBy) {
 
-<span class="nc" id="L67">        List&lt;Post&gt; posts = postRepository.findByTitleContainingAndCategoryOrderByPublishTime(</span>
+<span class="fc" id="L67">        List&lt;Post&gt; posts = postRepository.findByTitleContainingAndCategoryOrderByPublishTime(</span>
                 title, category, sortBy);
 
-<span class="nc" id="L70">        return ResponseEntity.ok(posts);</span>
+<span class="fc" id="L70">        return ResponseEntity.ok(posts);</span>
     }
 
     @PostMapping(&quot;/posts/{postId}/comments&quot;)
     public ResponseEntity&lt;Comment&gt; createComment(@PathVariable Long postId, @RequestBody Comment comment) {
 <span class="fc" id="L75">        Optional&lt;Post&gt; post = postRepository.findById(postId);</span>
-<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if (post.isPresent()) {</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if (post.isPresent()) {</span>
 <span class="fc" id="L77">            comment.setPost(post.get());</span>
 <span class="fc" id="L78">            Comment savedComment = commentRepository.save(comment);</span>
 <span class="fc" id="L79">            return ResponseEntity.ok(savedComment);</span>
         } else {
-<span class="nc" id="L81">            return ResponseEntity.notFound().build();</span>
+<span class="fc" id="L81">            return ResponseEntity.notFound().build();</span>
         }
     }
 
@@ -91,27 +91,27 @@ import java.util.Optional;
 
     @PostMapping(&quot;/comments/{commentId}/like&quot;)
     public ResponseEntity&lt;Void&gt; likeComment(@PathVariable Long commentId) {
-<span class="nc" id="L94">        Optional&lt;Comment&gt; comment = commentRepository.findById(commentId);</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">        if (comment.isPresent()) {</span>
-<span class="nc" id="L96">            Comment updatedComment = comment.get();</span>
-<span class="nc" id="L97">            updatedComment.setLikes(updatedComment.getLikes() + 1);</span>
-<span class="nc" id="L98">            commentRepository.save(updatedComment);</span>
-<span class="nc" id="L99">            return ResponseEntity.ok().build();</span>
+<span class="fc" id="L94">        Optional&lt;Comment&gt; comment = commentRepository.findById(commentId);</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">        if (comment.isPresent()) {</span>
+<span class="fc" id="L96">            Comment updatedComment = comment.get();</span>
+<span class="fc" id="L97">            updatedComment.setLikes(updatedComment.getLikes() + 1);</span>
+<span class="fc" id="L98">            commentRepository.save(updatedComment);</span>
+<span class="fc" id="L99">            return ResponseEntity.ok().build();</span>
         } else {
-<span class="nc" id="L101">            return ResponseEntity.notFound().build();</span>
+<span class="fc" id="L101">            return ResponseEntity.notFound().build();</span>
         }
     }
 
     @PostMapping(&quot;/comments/{commentId}/dislike&quot;)
     public ResponseEntity&lt;Void&gt; dislikeComment(@PathVariable Long commentId) {
-<span class="nc" id="L107">        Optional&lt;Comment&gt; comment = commentRepository.findById(commentId);</span>
-<span class="nc bnc" id="L108" title="All 2 branches missed.">        if (comment.isPresent()) {</span>
-<span class="nc" id="L109">            Comment updatedComment = comment.get();</span>
-<span class="nc" id="L110">            updatedComment.setDislikes(updatedComment.getDislikes() + 1);</span>
-<span class="nc" id="L111">            commentRepository.save(updatedComment);</span>
-<span class="nc" id="L112">            return ResponseEntity.ok().build();</span>
+<span class="fc" id="L107">        Optional&lt;Comment&gt; comment = commentRepository.findById(commentId);</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">        if (comment.isPresent()) {</span>
+<span class="fc" id="L109">            Comment updatedComment = comment.get();</span>
+<span class="fc" id="L110">            updatedComment.setDislikes(updatedComment.getDislikes() + 1);</span>
+<span class="fc" id="L111">            commentRepository.save(updatedComment);</span>
+<span class="fc" id="L112">            return ResponseEntity.ok().build();</span>
         } else {
-<span class="nc" id="L114">            return ResponseEntity.notFound().build();</span>
+<span class="fc" id="L114">            return ResponseEntity.notFound().build();</span>
         }
     }
 
