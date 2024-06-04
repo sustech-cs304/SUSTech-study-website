@@ -90,17 +90,4 @@ public class Comment {
     public void setDislikes(int dislikes) {
         this.dislikes = dislikes;
     }
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", content='" + content + '\'' +
-                ", author='" + author + '\'' +
-                ", publishTime=" + publishTime +
-                ", post=" + post +
-                ", likes=" + likes +
-                ", dislikes=" + dislikes +
-                '}';
-    }
 }

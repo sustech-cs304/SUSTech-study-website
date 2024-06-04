@@ -28,6 +28,16 @@ public class goods {
 
     private int view;
 
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    private String contact;
+
     public goods(String name, int price, List<String> tags, String seller, byte[] image, String description) {
         this.name = name;
         this.price = price;

@@ -20,24 +20,4 @@ public class ReservationService {
     public List<Reservation> findAllReservations() {
         return reservationRepository.findAll();
     }
-    public boolean checkInReservation(Long reservationId) {
-        Reservation reservation = reservationRepository.findById(reservationId).orElse(null);
-        if (reservation != null) {
-            reservation.setStatus("已签到");
-            reservationRepository.save(reservation);
-            return true;
-        }
-        return false;
-    }
-
-    public boolean cancelReservation(Long reservationId) {
-        try {
-            reservationRepository.deleteById(reservationId);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-
 }

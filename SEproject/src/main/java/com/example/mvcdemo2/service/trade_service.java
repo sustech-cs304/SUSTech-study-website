@@ -45,6 +45,7 @@ public class trade_service{
                 .collect(Collectors.toList());
     }
 
+
 //    @Transactional
 //    public void saveImageToDatabase(int goodsId) throws IOException {
 //        Optional<goods> optionalGoods = trade_repository.findById(goodsId);

@@ -10,6 +10,9 @@ import java.util.List;
 
 
 public interface trade_repository extends JpaRepository<goods, Integer> {
-    @Query("SELECT g FROM goods g WHERE g.name LIKE %:searchQuery%")
+    @Query("SELECT g FROM goods g WHERE g.name ILIKE %:searchQuery%")
     List<goods> findByNameContaining(@Param("searchQuery") String searchQuery);
+
+    @Query("SELECT g FROM goods g WHERE g.seller = :searchQuery")
+    List<goods> findBySeller(@Param("searchQuery") String searchQuery);
 }

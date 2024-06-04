@@ -1,9 +1,7 @@
 package com.example.mvcdemo2.controller;
 
 import com.example.mvcdemo2.model.History;
-import com.example.mvcdemo2.model.Admin;
 
-import com.example.mvcdemo2.repository.AdminRepository;
 import com.example.mvcdemo2.repository.HistoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,13 +22,11 @@ public class HistoryController {
 
     @Autowired
     private HistoryRepository historyRepository;
-    @Autowired
-    private AdminRepository adminRepository;
+
     @GetMapping("get_user_name")
     public String GetUserName(){
         return usrName;
     }
-
     @GetMapping("/his")
     public List<History> findAllHistory(){
         List<History> allHistory = historyRepository.findAllHistory();
@@ -44,13 +40,7 @@ public class HistoryController {
 
     @GetMapping("/api/quiz-history")
     public ModelAndView findHistoryByUsernameAndID(@RequestParam("id") int id) {
-        Admin admin = adminRepository.findAdmin(usrName);
-        List<History> historyList = null;
-        if(admin == null){
-            historyList = historyRepository.findHisByNameAndID(usrName, id);
-        }else{
-            historyList = historyRepository.findAll();
-        }
+        List<History> historyList = historyRepository.findHisByNameAndID(usrName, id);
         ModelAndView mav = new ModelAndView("history"); // 视图名称，对应模板文件名
         mav.addObject("historyList", historyList);
         return mav;

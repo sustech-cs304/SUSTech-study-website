@@ -73,12 +73,5 @@ public class TopicPopularity {
 
         return outputArray;
     }
-    public List<String> publicSplitTags(String tagsString) {
-        return splitTags(tagsString);
-    }
-
-    public Object[][] publicConvertArray(String[][] inputArray) {
-        return convertArray(inputArray);
-    }
 }
 

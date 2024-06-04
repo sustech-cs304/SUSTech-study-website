@@ -53,13 +53,6 @@ public class StudentController {
 //        return "forward:/main.html";
         return "reservation_system";
     }
-
-    @GetMapping("/res_pc")
-    public String res_pc() {
-        // Assuming 'main.html' is directly inside 'static' folder.
-//        return "forward:/main.html";
-        return "res_pc";
-    }
     @GetMapping("/")
     public String home() {
         return "login"; // Assuming 'main' is the name of your home page template
