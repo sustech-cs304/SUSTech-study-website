@@ -17,6 +17,15 @@ public class goods {
     private String seller;
     private byte[] image;
     private String description;
+    private String Contact;
+
+    public String getContact() {
+        return Contact;
+    }
+
+    public void setContact(String contact) {
+        Contact = contact;
+    }
 
     public int getView() {
         return view;
