@@ -1,0 +1,27 @@
+标题：return error: _b.throwIfAborted is not a function. 
+页面：https://github.com/modelcontextprotocol/inspector/issues
+
+whatever I click (e.g. list resources/list templates/list prompts), It always return the error: _b.throwIfAborted is not a function. 
+
+However, when I am using cline + mcp server, it works pretty well and no errors have occured.
+further bug reports:
+Uncaught (in promise) TypeError: b. throwIfAborted is not a function at index-CgrYmEaq.js: 16291
+at new Promise (<anonymous>)
+at Client.request (index-CgrYmEaq.js: 16282) 
+at makeRequest (index-CgrYmEaq.js: 17563) 
+at sendMCPRequest (index-CgrYmEaq.js: 29090) 
+at listPrompts (index-CgrYmEaq.js: 29174)
+at listPrompts (index-CgrYmEaq.js: 29397) 
+at Object. Nb (index-CarVmFan is: 1281)
+at Tb (index-CgrYmEaqhttp://127.0.0.1:6274/assets/index-CgrYmEaq.js:29397 at Ub (index-CgrYmEaq.js: 1296)
+
+the steps that I install mcp is:
+0. powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex" 
+1. uv init weather
+2. cd weather
+3. uv venv
+4. .venv\Scripts\activate
+5. uv add "mcp[cli]" httpx 
+6. pip install fastmcp
+7. write weather.py
+8. mcp dev weather.py
